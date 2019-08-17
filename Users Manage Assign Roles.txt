@@ -1,0 +1,26 @@
+Securing jenkins server
+=========================================================
+Goto admin user 
+goto configure
+
+In password session we can hange our password and clik save.
+ in our jenkins server /var/lib/jenkins
+path ls -al
+
+
+How to create Users Manage Assign Roles | Jenkins User Administration
+=================================================================
+1)Manage jenkins
+2)Manage users
+3) create user
+
+===============================================
+manage jenkinks
+
+manage plugins
+ Availability
+
+Role-based Authorization Strategy
+
+restart jenkins
+=============================================================

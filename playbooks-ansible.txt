@@ -1,0 +1,19 @@
+ansible:- is a configuration management tool like puppet and chef
+agent less configuration management tool
+3. need not to install any agent on remote servers
+4. totally relies on ssh connections so just make sure that ssh is available and running
+5. ansible uses python(puppet and chef uses ruby)
+6. ansible uses :- push mechanism(pupet and chef uses pull)
+7.some of the known companies using ansible: apple /juniper /nasa
+
+require ments
+===========
+Minimum 2 rhel machines --version 6
+DNS is available (updated/etc/hosts file)
+
+ESICP145279
+9821156
+
+
+
+

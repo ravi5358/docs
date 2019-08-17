@@ -1,0 +1,924 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang2057{\fonttbl{\f0\fmodern Courier New;}{\f1\fmodern\fcharset0 Courier New;}{\f2\fnil\fcharset129 Courier New;}}
+{\colortbl ;\red0\green0\blue0;\red48\green127\blue48;\red127\green127\blue27;\red127\green27\blue127;\red127\green48\blue48;\red27\green127\blue127;\red27\green27\blue27;}
+\viewkind4\uc1\pard\f0\fs18 Authenticating with public key "Imported-Openssh-Key: C:\\Users\\Ravi Shankar\\Desktop\\gitpractice.pem"\cf1\highlight1 
+\par \cf0\highlight0      \u9484?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9488?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?                        \cf2\f1\bullet  MobaXterm 11.1 \bullet  \cf0\f0                          \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?            \cf3 (SSH client, X-server and networking tools)\cf0              \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?                                                                    \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474? \u8594? SSH session to \cf4 ec2-user\cf0 @\cf4 3.14.80.141                              \cf0\u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?\f1    \bullet  SSH compression : \cf2\f0 v\cf0                                             \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?\f1    \bullet  SSH-browser     : \cf2\f0 v\cf0                                             \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?\f1    \bullet  X11-forwarding  : \cf5\f0 x\cf0   (disabled or not supported by server)     \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?\f1    \bullet  DISPLAY         : \cf4\f0 192.168.43.126:0.0                        \cf0    \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?                                                                    \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474? \u8594? For more info, ctrl+click on \cf6\ul help\cf0\ulnone  or visit our \cf6\ul website\cf0\ulnone            \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9492?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9496?\cf1\highlight1 
+\par 
+\par \cf0\highlight0 [ec2-user@ip-172-31-45-192 ~]$ sudo -i\cf1\highlight1 
+\par \cf0\highlight0 [root@ip-172-31-45-192 ~]# yum update\cf1\highlight1 
+\par \cf0\highlight0 Loaded plugins: amazon-id, rhui-lb, search-disabled-repos\cf1\highlight1 
+\par \cf0\highlight0 rhui-REGION-client-config-server-7                                                                                | 2.9 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 rhui-REGION-rhel-server-releases                                                                                  | 3.5 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 rhui-REGION-rhel-server-rh-common                                                                                 | 3.8 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (1/7): rhui-REGION-client-config-server-7/x86_64/primary_db                                                       | 3.9 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (2/7): rhui-REGION-rhel-server-releases/7Server/x86_64/group                                                      | 774 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (3/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/group                                                     |  124 B  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (4/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/primary_db                                                | 116 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (5/7): rhui-REGION-rhel-server-releases/7Server/x86_64/updateinfo                                                 | 3.0 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (6/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/updateinfo                                                |  33 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (7/7): rhui-REGION-rhel-server-releases/7Server/x86_64/primary_db                                                 |  55 MB  00:00:01\cf1\highlight1 
+\par \cf0\highlight0 Resolving Dependencies\cf1\highlight1 
+\par \cf0\highlight0 --> Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 ---> Package NetworkManager.x86_64 1:1.12.0-6.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package NetworkManager.x86_64 1:1.12.0-10.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package NetworkManager-config-server.noarch 1:1.12.0-6.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package NetworkManager-config-server.noarch 1:1.12.0-10.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package NetworkManager-libnm.x86_64 1:1.12.0-6.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package NetworkManager-libnm.x86_64 1:1.12.0-10.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package NetworkManager-team.x86_64 1:1.12.0-6.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package NetworkManager-team.x86_64 1:1.12.0-10.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package NetworkManager-tui.x86_64 1:1.12.0-6.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package NetworkManager-tui.x86_64 1:1.12.0-10.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package bind-libs-lite.x86_64 32:9.9.4-72.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package bind-libs-lite.x86_64 32:9.9.4-73.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package bind-license.noarch 32:9.9.4-72.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package bind-license.noarch 32:9.9.4-73.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package cloud-init.x86_64 0:18.2-1.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package cloud-init.x86_64 0:18.2-1.el7_6.2 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package cronie.x86_64 0:1.4.11-19.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package cronie.x86_64 0:1.4.11-20.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package cronie-anacron.x86_64 0:1.4.11-19.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package cronie-anacron.x86_64 0:1.4.11-20.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package dbus.x86_64 1:1.10.24-12.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package dbus.x86_64 1:1.10.24-13.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package dbus-libs.x86_64 1:1.10.24-12.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package dbus-libs.x86_64 1:1.10.24-13.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package device-mapper.x86_64 7:1.02.149-8.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package device-mapper.x86_64 7:1.02.149-10.el7_6.7 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package device-mapper-libs.x86_64 7:1.02.149-8.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package device-mapper-libs.x86_64 7:1.02.149-10.el7_6.7 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package freetype.x86_64 0:2.8-12.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package freetype.x86_64 0:2.8-12.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package glibc.x86_64 0:2.17-260.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package glibc.x86_64 0:2.17-260.el7_6.4 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package glibc-common.x86_64 0:2.17-260.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package glibc-common.x86_64 0:2.17-260.el7_6.4 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2.x86_64 1:2.02-0.76.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2.x86_64 1:2.02-0.76.el7.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-common.noarch 1:2.02-0.76.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-common.noarch 1:2.02-0.76.el7.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-pc.x86_64 1:2.02-0.76.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-pc.x86_64 1:2.02-0.76.el7.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-pc-modules.noarch 1:2.02-0.76.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-pc-modules.noarch 1:2.02-0.76.el7.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-tools.x86_64 1:2.02-0.76.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-tools.x86_64 1:2.02-0.76.el7.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-tools-extra.x86_64 1:2.02-0.76.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-tools-extra.x86_64 1:2.02-0.76.el7.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-tools-minimal.x86_64 1:2.02-0.76.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package grub2-tools-minimal.x86_64 1:2.02-0.76.el7.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package iproute.x86_64 0:4.11.0-14.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package iproute.x86_64 0:4.11.0-14.el7_6.2 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package kernel.x86_64 0:3.10.0-957.12.1.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: linux-firmware >= 20180911-68 for package: kernel-3.10.0-957.12.1.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 ---> Package kernel-tools.x86_64 0:3.10.0-957.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package kernel-tools.x86_64 0:3.10.0-957.12.1.el7 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package kernel-tools-libs.x86_64 0:3.10.0-957.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package kernel-tools-libs.x86_64 0:3.10.0-957.12.1.el7 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package kexec-tools.x86_64 0:2.0.15-21.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package kexec-tools.x86_64 0:2.0.15-21.el7_6.3 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package krb5-libs.x86_64 0:1.15.1-34.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package krb5-libs.x86_64 0:1.15.1-37.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libblkid.x86_64 0:2.23.2-59.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libblkid.x86_64 0:2.23.2-59.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libgcc.x86_64 0:4.8.5-36.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libgcc.x86_64 0:4.8.5-36.el7_6.2 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libgomp.x86_64 0:4.8.5-36.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libgomp.x86_64 0:4.8.5-36.el7_6.2 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libgudev1.x86_64 0:219-62.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libgudev1.x86_64 0:219-62.el7_6.6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libmount.x86_64 0:2.23.2-59.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libmount.x86_64 0:2.23.2-59.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libsmartcols.x86_64 0:2.23.2-59.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libsmartcols.x86_64 0:2.23.2-59.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libssh2.x86_64 0:1.4.3-12.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libssh2.x86_64 0:1.4.3-12.el7_6.2 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libstdc++.x86_64 0:4.8.5-36.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libstdc++.x86_64 0:4.8.5-36.el7_6.2 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libuuid.x86_64 0:2.23.2-59.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package libuuid.x86_64 0:2.23.2-59.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package nss.x86_64 0:3.36.0-7.el7_5 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package nss.x86_64 0:3.36.0-7.1.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package nss-pem.x86_64 0:1.0.3-5.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package nss-pem.x86_64 0:1.0.3-5.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package nss-sysinit.x86_64 0:3.36.0-7.el7_5 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package nss-sysinit.x86_64 0:3.36.0-7.1.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package nss-tools.x86_64 0:3.36.0-7.el7_5 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package nss-tools.x86_64 0:3.36.0-7.1.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package nss-util.x86_64 0:3.36.0-1.el7_5 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package nss-util.x86_64 0:3.36.0-1.1.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package openldap.x86_64 0:2.4.44-20.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package openldap.x86_64 0:2.4.44-21.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package openssl.x86_64 1:1.0.2k-16.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package openssl.x86_64 1:1.0.2k-16.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package openssl-libs.x86_64 1:1.0.2k-16.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package openssl-libs.x86_64 1:1.0.2k-16.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package policycoreutils.x86_64 0:2.5-29.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package policycoreutils.x86_64 0:2.5-29.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package policycoreutils-python.x86_64 0:2.5-29.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package policycoreutils-python.x86_64 0:2.5-29.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package polkit.x86_64 0:0.112-18.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package polkit.x86_64 0:0.112-18.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package python.x86_64 0:2.7.5-76.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package python.x86_64 0:2.7.5-77.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package python-libs.x86_64 0:2.7.5-76.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package python-libs.x86_64 0:2.7.5-77.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package python-perf.x86_64 0:3.10.0-957.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package python-perf.x86_64 0:3.10.0-957.12.1.el7 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package rh-amazon-rhui-client.noarch 0:2.2.141-1.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package rh-amazon-rhui-client.noarch 0:2.2.147-1.el7 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package rsync.x86_64 0:3.1.2-4.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package rsync.x86_64 0:3.1.2-6.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package selinux-policy.noarch 0:3.13.1-229.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package selinux-policy.noarch 0:3.13.1-229.el7_6.12 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package selinux-policy-targeted.noarch 0:3.13.1-229.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package selinux-policy-targeted.noarch 0:3.13.1-229.el7_6.12 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package shadow-utils.x86_64 2:4.1.5.1-25.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package shadow-utils.x86_64 2:4.1.5.1-25.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package subscription-manager.x86_64 0:1.21.10-2.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package subscription-manager.x86_64 0:1.21.10-3.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package subscription-manager-rhsm.x86_64 0:1.21.10-2.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package subscription-manager-rhsm.x86_64 0:1.21.10-3.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package subscription-manager-rhsm-certificates.x86_64 0:1.21.10-2.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package subscription-manager-rhsm-certificates.x86_64 0:1.21.10-3.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package systemd.x86_64 0:219-62.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package systemd.x86_64 0:219-62.el7_6.6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package systemd-libs.x86_64 0:219-62.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package systemd-libs.x86_64 0:219-62.el7_6.6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package systemd-sysv.x86_64 0:219-62.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package systemd-sysv.x86_64 0:219-62.el7_6.6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package tuned.noarch 0:2.10.0-6.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package tuned.noarch 0:2.10.0-6.el7_6.3 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package tzdata.noarch 0:2018e-3.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package tzdata.noarch 0:2019a-1.el7 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package util-linux.x86_64 0:2.23.2-59.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package util-linux.x86_64 0:2.23.2-59.el7_6.1 will be an update\cf1\highlight1 
+\par \cf0\highlight0 ---> Package xfsprogs.x86_64 0:4.5.0-18.el7 will be updated\cf1\highlight1 
+\par \cf0\highlight0 ---> Package xfsprogs.x86_64 0:4.5.0-19.el7_6 will be an update\cf1\highlight1 
+\par \cf0\highlight0 --> Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 ---> Package linux-firmware.noarch 0:20180911-69.git85c5d90.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Finished Dependency Resolution\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Dependencies Resolved\cf1\highlight1 
+\par 
+\par \cf0\highlight0 =========================================================================================================================================\cf1\highlight1 
+\par \cf0\highlight0  Package                                     Arch        Version                           Repository                               Size\cf1\highlight1 
+\par \cf0\highlight0 =========================================================================================================================================\cf1\highlight1 
+\par \cf0\highlight0 Installing:\cf1\highlight1 
+\par \cf0\highlight0  kernel                                      x86_64      3.10.0-957.12.1.el7               rhui-REGION-rhel-server-releases         48 M\cf1\highlight1 
+\par \cf0\highlight0 Updating:\cf1\highlight1 
+\par \cf0\highlight0  NetworkManager                              x86_64      1:1.12.0-10.el7_6                 rhui-REGION-rhel-server-releases        1.7 M\cf1\highlight1 
+\par \cf0\highlight0  NetworkManager-config-server                noarch      1:1.12.0-10.el7_6                 rhui-REGION-rhel-server-releases        146 k\cf1\highlight1 
+\par \cf0\highlight0  NetworkManager-libnm                        x86_64      1:1.12.0-10.el7_6                 rhui-REGION-rhel-server-releases        1.4 M\cf1\highlight1 
+\par \cf0\highlight0  NetworkManager-team                         x86_64      1:1.12.0-10.el7_6                 rhui-REGION-rhel-server-releases        159 k\cf1\highlight1 
+\par \cf0\highlight0  NetworkManager-tui                          x86_64      1:1.12.0-10.el7_6                 rhui-REGION-rhel-server-releases        239 k\cf1\highlight1 
+\par \cf0\highlight0  bind-libs-lite                              x86_64      32:9.9.4-73.el7_6                 rhui-REGION-rhel-server-releases        741 k\cf1\highlight1 
+\par \cf0\highlight0  bind-license                                noarch      32:9.9.4-73.el7_6                 rhui-REGION-rhel-server-releases         87 k\cf1\highlight1 
+\par \cf0\highlight0  cloud-init                                  x86_64      18.2-1.el7_6.2                    rhui-REGION-rhel-server-releases        779 k\cf1\highlight1 
+\par \cf0\highlight0  cronie                                      x86_64      1.4.11-20.el7_6                   rhui-REGION-rhel-server-releases         91 k\cf1\highlight1 
+\par \cf0\highlight0  cronie-anacron                              x86_64      1.4.11-20.el7_6                   rhui-REGION-rhel-server-releases         36 k\cf1\highlight1 
+\par \cf0\highlight0  dbus                                        x86_64      1:1.10.24-13.el7_6                rhui-REGION-rhel-server-releases        245 k\cf1\highlight1 
+\par \cf0\highlight0  dbus-libs                                   x86_64      1:1.10.24-13.el7_6                rhui-REGION-rhel-server-releases        169 k\cf1\highlight1 
+\par \cf0\highlight0  device-mapper                               x86_64      7:1.02.149-10.el7_6.7             rhui-REGION-rhel-server-releases        293 k\cf1\highlight1 
+\par \cf0\highlight0  device-mapper-libs                          x86_64      7:1.02.149-10.el7_6.7             rhui-REGION-rhel-server-releases        321 k\cf1\highlight1 
+\par \cf0\highlight0  freetype                                    x86_64      2.8-12.el7_6.1                    rhui-REGION-rhel-server-releases        380 k\cf1\highlight1 
+\par \cf0\highlight0  glibc                                       x86_64      2.17-260.el7_6.4                  rhui-REGION-rhel-server-releases        3.6 M\cf1\highlight1 
+\par \cf0\highlight0  glibc-common                                x86_64      2.17-260.el7_6.4                  rhui-REGION-rhel-server-releases         11 M\cf1\highlight1 
+\par \cf0\highlight0  grub2                                       x86_64      1:2.02-0.76.el7.1                 rhui-REGION-rhel-server-releases         30 k\cf1\highlight1 
+\par \cf0\highlight0  grub2-common                                noarch      1:2.02-0.76.el7.1                 rhui-REGION-rhel-server-releases        728 k\cf1\highlight1 
+\par \cf0\highlight0  grub2-pc                                    x86_64      1:2.02-0.76.el7.1                 rhui-REGION-rhel-server-releases         30 k\cf1\highlight1 
+\par \cf0\highlight0  grub2-pc-modules                            noarch      1:2.02-0.76.el7.1                 rhui-REGION-rhel-server-releases        846 k\cf1\highlight1 
+\par \cf0\highlight0  grub2-tools                                 x86_64      1:2.02-0.76.el7.1                 rhui-REGION-rhel-server-releases        1.8 M\cf1\highlight1 
+\par \cf0\highlight0  grub2-tools-extra                           x86_64      1:2.02-0.76.el7.1                 rhui-REGION-rhel-server-releases        995 k\cf1\highlight1 
+\par \cf0\highlight0  grub2-tools-minimal                         x86_64      1:2.02-0.76.el7.1                 rhui-REGION-rhel-server-releases        172 k\cf1\highlight1 
+\par \cf0\highlight0  iproute                                     x86_64      4.11.0-14.el7_6.2                 rhui-REGION-rhel-server-releases        764 k\cf1\highlight1 
+\par \cf0\highlight0  kernel-tools                                x86_64      3.10.0-957.12.1.el7               rhui-REGION-rhel-server-releases        7.1 M\cf1\highlight1 
+\par \cf0\highlight0  kernel-tools-libs                           x86_64      3.10.0-957.12.1.el7               rhui-REGION-rhel-server-releases        7.0 M\cf1\highlight1 
+\par \cf0\highlight0  kexec-tools                                 x86_64      2.0.15-21.el7_6.3                 rhui-REGION-rhel-server-releases        343 k\cf1\highlight1 
+\par \cf0\highlight0  krb5-libs                                   x86_64      1.15.1-37.el7_6                   rhui-REGION-rhel-server-releases        803 k\cf1\highlight1 
+\par \cf0\highlight0  libblkid                                    x86_64      2.23.2-59.el7_6.1                 rhui-REGION-rhel-server-releases        181 k\cf1\highlight1 
+\par \cf0\highlight0  libgcc                                      x86_64      4.8.5-36.el7_6.2                  rhui-REGION-rhel-server-releases        102 k\cf1\highlight1 
+\par \cf0\highlight0  libgomp                                     x86_64      4.8.5-36.el7_6.2                  rhui-REGION-rhel-server-releases        158 k\cf1\highlight1 
+\par \cf0\highlight0  libgudev1                                   x86_64      219-62.el7_6.6                    rhui-REGION-rhel-server-releases         96 k\cf1\highlight1 
+\par \cf0\highlight0  libmount                                    x86_64      2.23.2-59.el7_6.1                 rhui-REGION-rhel-server-releases        182 k\cf1\highlight1 
+\par \cf0\highlight0  libsmartcols                                x86_64      2.23.2-59.el7_6.1                 rhui-REGION-rhel-server-releases        140 k\cf1\highlight1 
+\par \cf0\highlight0  libssh2                                     x86_64      1.4.3-12.el7_6.2                  rhui-REGION-rhel-server-releases        135 k\cf1\highlight1 
+\par \cf0\highlight0  libstdc++                                   x86_64      4.8.5-36.el7_6.2                  rhui-REGION-rhel-server-releases        305 k\cf1\highlight1 
+\par \cf0\highlight0  libuuid                                     x86_64      2.23.2-59.el7_6.1                 rhui-REGION-rhel-server-releases         83 k\cf1\highlight1 
+\par \cf0\highlight0  nss                                         x86_64      3.36.0-7.1.el7_6                  rhui-REGION-rhel-server-releases        835 k\cf1\highlight1 
+\par \cf0\highlight0  nss-pem                                     x86_64      1.0.3-5.el7_6.1                   rhui-REGION-rhel-server-releases         74 k\cf1\highlight1 
+\par \cf0\highlight0  nss-sysinit                                 x86_64      3.36.0-7.1.el7_6                  rhui-REGION-rhel-server-releases         62 k\cf1\highlight1 
+\par \cf0\highlight0  nss-tools                                   x86_64      3.36.0-7.1.el7_6                  rhui-REGION-rhel-server-releases        515 k\cf1\highlight1 
+\par \cf0\highlight0  nss-util                                    x86_64      3.36.0-1.1.el7_6                  rhui-REGION-rhel-server-releases         78 k\cf1\highlight1 
+\par \cf0\highlight0  openldap                                    x86_64      2.4.44-21.el7_6                   rhui-REGION-rhel-server-releases        356 k\cf1\highlight1 
+\par \cf0\highlight0  openssl                                     x86_64      1:1.0.2k-16.el7_6.1               rhui-REGION-rhel-server-releases        493 k\cf1\highlight1 
+\par \cf0\highlight0  openssl-libs                                x86_64      1:1.0.2k-16.el7_6.1               rhui-REGION-rhel-server-releases        1.2 M\cf1\highlight1 
+\par \cf0\highlight0  policycoreutils                             x86_64      2.5-29.el7_6.1                    rhui-REGION-rhel-server-releases        916 k\cf1\highlight1 
+\par \cf0\highlight0  policycoreutils-python                      x86_64      2.5-29.el7_6.1                    rhui-REGION-rhel-server-releases        456 k\cf1\highlight1 
+\par \cf0\highlight0  polkit                                      x86_64      0.112-18.el7_6.1                  rhui-REGION-rhel-server-releases        168 k\cf1\highlight1 
+\par \cf0\highlight0  python                                      x86_64      2.7.5-77.el7_6                    rhui-REGION-rhel-server-releases         94 k\cf1\highlight1 
+\par \cf0\highlight0  python-libs                                 x86_64      2.7.5-77.el7_6                    rhui-REGION-rhel-server-releases        5.6 M\cf1\highlight1 
+\par \cf0\highlight0  python-perf                                 x86_64      3.10.0-957.12.1.el7               rhui-REGION-rhel-server-releases        7.1 M\cf1\highlight1 
+\par \cf0\highlight0  rh-amazon-rhui-client                       noarch      2.2.147-1.el7                     rhui-REGION-client-config-server-7       55 k\cf1\highlight1 
+\par \cf0\highlight0  rsync                                       x86_64      3.1.2-6.el7_6.1                   rhui-REGION-rhel-server-releases        404 k\cf1\highlight1 
+\par \cf0\highlight0  selinux-policy                              noarch      3.13.1-229.el7_6.12               rhui-REGION-rhel-server-releases        484 k\cf1\highlight1 
+\par \cf0\highlight0  selinux-policy-targeted                     noarch      3.13.1-229.el7_6.12               rhui-REGION-rhel-server-releases        6.9 M\cf1\highlight1 
+\par \cf0\highlight0  shadow-utils                                x86_64      2:4.1.5.1-25.el7_6.1              rhui-REGION-rhel-server-releases        1.1 M\cf1\highlight1 
+\par \cf0\highlight0  subscription-manager                        x86_64      1.21.10-3.el7_6                   rhui-REGION-rhel-server-releases        1.0 M\cf1\highlight1 
+\par \cf0\highlight0  subscription-manager-rhsm                   x86_64      1.21.10-3.el7_6                   rhui-REGION-rhel-server-releases        297 k\cf1\highlight1 
+\par \cf0\highlight0  subscription-manager-rhsm-certificates      x86_64      1.21.10-3.el7_6                   rhui-REGION-rhel-server-releases        212 k\cf1\highlight1 
+\par \cf0\highlight0  systemd                                     x86_64      219-62.el7_6.6                    rhui-REGION-rhel-server-releases        5.1 M\cf1\highlight1 
+\par \cf0\highlight0  systemd-libs                                x86_64      219-62.el7_6.6                    rhui-REGION-rhel-server-releases        407 k\cf1\highlight1 
+\par \cf0\highlight0  systemd-sysv                                x86_64      219-62.el7_6.6                    rhui-REGION-rhel-server-releases         84 k\cf1\highlight1 
+\par \cf0\highlight0  tuned                                       noarch      2.10.0-6.el7_6.3                  rhui-REGION-rhel-server-releases        254 k\cf1\highlight1 
+\par \cf0\highlight0  tzdata                                      noarch      2019a-1.el7                       rhui-REGION-rhel-server-releases        494 k\cf1\highlight1 
+\par \cf0\highlight0  util-linux                                  x86_64      2.23.2-59.el7_6.1                 rhui-REGION-rhel-server-releases        2.0 M\cf1\highlight1 
+\par \cf0\highlight0  xfsprogs                                    x86_64      4.5.0-19.el7_6                    rhui-REGION-rhel-server-releases        897 k\cf1\highlight1 
+\par \cf0\highlight0 Installing for dependencies:\cf1\highlight1 
+\par \cf0\highlight0  linux-firmware                              noarch      20180911-69.git85c5d90.el7        rhui-REGION-rhel-server-releases         49 M\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Transaction Summary\cf1\highlight1 
+\par \cf0\highlight0 =========================================================================================================================================\cf1\highlight1 
+\par \cf0\highlight0 Install   1 Package  (+1 Dependent package)\cf1\highlight1 
+\par \cf0\highlight0 Upgrade  67 Packages\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Total download size: 178 M\cf1\highlight1 
+\par \cf0\highlight0 Is this ok [y/d/N]: y\cf1\highlight1 
+\par \cf0\highlight0 Downloading packages:\cf1\highlight1 
+\par \cf0\highlight0 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.\cf1\highlight1 
+\par \cf0\highlight0 (1/69): NetworkManager-config-server-1.12.0-10.el7_6.noarch.rpm                                                   | 146 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (2/69): NetworkManager-1.12.0-10.el7_6.x86_64.rpm                                                                 | 1.7 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (3/69): NetworkManager-team-1.12.0-10.el7_6.x86_64.rpm                                                            | 159 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (4/69): NetworkManager-libnm-1.12.0-10.el7_6.x86_64.rpm                                                           | 1.4 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (5/69): NetworkManager-tui-1.12.0-10.el7_6.x86_64.rpm                                                             | 239 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (6/69): bind-libs-lite-9.9.4-73.el7_6.x86_64.rpm                                                                  | 741 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (7/69): cloud-init-18.2-1.el7_6.2.x86_64.rpm                                                                      | 779 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (8/69): bind-license-9.9.4-73.el7_6.noarch.rpm                                                                    |  87 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (9/69): cronie-1.4.11-20.el7_6.x86_64.rpm                                                                         |  91 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (10/69): dbus-1.10.24-13.el7_6.x86_64.rpm                                                                         | 245 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (11/69): cronie-anacron-1.4.11-20.el7_6.x86_64.rpm                                                                |  36 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (12/69): dbus-libs-1.10.24-13.el7_6.x86_64.rpm                                                                    | 169 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (13/69): device-mapper-1.02.149-10.el7_6.7.x86_64.rpm                                                             | 293 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (14/69): device-mapper-libs-1.02.149-10.el7_6.7.x86_64.rpm                                                        | 321 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (15/69): freetype-2.8-12.el7_6.1.x86_64.rpm                                                                       | 380 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (16/69): grub2-2.02-0.76.el7.1.x86_64.rpm                                                                         |  30 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (17/69): glibc-2.17-260.el7_6.4.x86_64.rpm                                                                        | 3.6 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (18/69): grub2-pc-2.02-0.76.el7.1.x86_64.rpm                                                                      |  30 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (19/69): grub2-common-2.02-0.76.el7.1.noarch.rpm                                                                  | 728 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (20/69): grub2-pc-modules-2.02-0.76.el7.1.noarch.rpm                                                              | 846 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (21/69): glibc-common-2.17-260.el7_6.4.x86_64.rpm                                                                 |  11 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (22/69): grub2-tools-extra-2.02-0.76.el7.1.x86_64.rpm                                                             | 995 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (23/69): grub2-tools-2.02-0.76.el7.1.x86_64.rpm                                                                   | 1.8 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (24/69): grub2-tools-minimal-2.02-0.76.el7.1.x86_64.rpm                                                           | 172 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (25/69): iproute-4.11.0-14.el7_6.2.x86_64.rpm                                                                     | 764 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (26/69): kernel-tools-3.10.0-957.12.1.el7.x86_64.rpm                                                              | 7.1 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (27/69): kernel-tools-libs-3.10.0-957.12.1.el7.x86_64.rpm                                                         | 7.0 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (28/69): krb5-libs-1.15.1-37.el7_6.x86_64.rpm                                                                     | 803 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (29/69): kexec-tools-2.0.15-21.el7_6.3.x86_64.rpm                                                                 | 343 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (30/69): libgcc-4.8.5-36.el7_6.2.x86_64.rpm                                                                       | 102 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (31/69): libblkid-2.23.2-59.el7_6.1.x86_64.rpm                                                                    | 181 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (32/69): libgudev1-219-62.el7_6.6.x86_64.rpm                                                                      |  96 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (33/69): libgomp-4.8.5-36.el7_6.2.x86_64.rpm                                                                      | 158 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (34/69): libsmartcols-2.23.2-59.el7_6.1.x86_64.rpm                                                                | 140 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (35/69): libmount-2.23.2-59.el7_6.1.x86_64.rpm                                                                    | 182 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (36/69): libssh2-1.4.3-12.el7_6.2.x86_64.rpm                                                                      | 135 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (37/69): libstdc++-4.8.5-36.el7_6.2.x86_64.rpm                                                                    | 305 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (38/69): libuuid-2.23.2-59.el7_6.1.x86_64.rpm                                                                     |  83 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (39/69): kernel-3.10.0-957.12.1.el7.x86_64.rpm                                                                    |  48 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (40/69): nss-3.36.0-7.1.el7_6.x86_64.rpm                                                                          | 835 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (41/69): nss-pem-1.0.3-5.el7_6.1.x86_64.rpm                                                                       |  74 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (42/69): nss-sysinit-3.36.0-7.1.el7_6.x86_64.rpm                                                                  |  62 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (43/69): nss-tools-3.36.0-7.1.el7_6.x86_64.rpm                                                                    | 515 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (44/69): nss-util-3.36.0-1.1.el7_6.x86_64.rpm                                                                     |  78 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (45/69): openssl-1.0.2k-16.el7_6.1.x86_64.rpm                                                                     | 493 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (46/69): openldap-2.4.44-21.el7_6.x86_64.rpm                                                                      | 356 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (47/69): policycoreutils-2.5-29.el7_6.1.x86_64.rpm                                                                | 916 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (48/69): openssl-libs-1.0.2k-16.el7_6.1.x86_64.rpm                                                                | 1.2 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (49/69): policycoreutils-python-2.5-29.el7_6.1.x86_64.rpm                                                         | 456 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (50/69): polkit-0.112-18.el7_6.1.x86_64.rpm                                                                       | 168 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (51/69): python-2.7.5-77.el7_6.x86_64.rpm                                                                         |  94 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (52/69): linux-firmware-20180911-69.git85c5d90.el7.noarch.rpm                                                     |  49 MB  00:00:01\cf1\highlight1 
+\par \cf0\highlight0 (53/69): python-libs-2.7.5-77.el7_6.x86_64.rpm                                                                    | 5.6 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (54/69): python-perf-3.10.0-957.12.1.el7.x86_64.rpm                                                               | 7.1 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (55/69): rsync-3.1.2-6.el7_6.1.x86_64.rpm                                                                         | 404 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (56/69): selinux-policy-3.13.1-229.el7_6.12.noarch.rpm                                                            | 484 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (57/69): subscription-manager-1.21.10-3.el7_6.x86_64.rpm                                                          | 1.0 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (58/69): rh-amazon-rhui-client-2.2.147-1.el7.noarch.rpm                                                           |  55 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (59/69): selinux-policy-targeted-3.13.1-229.el7_6.12.noarch.rpm                                                   | 6.9 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (60/69): subscription-manager-rhsm-1.21.10-3.el7_6.x86_64.rpm                                                     | 297 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (61/69): subscription-manager-rhsm-certificates-1.21.10-3.el7_6.x86_64.rpm                                        | 212 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (62/69): shadow-utils-4.1.5.1-25.el7_6.1.x86_64.rpm                                                               | 1.1 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (63/69): systemd-219-62.el7_6.6.x86_64.rpm                                                                        | 5.1 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (64/69): systemd-libs-219-62.el7_6.6.x86_64.rpm                                                                   | 407 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (65/69): tuned-2.10.0-6.el7_6.3.noarch.rpm                                                                        | 254 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (66/69): systemd-sysv-219-62.el7_6.6.x86_64.rpm                                                                   |  84 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (67/69): tzdata-2019a-1.el7.noarch.rpm                                                                            | 494 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (68/69): xfsprogs-4.5.0-19.el7_6.x86_64.rpm                                                                       | 897 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (69/69): util-linux-2.23.2-59.el7_6.1.x86_64.rpm                                                                  | 2.0 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 -----------------------------------------------------------------------------------------------------------------------------------------\cf1\highlight1 
+\par \cf0\highlight0 Total                                                                                                     47 MB/s | 178 MB  00:00:03\cf1\highlight1 
+\par \cf0\highlight0 Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 Running transaction test\cf1\highlight1 
+\par \cf0\highlight0 Transaction test succeeded\cf1\highlight1 
+\par \cf0\highlight0 Running transaction\cf1\highlight1 
+\par \cf0\highlight0   Updating   : libgcc-4.8.5-36.el7_6.2.x86_64                                                                                      1/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:grub2-common-2.02-0.76.el7.1.noarch                                                                               2/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:grub2-pc-modules-2.02-0.76.el7.1.noarch                                                                           3/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 32:bind-license-9.9.4-73.el7_6.noarch                                                                               4/136\cf1\highlight1 
+\par \cf0\highlight0   Installing : linux-firmware-20180911-69.git85c5d90.el7.noarch                                                                    5/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : subscription-manager-rhsm-certificates-1.21.10-3.el7_6.x86_64                                                       6/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : tzdata-2019a-1.el7.noarch                                                                                           7/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : glibc-2.17-260.el7_6.4.x86_64                                                                                       8/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : glibc-common-2.17-260.el7_6.4.x86_64                                                                                9/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : systemd-libs-219-62.el7_6.6.x86_64                                                                                 10/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : nss-util-3.36.0-1.1.el7_6.x86_64                                                                                   11/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : krb5-libs-1.15.1-37.el7_6.x86_64                                                                                   12/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:openssl-libs-1.0.2k-16.el7_6.1.x86_64                                                                            13/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : libuuid-2.23.2-59.el7_6.1.x86_64                                                                                   14/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : libblkid-2.23.2-59.el7_6.1.x86_64                                                                                  15/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : python-libs-2.7.5-77.el7_6.x86_64                                                                                  16/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : python-2.7.5-77.el7_6.x86_64                                                                                       17/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 2:shadow-utils-4.1.5.1-25.el7_6.1.x86_64                                                                           18/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : libmount-2.23.2-59.el7_6.1.x86_64                                                                                  19/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : subscription-manager-rhsm-1.21.10-3.el7_6.x86_64                                                                   20/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : python-perf-3.10.0-957.12.1.el7.x86_64                                                                             21/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : nss-sysinit-3.36.0-7.1.el7_6.x86_64                                                                                22/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : nss-3.36.0-7.1.el7_6.x86_64                                                                                        23/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : nss-pem-1.0.3-5.el7_6.1.x86_64                                                                                     24/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:NetworkManager-libnm-1.12.0-10.el7_6.x86_64                                                                      25/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : nss-tools-3.36.0-7.1.el7_6.x86_64                                                                                  26/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:dbus-libs-1.10.24-13.el7_6.x86_64                                                                                27/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : systemd-219-62.el7_6.6.x86_64                                                                                      28/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:dbus-1.10.24-13.el7_6.x86_64                                                                                     29/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : polkit-0.112-18.el7_6.1.x86_64                                                                                     30/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:NetworkManager-1.12.0-10.el7_6.x86_64                                                                            31/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : cronie-anacron-1.4.11-20.el7_6.x86_64                                                                              32/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : cronie-1.4.11-20.el7_6.x86_64                                                                                      33/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : iproute-4.11.0-14.el7_6.2.x86_64                                                                                   34/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : libsmartcols-2.23.2-59.el7_6.1.x86_64                                                                              35/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : util-linux-2.23.2-59.el7_6.1.x86_64                                                                                36/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : policycoreutils-2.5-29.el7_6.1.x86_64                                                                              37/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : selinux-policy-3.13.1-229.el7_6.12.noarch                                                                          38/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : policycoreutils-python-2.5-29.el7_6.1.x86_64                                                                       39/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 7:device-mapper-libs-1.02.149-10.el7_6.7.x86_64                                                                    40/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 7:device-mapper-1.02.149-10.el7_6.7.x86_64                                                                         41/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:grub2-tools-minimal-2.02-0.76.el7.1.x86_64                                                                       42/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:grub2-tools-2.02-0.76.el7.1.x86_64                                                                               43/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : kernel-tools-libs-3.10.0-957.12.1.el7.x86_64                                                                       44/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : freetype-2.8-12.el7_6.1.x86_64                                                                                     45/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:grub2-tools-extra-2.02-0.76.el7.1.x86_64                                                                         46/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:grub2-pc-2.02-0.76.el7.1.x86_64                                                                                  47/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:grub2-2.02-0.76.el7.1.x86_64                                                                                     48/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : kernel-tools-3.10.0-957.12.1.el7.x86_64                                                                            49/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : cloud-init-18.2-1.el7_6.2.x86_64                                                                                   50/136\cf1\highlight1 
+\par \cf0\highlight0 warning: /etc/cloud/cloud.cfg created as /etc/cloud/cloud.cfg.rpmnew\cf1\highlight1 
+\par \cf0\highlight0   Updating   : selinux-policy-targeted-3.13.1-229.el7_6.12.noarch                                                                 51/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : tuned-2.10.0-6.el7_6.3.noarch                                                                                      52/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:NetworkManager-tui-1.12.0-10.el7_6.x86_64                                                                        53/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:NetworkManager-team-1.12.0-10.el7_6.x86_64                                                                       54/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : kexec-tools-2.0.15-21.el7_6.3.x86_64                                                                               55/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : subscription-manager-1.21.10-3.el7_6.x86_64                                                                        56/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : systemd-sysv-219-62.el7_6.6.x86_64                                                                                 57/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : rsync-3.1.2-6.el7_6.1.x86_64                                                                                       58/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : openldap-2.4.44-21.el7_6.x86_64                                                                                    59/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : rh-amazon-rhui-client-2.2.147-1.el7.noarch                                                                         60/136\cf1\highlight1 
+\par \cf0\highlight0 [INFO:choose_repo] choose_repo:39 2019-04-28 14:57:42,705: Zone [us-east-2c]\cf1\highlight1 
+\par \cf0\highlight0 [INFO:choose_repo] choose_repo:67 2019-04-28 14:57:42,706: Enabling binary repos in redhat-rhui.repo\cf1\highlight1 
+\par \cf0\highlight0 [INFO:choose_repo] choose_repo:86 2019-04-28 14:57:42,707: Enabling load balancer plugin\cf1\highlight1 
+\par \cf0\highlight0 [INFO:choose_repo] choose_repo:88 2019-04-28 14:57:42,707: Executing [sed -i 's/enabled=0/enabled=1/' /etc/yum/pluginconf.d/rhui-lb.conf]\cf1\highlight1 
+\par \cf0\highlight0 [INFO:choose_repo] choose_repo:92 2019-04-28 14:57:42,713: Setting region in load balancer config\cf1\highlight1 
+\par \cf0\highlight0 [INFO:choose_repo] choose_repo:94 2019-04-28 14:57:42,713: Executing [sed -i 's/REGION/us-east-2/' /etc/yum.repos.d/rhui-load-balancers.conf]\cf1\highlight1 
+\par \cf0\highlight0 [INFO:choose_repo] choose_repo:98 2019-04-28 14:57:42,715: Enabling client config repo\cf1\highlight1 
+\par \cf0\highlight0 [INFO:choose_repo] choose_repo:101 2019-04-28 14:57:42,716: Executing [sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/redhat-rhui-client-config.repo]\cf1\highlight1 
+\par \cf0\highlight0   Updating   : xfsprogs-4.5.0-19.el7_6.x86_64                                                                                     61/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:openssl-1.0.2k-16.el7_6.1.x86_64                                                                                 62/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : libssh2-1.4.3-12.el7_6.2.x86_64                                                                                    63/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 32:bind-libs-lite-9.9.4-73.el7_6.x86_64                                                                            64/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : libgudev1-219-62.el7_6.6.x86_64                                                                                    65/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : libstdc++-4.8.5-36.el7_6.2.x86_64                                                                                  66/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : libgomp-4.8.5-36.el7_6.2.x86_64                                                                                    67/136\cf1\highlight1 
+\par \cf0\highlight0   Installing : kernel-3.10.0-957.12.1.el7.x86_64                                                                                  68/136\cf1\highlight1 
+\par \cf0\highlight0   Updating   : 1:NetworkManager-config-server-1.12.0-10.el7_6.noarch                                                              69/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : tuned-2.10.0-6.el7.noarch                                                                                          70/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:NetworkManager-tui-1.12.0-6.el7.x86_64                                                                           71/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : cloud-init-18.2-1.el7.x86_64                                                                                       72/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : openldap-2.4.44-20.el7.x86_64                                                                                      73/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 32:bind-libs-lite-9.9.4-72.el7.x86_64                                                                              74/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : nss-tools-3.36.0-7.el7_5.x86_64                                                                                    75/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : policycoreutils-python-2.5-29.el7.x86_64                                                                           76/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : subscription-manager-1.21.10-2.el7.x86_64                                                                          77/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : subscription-manager-rhsm-1.21.10-2.el7.x86_64                                                                     78/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:openssl-1.0.2k-16.el7.x86_64                                                                                     79/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : xfsprogs-4.5.0-18.el7.x86_64                                                                                       80/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : python-perf-3.10.0-957.el7.x86_64                                                                                  81/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : libgudev1-219-62.el7.x86_64                                                                                        82/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : kernel-tools-3.10.0-957.el7.x86_64                                                                                 83/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:NetworkManager-team-1.12.0-6.el7.x86_64                                                                          84/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:NetworkManager-1.12.0-6.el7.x86_64                                                                               85/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:NetworkManager-libnm-1.12.0-6.el7.x86_64                                                                         86/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : nss-sysinit-3.36.0-7.el7_5.x86_64                                                                                  87/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : nss-3.36.0-7.el7_5.x86_64                                                                                          88/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : nss-pem-1.0.3-5.el7.x86_64                                                                                         89/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : polkit-0.112-18.el7.x86_64                                                                                         90/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : libssh2-1.4.3-12.el7.x86_64                                                                                        91/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : libstdc++-4.8.5-36.el7.x86_64                                                                                      92/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : selinux-policy-targeted-3.13.1-229.el7.noarch                                                                      93/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : systemd-sysv-219-62.el7.x86_64                                                                                     94/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : cronie-1.4.11-19.el7.x86_64                                                                                        95/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : cronie-anacron-1.4.11-19.el7.x86_64                                                                                96/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : rsync-3.1.2-4.el7.x86_64                                                                                           97/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : kexec-tools-2.0.15-21.el7.x86_64                                                                                   98/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : selinux-policy-3.13.1-229.el7.noarch                                                                               99/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : rh-amazon-rhui-client-2.2.141-1.el7.noarch                                                                        100/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:grub2-2.02-0.76.el7.x86_64                                                                                      101/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:grub2-pc-2.02-0.76.el7.x86_64                                                                                   102/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:grub2-pc-modules-2.02-0.76.el7.noarch                                                                           103/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : subscription-manager-rhsm-certificates-1.21.10-2.el7.x86_64                                                       104/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 32:bind-license-9.9.4-72.el7.noarch                                                                               105/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:NetworkManager-config-server-1.12.0-6.el7.noarch                                                                106/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:grub2-tools-extra-2.02-0.76.el7.x86_64                                                                          107/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:grub2-tools-2.02-0.76.el7.x86_64                                                                                108/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : python-2.7.5-76.el7.x86_64                                                                                        109/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : python-libs-2.7.5-76.el7.x86_64                                                                                   110/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:grub2-tools-minimal-2.02-0.76.el7.x86_64                                                                        111/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 7:device-mapper-1.02.149-8.el7.x86_64                                                                             112/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 7:device-mapper-libs-1.02.149-8.el7.x86_64                                                                        113/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:dbus-1.10.24-12.el7.x86_64                                                                                      114/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : systemd-219-62.el7.x86_64                                                                                         115/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:dbus-libs-1.10.24-12.el7.x86_64                                                                                 116/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : krb5-libs-1.15.1-34.el7.x86_64                                                                                    117/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:openssl-libs-1.0.2k-16.el7.x86_64                                                                               118/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : policycoreutils-2.5-29.el7.x86_64                                                                                 119/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : util-linux-2.23.2-59.el7.x86_64                                                                                   120/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : libmount-2.23.2-59.el7.x86_64                                                                                     121/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : libblkid-2.23.2-59.el7.x86_64                                                                                     122/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : systemd-libs-219-62.el7.x86_64                                                                                    123/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : libuuid-2.23.2-59.el7.x86_64                                                                                      124/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : libsmartcols-2.23.2-59.el7.x86_64                                                                                 125/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 2:shadow-utils-4.1.5.1-25.el7.x86_64                                                                              126/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : freetype-2.8-12.el7.x86_64                                                                                        127/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : nss-util-3.36.0-1.el7_5.x86_64                                                                                    128/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : kernel-tools-libs-3.10.0-957.el7.x86_64                                                                           129/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : iproute-4.11.0-14.el7.x86_64                                                                                      130/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : libgomp-4.8.5-36.el7.x86_64                                                                                       131/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : 1:grub2-common-2.02-0.76.el7.noarch                                                                               132/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : glibc-common-2.17-260.el7.x86_64                                                                                  133/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : glibc-2.17-260.el7.x86_64                                                                                         134/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : tzdata-2018e-3.el7.noarch                                                                                         135/136\cf1\highlight1 
+\par \cf0\highlight0   Cleanup    : libgcc-4.8.5-36.el7.x86_64                                                                                        136/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-tools-extra-2.02-0.76.el7.1.x86_64                                                                          1/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : kexec-tools-2.0.15-21.el7_6.3.x86_64                                                                                2/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : nss-pem-1.0.3-5.el7_6.1.x86_64                                                                                      3/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : iproute-4.11.0-14.el7_6.2.x86_64                                                                                    4/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libblkid-2.23.2-59.el7_6.1.x86_64                                                                                   5/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : nss-sysinit-3.36.0-7.1.el7_6.x86_64                                                                                 6/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : tuned-2.10.0-6.el7_6.3.noarch                                                                                       7/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:NetworkManager-tui-1.12.0-10.el7_6.x86_64                                                                         8/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:NetworkManager-libnm-1.12.0-10.el7_6.x86_64                                                                       9/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:openssl-libs-1.0.2k-16.el7_6.1.x86_64                                                                            10/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 7:device-mapper-1.02.149-10.el7_6.7.x86_64                                                                         11/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : cronie-anacron-1.4.11-20.el7_6.x86_64                                                                              12/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : cloud-init-18.2-1.el7_6.2.x86_64                                                                                   13/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : systemd-libs-219-62.el7_6.6.x86_64                                                                                 14/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:NetworkManager-team-1.12.0-10.el7_6.x86_64                                                                       15/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : kernel-tools-3.10.0-957.12.1.el7.x86_64                                                                            16/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-2.02-0.76.el7.1.x86_64                                                                                     17/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : nss-tools-3.36.0-7.1.el7_6.x86_64                                                                                  18/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libmount-2.23.2-59.el7_6.1.x86_64                                                                                  19/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libstdc++-4.8.5-36.el7_6.2.x86_64                                                                                  20/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : krb5-libs-1.15.1-37.el7_6.x86_64                                                                                   21/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 2:shadow-utils-4.1.5.1-25.el7_6.1.x86_64                                                                           22/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:NetworkManager-config-server-1.12.0-10.el7_6.noarch                                                              23/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : tzdata-2019a-1.el7.noarch                                                                                          24/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : nss-3.36.0-7.1.el7_6.x86_64                                                                                        25/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:openssl-1.0.2k-16.el7_6.1.x86_64                                                                                 26/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libgomp-4.8.5-36.el7_6.2.x86_64                                                                                    27/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : subscription-manager-rhsm-1.21.10-3.el7_6.x86_64                                                                   28/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : kernel-3.10.0-957.12.1.el7.x86_64                                                                                  29/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : subscription-manager-1.21.10-3.el7_6.x86_64                                                                        30/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libsmartcols-2.23.2-59.el7_6.1.x86_64                                                                              31/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : subscription-manager-rhsm-certificates-1.21.10-3.el7_6.x86_64                                                      32/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : cronie-1.4.11-20.el7_6.x86_64                                                                                      33/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : python-libs-2.7.5-77.el7_6.x86_64                                                                                  34/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : openldap-2.4.44-21.el7_6.x86_64                                                                                    35/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : rh-amazon-rhui-client-2.2.147-1.el7.noarch                                                                         36/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-pc-2.02-0.76.el7.1.x86_64                                                                                  37/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-tools-2.02-0.76.el7.1.x86_64                                                                               38/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libssh2-1.4.3-12.el7_6.2.x86_64                                                                                    39/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : python-perf-3.10.0-957.12.1.el7.x86_64                                                                             40/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-common-2.02-0.76.el7.1.noarch                                                                              41/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : policycoreutils-2.5-29.el7_6.1.x86_64                                                                              42/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : systemd-sysv-219-62.el7_6.6.x86_64                                                                                 43/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : linux-firmware-20180911-69.git85c5d90.el7.noarch                                                                   44/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : selinux-policy-targeted-3.13.1-229.el7_6.12.noarch                                                                 45/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : selinux-policy-3.13.1-229.el7_6.12.noarch                                                                          46/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : kernel-tools-libs-3.10.0-957.12.1.el7.x86_64                                                                       47/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : policycoreutils-python-2.5-29.el7_6.1.x86_64                                                                       48/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:dbus-libs-1.10.24-13.el7_6.x86_64                                                                                49/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:dbus-1.10.24-13.el7_6.x86_64                                                                                     50/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : python-2.7.5-77.el7_6.x86_64                                                                                       51/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libuuid-2.23.2-59.el7_6.1.x86_64                                                                                   52/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : glibc-common-2.17-260.el7_6.4.x86_64                                                                               53/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : freetype-2.8-12.el7_6.1.x86_64                                                                                     54/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : glibc-2.17-260.el7_6.4.x86_64                                                                                      55/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 32:bind-license-9.9.4-73.el7_6.noarch                                                                              56/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-tools-minimal-2.02-0.76.el7.1.x86_64                                                                       57/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : util-linux-2.23.2-59.el7_6.1.x86_64                                                                                58/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-pc-modules-2.02-0.76.el7.1.noarch                                                                          59/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : rsync-3.1.2-6.el7_6.1.x86_64                                                                                       60/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : nss-util-3.36.0-1.1.el7_6.x86_64                                                                                   61/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 32:bind-libs-lite-9.9.4-73.el7_6.x86_64                                                                            62/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libgcc-4.8.5-36.el7_6.2.x86_64                                                                                     63/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : polkit-0.112-18.el7_6.1.x86_64                                                                                     64/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 7:device-mapper-libs-1.02.149-10.el7_6.7.x86_64                                                                    65/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:NetworkManager-1.12.0-10.el7_6.x86_64                                                                            66/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : systemd-219-62.el7_6.6.x86_64                                                                                      67/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : xfsprogs-4.5.0-19.el7_6.x86_64                                                                                     68/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libgudev1-219-62.el7_6.6.x86_64                                                                                    69/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : python-2.7.5-76.el7.x86_64                                                                                         70/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-pc-modules-2.02-0.76.el7.noarch                                                                            71/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:NetworkManager-1.12.0-6.el7.x86_64                                                                               72/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:NetworkManager-team-1.12.0-6.el7.x86_64                                                                          73/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libgcc-4.8.5-36.el7.x86_64                                                                                         74/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libstdc++-4.8.5-36.el7.x86_64                                                                                      75/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : freetype-2.8-12.el7.x86_64                                                                                         76/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-tools-extra-2.02-0.76.el7.x86_64                                                                           77/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : rsync-3.1.2-4.el7.x86_64                                                                                           78/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : policycoreutils-2.5-29.el7.x86_64                                                                                  79/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 2:shadow-utils-4.1.5.1-25.el7.x86_64                                                                               80/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libgomp-4.8.5-36.el7.x86_64                                                                                        81/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : nss-sysinit-3.36.0-7.el7_5.x86_64                                                                                  82/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libsmartcols-2.23.2-59.el7.x86_64                                                                                  83/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-2.02-0.76.el7.x86_64                                                                                       84/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : krb5-libs-1.15.1-34.el7.x86_64                                                                                     85/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : policycoreutils-python-2.5-29.el7.x86_64                                                                           86/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : cronie-anacron-1.4.11-19.el7.x86_64                                                                                87/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 7:device-mapper-libs-1.02.149-8.el7.x86_64                                                                         88/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-tools-2.02-0.76.el7.x86_64                                                                                 89/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : iproute-4.11.0-14.el7.x86_64                                                                                       90/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : kernel-tools-libs-3.10.0-957.el7.x86_64                                                                            91/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : nss-util-3.36.0-1.el7_5.x86_64                                                                                     92/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libuuid-2.23.2-59.el7.x86_64                                                                                       93/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libgudev1-219-62.el7.x86_64                                                                                        94/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : systemd-219-62.el7.x86_64                                                                                          95/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : nss-tools-3.36.0-7.el7_5.x86_64                                                                                    96/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : util-linux-2.23.2-59.el7.x86_64                                                                                    97/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:NetworkManager-tui-1.12.0-6.el7.x86_64                                                                           98/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : subscription-manager-1.21.10-2.el7.x86_64                                                                          99/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:dbus-1.10.24-12.el7.x86_64                                                                                      100/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libblkid-2.23.2-59.el7.x86_64                                                                                     101/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : cloud-init-18.2-1.el7.x86_64                                                                                      102/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-tools-minimal-2.02-0.76.el7.x86_64                                                                        103/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : openldap-2.4.44-20.el7.x86_64                                                                                     104/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : subscription-manager-rhsm-1.21.10-2.el7.x86_64                                                                    105/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : glibc-2.17-260.el7.x86_64                                                                                         106/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-pc-2.02-0.76.el7.x86_64                                                                                   107/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 7:device-mapper-1.02.149-8.el7.x86_64                                                                             108/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : selinux-policy-3.13.1-229.el7.noarch                                                                              109/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 32:bind-libs-lite-9.9.4-72.el7.x86_64                                                                             110/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : kernel-tools-3.10.0-957.el7.x86_64                                                                                111/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:openssl-1.0.2k-16.el7.x86_64                                                                                    112/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:dbus-libs-1.10.24-12.el7.x86_64                                                                                 113/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:NetworkManager-config-server-1.12.0-6.el7.noarch                                                                114/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libmount-2.23.2-59.el7.x86_64                                                                                     115/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : subscription-manager-rhsm-certificates-1.21.10-2.el7.x86_64                                                       116/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : python-libs-2.7.5-76.el7.x86_64                                                                                   117/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 32:bind-license-9.9.4-72.el7.noarch                                                                               118/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : tuned-2.10.0-6.el7.noarch                                                                                         119/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:grub2-common-2.02-0.76.el7.noarch                                                                               120/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : kexec-tools-2.0.15-21.el7.x86_64                                                                                  121/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : systemd-sysv-219-62.el7.x86_64                                                                                    122/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : python-perf-3.10.0-957.el7.x86_64                                                                                 123/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : nss-3.36.0-7.el7_5.x86_64                                                                                         124/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:openssl-libs-1.0.2k-16.el7.x86_64                                                                               125/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : systemd-libs-219-62.el7.x86_64                                                                                    126/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : xfsprogs-4.5.0-18.el7.x86_64                                                                                      127/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : nss-pem-1.0.3-5.el7.x86_64                                                                                        128/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : libssh2-1.4.3-12.el7.x86_64                                                                                       129/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : selinux-policy-targeted-3.13.1-229.el7.noarch                                                                     130/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : glibc-common-2.17-260.el7.x86_64                                                                                  131/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : tzdata-2018e-3.el7.noarch                                                                                         132/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:NetworkManager-libnm-1.12.0-6.el7.x86_64                                                                        133/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : polkit-0.112-18.el7.x86_64                                                                                        134/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : cronie-1.4.11-19.el7.x86_64                                                                                       135/136\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : rh-amazon-rhui-client-2.2.141-1.el7.noarch                                                                        136/136\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Installed:\cf1\highlight1 
+\par \cf0\highlight0   kernel.x86_64 0:3.10.0-957.12.1.el7\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Dependency Installed:\cf1\highlight1 
+\par \cf0\highlight0   linux-firmware.noarch 0:20180911-69.git85c5d90.el7\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Updated:\cf1\highlight1 
+\par \cf0\highlight0   NetworkManager.x86_64 1:1.12.0-10.el7_6                      NetworkManager-config-server.noarch 1:1.12.0-10.el7_6\cf1\highlight1 
+\par \cf0\highlight0   NetworkManager-libnm.x86_64 1:1.12.0-10.el7_6                NetworkManager-team.x86_64 1:1.12.0-10.el7_6\cf1\highlight1 
+\par \cf0\highlight0   NetworkManager-tui.x86_64 1:1.12.0-10.el7_6                  bind-libs-lite.x86_64 32:9.9.4-73.el7_6\cf1\highlight1 
+\par \cf0\highlight0   bind-license.noarch 32:9.9.4-73.el7_6                        cloud-init.x86_64 0:18.2-1.el7_6.2\cf1\highlight1 
+\par \cf0\highlight0   cronie.x86_64 0:1.4.11-20.el7_6                              cronie-anacron.x86_64 0:1.4.11-20.el7_6\cf1\highlight1 
+\par \cf0\highlight0   dbus.x86_64 1:1.10.24-13.el7_6                               dbus-libs.x86_64 1:1.10.24-13.el7_6\cf1\highlight1 
+\par \cf0\highlight0   device-mapper.x86_64 7:1.02.149-10.el7_6.7                   device-mapper-libs.x86_64 7:1.02.149-10.el7_6.7\cf1\highlight1 
+\par \cf0\highlight0   freetype.x86_64 0:2.8-12.el7_6.1                             glibc.x86_64 0:2.17-260.el7_6.4\cf1\highlight1 
+\par \cf0\highlight0   glibc-common.x86_64 0:2.17-260.el7_6.4                       grub2.x86_64 1:2.02-0.76.el7.1\cf1\highlight1 
+\par \cf0\highlight0   grub2-common.noarch 1:2.02-0.76.el7.1                        grub2-pc.x86_64 1:2.02-0.76.el7.1\cf1\highlight1 
+\par \cf0\highlight0   grub2-pc-modules.noarch 1:2.02-0.76.el7.1                    grub2-tools.x86_64 1:2.02-0.76.el7.1\cf1\highlight1 
+\par \cf0\highlight0   grub2-tools-extra.x86_64 1:2.02-0.76.el7.1                   grub2-tools-minimal.x86_64 1:2.02-0.76.el7.1\cf1\highlight1 
+\par \cf0\highlight0   iproute.x86_64 0:4.11.0-14.el7_6.2                           kernel-tools.x86_64 0:3.10.0-957.12.1.el7\cf1\highlight1 
+\par \cf0\highlight0   kernel-tools-libs.x86_64 0:3.10.0-957.12.1.el7               kexec-tools.x86_64 0:2.0.15-21.el7_6.3\cf1\highlight1 
+\par \cf0\highlight0   krb5-libs.x86_64 0:1.15.1-37.el7_6                           libblkid.x86_64 0:2.23.2-59.el7_6.1\cf1\highlight1 
+\par \cf0\highlight0   libgcc.x86_64 0:4.8.5-36.el7_6.2                             libgomp.x86_64 0:4.8.5-36.el7_6.2\cf1\highlight1 
+\par \cf0\highlight0   libgudev1.x86_64 0:219-62.el7_6.6                            libmount.x86_64 0:2.23.2-59.el7_6.1\cf1\highlight1 
+\par \cf0\highlight0   libsmartcols.x86_64 0:2.23.2-59.el7_6.1                      libssh2.x86_64 0:1.4.3-12.el7_6.2\cf1\highlight1 
+\par \cf0\highlight0   libstdc++.x86_64 0:4.8.5-36.el7_6.2                          libuuid.x86_64 0:2.23.2-59.el7_6.1\cf1\highlight1 
+\par \cf0\highlight0   nss.x86_64 0:3.36.0-7.1.el7_6                                nss-pem.x86_64 0:1.0.3-5.el7_6.1\cf1\highlight1 
+\par \cf0\highlight0   nss-sysinit.x86_64 0:3.36.0-7.1.el7_6                        nss-tools.x86_64 0:3.36.0-7.1.el7_6\cf1\highlight1 
+\par \cf0\highlight0   nss-util.x86_64 0:3.36.0-1.1.el7_6                           openldap.x86_64 0:2.4.44-21.el7_6\cf1\highlight1 
+\par \cf0\highlight0   openssl.x86_64 1:1.0.2k-16.el7_6.1                           openssl-libs.x86_64 1:1.0.2k-16.el7_6.1\cf1\highlight1 
+\par \cf0\highlight0   policycoreutils.x86_64 0:2.5-29.el7_6.1                      policycoreutils-python.x86_64 0:2.5-29.el7_6.1\cf1\highlight1 
+\par \cf0\highlight0   polkit.x86_64 0:0.112-18.el7_6.1                             python.x86_64 0:2.7.5-77.el7_6\cf1\highlight1 
+\par \cf0\highlight0   python-libs.x86_64 0:2.7.5-77.el7_6                          python-perf.x86_64 0:3.10.0-957.12.1.el7\cf1\highlight1 
+\par \cf0\highlight0   rh-amazon-rhui-client.noarch 0:2.2.147-1.el7                 rsync.x86_64 0:3.1.2-6.el7_6.1\cf1\highlight1 
+\par \cf0\highlight0   selinux-policy.noarch 0:3.13.1-229.el7_6.12                  selinux-policy-targeted.noarch 0:3.13.1-229.el7_6.12\cf1\highlight1 
+\par \cf0\highlight0   shadow-utils.x86_64 2:4.1.5.1-25.el7_6.1                     subscription-manager.x86_64 0:1.21.10-3.el7_6\cf1\highlight1 
+\par \cf0\highlight0   subscription-manager-rhsm.x86_64 0:1.21.10-3.el7_6           subscription-manager-rhsm-certificates.x86_64 0:1.21.10-3.el7_6\cf1\highlight1 
+\par \cf0\highlight0   systemd.x86_64 0:219-62.el7_6.6                              systemd-libs.x86_64 0:219-62.el7_6.6\cf1\highlight1 
+\par \cf0\highlight0   systemd-sysv.x86_64 0:219-62.el7_6.6                         tuned.noarch 0:2.10.0-6.el7_6.3\cf1\highlight1 
+\par \cf0\highlight0   tzdata.noarch 0:2019a-1.el7                                  util-linux.x86_64 0:2.23.2-59.el7_6.1\cf1\highlight1 
+\par \cf0\highlight0   xfsprogs.x86_64 0:4.5.0-19.el7_6\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Complete!\cf1\highlight1 
+\par \cf0\highlight0 [root@ip-172-31-45-192 ~]# yum install git\cf1\highlight1 
+\par \cf0\highlight0 Loaded plugins: amazon-id, rhui-lb, search-disabled-repos\cf1\highlight1 
+\par \cf0\highlight0 rhui-REGION-client-config-server-7                                                                                | 2.9 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 rhui-REGION-rhel-server-releases                                                                                  | 3.5 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 rhui-REGION-rhel-server-rh-common                                                                                 | 3.8 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 Resolving Dependencies\cf1\highlight1 
+\par \cf0\highlight0 --> Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 ---> Package git.x86_64 0:1.8.3.1-20.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl-Git = 1.8.3.1-20.el7 for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl >= 5.008 for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: /usr/bin/perl for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Error) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Exporter) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(File::Basename) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(File::Copy) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(File::Find) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(File::Path) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(File::Spec) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(File::Temp) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(File::stat) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Getopt::Long) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Git) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Term::ReadKey) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(lib) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(strict) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(vars) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(warnings) for package: git-1.8.3.1-20.el7.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl.x86_64 4:5.16.3-294.el7_6 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl-libs = 4:5.16.3-294.el7_6 for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl-libs for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl-macros for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: libperl.so()(64bit) for package: 4:perl-5.16.3-294.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Error.noarch 1:0.17020-2.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Getopt-Long.noarch 0:2.40-3.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Long-2.40-3.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-2.40-3.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Git.noarch 0:1.8.3.1-20.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-TermReadKey.x86_64 0:2.30-20.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.28-4.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Socket.x86_64 0:2.010-4.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-constant.noarch 0:1.27-2.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-libs.x86_64 4:5.16.3-294.el7_6 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-macros.x86_64 4:5.16.3-294.el7_6 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Pod-Escapes.noarch 1:1.04-294.el7_6 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package perl-parent.noarch 1:0.225-244.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Finished Dependency Resolution\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Dependencies Resolved\cf1\highlight1 
+\par 
+\par \cf0\highlight0 =========================================================================================================================================\cf1\highlight1 
+\par \cf0\highlight0  Package                            Arch               Version                        Repository                                    Size\cf1\highlight1 
+\par \cf0\highlight0 =========================================================================================================================================\cf1\highlight1 
+\par \cf0\highlight0 Installing:\cf1\highlight1 
+\par \cf0\highlight0  git                                x86_64             1.8.3.1-20.el7                 rhui-REGION-rhel-server-releases             4.4 M\cf1\highlight1 
+\par \cf0\highlight0 Installing for dependencies:\cf1\highlight1 
+\par \cf0\highlight0  perl                               x86_64             4:5.16.3-294.el7_6             rhui-REGION-rhel-server-releases             8.0 M\cf1\highlight1 
+\par \cf0\highlight0  perl-Carp                          noarch             1.26-244.el7                   rhui-REGION-rhel-server-releases              19 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Encode                        x86_64             2.51-7.el7                     rhui-REGION-rhel-server-releases             1.5 M\cf1\highlight1 
+\par \cf0\highlight0  perl-Error                         noarch             1:0.17020-2.el7                rhui-REGION-rhel-server-releases              32 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Exporter                      noarch             5.68-3.el7                     rhui-REGION-rhel-server-releases              28 k\cf1\highlight1 
+\par \cf0\highlight0  perl-File-Path                     noarch             2.09-2.el7                     rhui-REGION-rhel-server-releases              27 k\cf1\highlight1 
+\par \cf0\highlight0  perl-File-Temp                     noarch             0.23.01-3.el7                  rhui-REGION-rhel-server-releases              56 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Filter                        x86_64             1.49-3.el7                     rhui-REGION-rhel-server-releases              76 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Getopt-Long                   noarch             2.40-3.el7                     rhui-REGION-rhel-server-releases              56 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Git                           noarch             1.8.3.1-20.el7                 rhui-REGION-rhel-server-releases              55 k\cf1\highlight1 
+\par \cf0\highlight0  perl-HTTP-Tiny                     noarch             0.033-3.el7                    rhui-REGION-rhel-server-releases              38 k\cf1\highlight1 
+\par \cf0\highlight0  perl-PathTools                     x86_64             3.40-5.el7                     rhui-REGION-rhel-server-releases              83 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Pod-Escapes                   noarch             1:1.04-294.el7_6               rhui-REGION-rhel-server-releases              51 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Pod-Perldoc                   noarch             3.20-4.el7                     rhui-REGION-rhel-server-releases              87 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Pod-Simple                    noarch             1:3.28-4.el7                   rhui-REGION-rhel-server-releases             216 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Pod-Usage                     noarch             1.63-3.el7                     rhui-REGION-rhel-server-releases              27 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Scalar-List-Utils             x86_64             1.27-248.el7                   rhui-REGION-rhel-server-releases              36 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Socket                        x86_64             2.010-4.el7                    rhui-REGION-rhel-server-releases              49 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Storable                      x86_64             2.45-3.el7                     rhui-REGION-rhel-server-releases              77 k\cf1\highlight1 
+\par \cf0\highlight0  perl-TermReadKey                   x86_64             2.30-20.el7                    rhui-REGION-rhel-server-releases              31 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Text-ParseWords               noarch             3.29-4.el7                     rhui-REGION-rhel-server-releases              14 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Time-HiRes                    x86_64             4:1.9725-3.el7                 rhui-REGION-rhel-server-releases              45 k\cf1\highlight1 
+\par \cf0\highlight0  perl-Time-Local                    noarch             1.2300-2.el7                   rhui-REGION-rhel-server-releases              24 k\cf1\highlight1 
+\par \cf0\highlight0  perl-constant                      noarch             1.27-2.el7                     rhui-REGION-rhel-server-releases              19 k\cf1\highlight1 
+\par \cf0\highlight0  perl-libs                          x86_64             4:5.16.3-294.el7_6             rhui-REGION-rhel-server-releases             688 k\cf1\highlight1 
+\par \cf0\highlight0  perl-macros                        x86_64             4:5.16.3-294.el7_6             rhui-REGION-rhel-server-releases              44 k\cf1\highlight1 
+\par \cf0\highlight0  perl-parent                        noarch             1:0.225-244.el7                rhui-REGION-rhel-server-releases              12 k\cf1\highlight1 
+\par \cf0\highlight0  perl-podlators                     noarch             2.5.1-3.el7                    rhui-REGION-rhel-server-releases             112 k\cf1\highlight1 
+\par \cf0\highlight0  perl-threads                       x86_64             1.87-4.el7                     rhui-REGION-rhel-server-releases              49 k\cf1\highlight1 
+\par \cf0\highlight0  perl-threads-shared                x86_64             1.43-6.el7                     rhui-REGION-rhel-server-releases              39 k\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Transaction Summary\cf1\highlight1 
+\par \cf0\highlight0 =========================================================================================================================================\cf1\highlight1 
+\par \cf0\highlight0 Install  1 Package (+30 Dependent packages)\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Total download size: 16 M\cf1\highlight1 
+\par \cf0\highlight0 Installed size: 59 M\cf1\highlight1 
+\par \cf0\highlight0 Is this ok [y/d/N]: y\cf1\highlight1 
+\par \cf0\highlight0 Downloading packages:\cf1\highlight1 
+\par \cf0\highlight0 (1/31): git-1.8.3.1-20.el7.x86_64.rpm                                                                             | 4.4 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (2/31): perl-Encode-2.51-7.el7.x86_64.rpm                                                                         | 1.5 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (3/31): perl-Carp-1.26-244.el7.noarch.rpm                                                                         |  19 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (4/31): perl-Error-0.17020-2.el7.noarch.rpm                                                                       |  32 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (5/31): perl-File-Path-2.09-2.el7.noarch.rpm                                                                      |  27 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (6/31): perl-Exporter-5.68-3.el7.noarch.rpm                                                                       |  28 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (7/31): perl-5.16.3-294.el7_6.x86_64.rpm                                                                          | 8.0 MB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (8/31): perl-Filter-1.49-3.el7.x86_64.rpm                                                                         |  76 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (9/31): perl-File-Temp-0.23.01-3.el7.noarch.rpm                                                                   |  56 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (10/31): perl-Getopt-Long-2.40-3.el7.noarch.rpm                                                                   |  56 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (11/31): perl-HTTP-Tiny-0.033-3.el7.noarch.rpm                                                                    |  38 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (12/31): perl-Git-1.8.3.1-20.el7.noarch.rpm                                                                       |  55 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (13/31): perl-PathTools-3.40-5.el7.x86_64.rpm                                                                     |  83 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (14/31): perl-Pod-Escapes-1.04-294.el7_6.noarch.rpm                                                               |  51 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (15/31): perl-Pod-Perldoc-3.20-4.el7.noarch.rpm                                                                   |  87 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (16/31): perl-Pod-Simple-3.28-4.el7.noarch.rpm                                                                    | 216 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (17/31): perl-Pod-Usage-1.63-3.el7.noarch.rpm                                                                     |  27 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (18/31): perl-Scalar-List-Utils-1.27-248.el7.x86_64.rpm                                                           |  36 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (19/31): perl-Socket-2.010-4.el7.x86_64.rpm                                                                       |  49 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (20/31): perl-Storable-2.45-3.el7.x86_64.rpm                                                                      |  77 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (21/31): perl-TermReadKey-2.30-20.el7.x86_64.rpm                                                                  |  31 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (22/31): perl-Time-HiRes-1.9725-3.el7.x86_64.rpm                                                                  |  45 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (23/31): perl-Text-ParseWords-3.29-4.el7.noarch.rpm                                                               |  14 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (24/31): perl-Time-Local-1.2300-2.el7.noarch.rpm                                                                  |  24 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (25/31): perl-libs-5.16.3-294.el7_6.x86_64.rpm                                                                    | 688 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (26/31): perl-constant-1.27-2.el7.noarch.rpm                                                                      |  19 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (27/31): perl-macros-5.16.3-294.el7_6.x86_64.rpm                                                                  |  44 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (28/31): perl-podlators-2.5.1-3.el7.noarch.rpm                                                                    | 112 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (29/31): perl-parent-0.225-244.el7.noarch.rpm                                                                     |  12 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (30/31): perl-threads-1.87-4.el7.x86_64.rpm                                                                       |  49 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (31/31): perl-threads-shared-1.43-6.el7.x86_64.rpm                                                                |  39 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 -----------------------------------------------------------------------------------------------------------------------------------------\cf1\highlight1 
+\par \cf0\highlight0 Total                                                                                                     12 MB/s |  16 MB  00:00:01\cf1\highlight1 
+\par \cf0\highlight0 Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 Running transaction test\cf1\highlight1 
+\par \cf0\highlight0 Transaction test succeeded\cf1\highlight1 
+\par \cf0\highlight0 Running transaction\cf1\highlight1 
+\par \cf0\highlight0   Installing : 1:perl-parent-0.225-244.el7.noarch                                                                                   1/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                                    2/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-podlators-2.5.1-3.el7.noarch                                                                                    3/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                                   4/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : 1:perl-Pod-Escapes-1.04-294.el7_6.noarch                                                                             5/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Encode-2.51-7.el7.x86_64                                                                                        6/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Text-ParseWords-3.29-4.el7.noarch                                                                               7/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Pod-Usage-1.63-3.el7.noarch                                                                                     8/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : 4:perl-libs-5.16.3-294.el7_6.x86_64                                                                                  9/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : 4:perl-macros-5.16.3-294.el7_6.x86_64                                                                               10/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Storable-2.45-3.el7.x86_64                                                                                     11/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Exporter-5.68-3.el7.noarch                                                                                     12/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-constant-1.27-2.el7.noarch                                                                                     13/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Time-Local-1.2300-2.el7.noarch                                                                                 14/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Socket-2.010-4.el7.x86_64                                                                                      15/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Carp-1.26-244.el7.noarch                                                                                       16/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                                               17/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-PathTools-3.40-5.el7.x86_64                                                                                    18/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                                          19/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-File-Temp-0.23.01-3.el7.noarch                                                                                 20/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-File-Path-2.09-2.el7.noarch                                                                                    21/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-threads-shared-1.43-6.el7.x86_64                                                                               22/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-threads-1.87-4.el7.x86_64                                                                                      23/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                                                 24/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Filter-1.49-3.el7.x86_64                                                                                       25/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Getopt-Long-2.40-3.el7.noarch                                                                                  26/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : 4:perl-5.16.3-294.el7_6.x86_64                                                                                      27/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : 1:perl-Error-0.17020-2.el7.noarch                                                                                   28/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-TermReadKey-2.30-20.el7.x86_64                                                                                 29/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : perl-Git-1.8.3.1-20.el7.noarch                                                                                      30/31\cf1\highlight1 
+\par \cf0\highlight0   Installing : git-1.8.3.1-20.el7.x86_64                                                                                           31/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                                    1/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-threads-shared-1.43-6.el7.x86_64                                                                                2/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Storable-2.45-3.el7.x86_64                                                                                      3/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:perl-Pod-Escapes-1.04-294.el7_6.noarch                                                                             4/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Exporter-5.68-3.el7.noarch                                                                                      5/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-constant-1.27-2.el7.noarch                                                                                      6/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-PathTools-3.40-5.el7.x86_64                                                                                     7/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:perl-parent-0.225-244.el7.noarch                                                                                   8/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-TermReadKey-2.30-20.el7.x86_64                                                                                  9/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 4:perl-libs-5.16.3-294.el7_6.x86_64                                                                                 10/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                                                                                 11/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Git-1.8.3.1-20.el7.noarch                                                                                      12/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Time-Local-1.2300-2.el7.noarch                                                                                 13/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 4:perl-macros-5.16.3-294.el7_6.x86_64                                                                               14/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Socket-2.010-4.el7.x86_64                                                                                      15/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Carp-1.26-244.el7.noarch                                                                                       16/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:perl-Error-0.17020-2.el7.noarch                                                                                   17/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : git-1.8.3.1-20.el7.x86_64                                                                                           18/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                                               19/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                                          20/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                                                                                    21/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Encode-2.51-7.el7.x86_64                                                                                       22/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                                  23/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-podlators-2.5.1-3.el7.noarch                                                                                   24/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-File-Path-2.09-2.el7.noarch                                                                                    25/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-threads-1.87-4.el7.x86_64                                                                                      26/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                                                 27/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Filter-1.49-3.el7.x86_64                                                                                       28/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Getopt-Long-2.40-3.el7.noarch                                                                                  29/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                                                                              30/31\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : 4:perl-5.16.3-294.el7_6.x86_64                                                                                      31/31\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Installed:\cf1\highlight1 
+\par \cf0\highlight0   git.x86_64 0:1.8.3.1-20.el7\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Dependency Installed:\cf1\highlight1 
+\par \cf0\highlight0   perl.x86_64 4:5.16.3-294.el7_6              perl-Carp.noarch 0:1.26-244.el7                 perl-Encode.x86_64 0:2.51-7.el7\cf1\highlight1 
+\par \cf0\highlight0   perl-Error.noarch 1:0.17020-2.el7           perl-Exporter.noarch 0:5.68-3.el7               perl-File-Path.noarch 0:2.09-2.el7\cf1\highlight1 
+\par \cf0\highlight0   perl-File-Temp.noarch 0:0.23.01-3.el7       perl-Filter.x86_64 0:1.49-3.el7                 perl-Getopt-Long.noarch 0:2.40-3.el7\cf1\highlight1 
+\par \cf0\highlight0   perl-Git.noarch 0:1.8.3.1-20.el7            perl-HTTP-Tiny.noarch 0:0.033-3.el7             perl-PathTools.x86_64 0:3.40-5.el7\cf1\highlight1 
+\par \cf0\highlight0   perl-Pod-Escapes.noarch 1:1.04-294.el7_6    perl-Pod-Perldoc.noarch 0:3.20-4.el7            perl-Pod-Simple.noarch 1:3.28-4.el7\cf1\highlight1 
+\par \cf0\highlight0   perl-Pod-Usage.noarch 0:1.63-3.el7          perl-Scalar-List-Utils.x86_64 0:1.27-248.el7    perl-Socket.x86_64 0:2.010-4.el7\cf1\highlight1 
+\par \cf0\highlight0   perl-Storable.x86_64 0:2.45-3.el7           perl-TermReadKey.x86_64 0:2.30-20.el7           perl-Text-ParseWords.noarch 0:3.29-4.el7\cf1\highlight1 
+\par \cf0\highlight0   perl-Time-HiRes.x86_64 4:1.9725-3.el7       perl-Time-Local.noarch 0:1.2300-2.el7           perl-constant.noarch 0:1.27-2.el7\cf1\highlight1 
+\par \cf0\highlight0   perl-libs.x86_64 4:5.16.3-294.el7_6         perl-macros.x86_64 4:5.16.3-294.el7_6           perl-parent.noarch 1:0.225-244.el7\cf1\highlight1 
+\par \cf0\highlight0   perl-podlators.noarch 0:2.5.1-3.el7         perl-threads.x86_64 0:1.87-4.el7                perl-threads-shared.x86_64 0:1.43-6.el7\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Complete!\cf1\highlight1 
+\par \cf0\highlight0 [root@ip-172-31-45-192 ~]# git --version\cf1\highlight1 
+\par \cf0\highlight0 git version 1.8.3.1\cf1\highlight1 
+\par \cf0\highlight0 [root@ip-172-31-45-192 ~]#\cf1\highlight1 
+\par \cf7\highlight0\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\cf1\highlight1 
+\par 
+\par \cf5\highlight0 Session stopped\cf1\highlight1 
+\par \cf0\highlight0     - Press \cf4 <return>\cf0  to exit tab\cf1\highlight1 
+\par \cf0\highlight0     - Press \cf4 R\cf0  to restart session\cf1\highlight1 
+\par \cf0\highlight0     - Press \cf4 S\cf0  to save terminal output to file\cf1\highlight1 
+\par 
+\par \cf5\highlight0 Network error: Software caused connection abort\cf1\highlight1 
+\par \pard\cf0\highlight0\f2\fs20 
+\par }
+ 

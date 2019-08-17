@@ -1,0 +1,353 @@
+install git
+------------------
+yum install git 
+
+git init 
+----------
+it will initiaize git and create empty structure under .git folder
+
+3 phases f git
+-----------------
+1) working dir
+2) stage/cache
+3) local_repo
+
+configure your git to work correctly
+3 types of configuration
+1) system
+/etc/gitconfig
+
+git config --system
+
+2) user
+~/.gitconfig (or) /home/ramu/.gitconfig
+git config --global
+
+3)project
+.git/config
+git config
+
+
+user level configuration
+------------------------
+git config --global user.name "ravi5358"
+git config --global user.email "ravishankar5358@gmail.com"
+git config --global core.editor "ravi"
+git config --global color.ui true
+
+git config --list  ----cnfigure list
+
+
+git status
+
+vi index.html
+
+<html>
+<head></head>
+<body></body>
+</html>
+
+If file is shows red colour that one is in working directory.
+
+next we need to move the file to stage that one is hidden using git add command
+
+git add index.html(green colour)
+
+next we need to move to local repository that files we ca track and we give exact message
+git commit -m "this is index.html"
+
+git status 
+
+git log it is exadecimal random number and it is unique number it will generate randomly it is called revision number or sha1 number
+
+git show sha1 number(6 character)
+
+echo "this is f1 file">f1
+
+git will won't track empty files 
+
+git commit -m " new comitted file f1"
+
+git commit -m "extra added"
+
+git log --author="ravi"
+
+git log --oneline
+
+git diff sha1 sha1
+
+=============================================
+
+git branch;- it shows all the current branches in alphabatical order
+-------------
+it is a series of commits along with the files/dir
+
+if we initialize git master branch will be default initialized
+
+* is represents your currently in that branch
+
+how to create branch git branch feature
+
+how to move one branch to other 
+git chckout feature
+
+in single step we create branch n heck out
+
+git checkout -b new branch name
+
+git checkout master
+
+git log --oneline
+
+git diff branch1..branch2
+
+
+how mix 2 branched means merging
+-----------------------------------
+
+git merge (target branch) so
+
+first we need to target branch then we enter above merge command
+
+like  git merge feature(target branch)
+
+how to remove branch 
+
+git branch -d feature(branch name)
+
+and we move to other branch then we remove branch because corrent branch we cannot remove
+
+git branch -D(force fully) branch name
+
+
+=========================================================
+
+git rm and git mv
+
+========================
+how to add and commit a file(s)/dir(s) in single step?
+
+git commit -am "commit name"
+
+Note:- it is applicable for existing files
+
+echo "file is created">file(new file name)
+
+how change the commit message
+
+git commit --amend -m "<commit message"> <file name>
+
+
+how to get back deleted file?
+
+rm <file name>
+
+git checkout <file name>
+
+how to remove permently
+
+git rm <file name> we can remove all 3 layers
+
+at a time add and commit 
+
+git commit -am "file1 to file2"
+
+git mv file1 file2
+
+
+
+git ignore
+==================
+if i worked in jave project .class file there and c .obj
+
+
+
+system level if we ignore /etc/gitignore
+
+i don't want track or ignore files(.log,.obj, .jpeg,.png)
+
+vi .gitignore
+
+===========================
+git add .
+
+git commit -m "ignoe file is added"
+
+
+
+how to remove or erase history
+
+soft, mix an hard 
+
+git reset --soft <commit number(sha1 number>  only in local repository
+
+git reset --mix <commit number (sha1 number> local and staging repository
+
+git reset --hard <commit number (sha1 number> 3 layers
+
+head is means which one point is top
+
+
+
+git stash:- is nothing temp area under git.to store temp files
+
+when the file is stageing area it will take
+
+to store the data in the stash
+git stash save <"relavent message">
+
+
+what are the commands use to copy the data into branches?
+git stash apply <stash#>
+
+git stash list  list of stash 
+
+stash 0
+stash 1
+git stash apply <stash#>---copy paste
+
+git stash pop <stash#> cut and paste
+
+git stash drop stash{}
+
+
+git merge
+
+==========
+git merge branch name
+
+git commit -a
+
+
+=======================================================================
+
+git server is a centralised repository 
+
+internet service to connect your server if it is out of your office
+intranet service:- to connect to your server with in your office
+
+
+public :- git hub
+
+private :- git bucket, bit bucket
+
+git bucket prereq is java
+
+sudo yum -y install java-1.8.0-openjdk
+
+git bucket is default 8080
+
+java -jar gitbucket.war
+
+how add origin
+
+==============
+
+git remote rm origin
+git remote
+git remote add origin repostory url
+
+next git push -u origin master
+
+how remove origin 
+
+git remove rm origin
+
+git push -u <alias name> <branch name>
+
+how to pull or fetch data central to local
+==========================================
+method 1
+git fetch 
+
+git merge origin/master 
+
+
+method 2
+-----------
+git pull <alias name(origin) <branch name(master)
+
+
+how to move other branch
+
+git checkout extra
+
+git fetch
+
+git merge origin/master
+
+git pull is used to is any extra files added that one we can pull
+
+
+
+==================================================================
+
+how to clone
+---------------------------
+
+mkdir ravi2
+
+git clone
+
+git remove it remove origin
+
+git remove -v
+
+
+
+merge one branch to other branch
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+[root@ravishankar-master ~]# systemctl start docker && systemctl enable docker
+[root@ravishankar-master ~]# systemctl start kubelet && systemctl enable kubelet
+[root@ravishankar-master ~]# systemctl status kubelet
+? kubelet.service - kubelet: The Kubernetes Node Agent
+   Loaded: loaded (/usr/lib/systemd/system/kubelet.service; enabled; vendor preset: disabled)
+  Drop-In: /usr/lib/systemd/system/kubelet.service.d
+           +-10-kubeadm.conf
+   Active: activating (auto-restart) (Result: exit-code) since Sat 2019-04-27 19:01:40 UTC; 877ms ago
+     Docs: https://kubernetes.io/docs/
+  Process: 5283 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS (code=exited, status=255)
+ Main PID: 5283 (code=exited, status=255)
+
+Apr 27 19:01:40 ravishankar-master systemd[1]: Unit kubelet.service entered failed state.
+Apr 27 19:01:40 ravishankar-master systemd[1]: kubelet.service failed.
+[root@ravishankar-master ~]# yum -y install kubeadm docker
+Loaded plugins: amazon-id, rhui-lb, search-disabled-repos
+Package kubeadm-1.14.1-0.x86_64 already installed and latest version
+No package docker available.
+Nothing to do
+[root@ravishankar-master ~]# firewall-cmd --permanent --add-port=6443/tcp
+-bash: firewall-cmd: command not found
+[root@ravishankar-master ~]# firewall-cmd --permanent --add-port=10250/tcp
+-bash: firewall-cmd: command not found
+[root@ravishankar-master ~]# firewall-cmd --reload
+-bash: firewall-cmd: command not found
+[root@ravishankar-master ~]#

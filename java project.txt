@@ -1,0 +1,54 @@
+
+
+
+
+java project
+
+java main code in src folder for this reason need to create java project
+
+file > new > others > java project > next (here need to give name of the project) ex: god  > next > finish > yes
+
+
+for writing java code in src
+
+click src > new > package > name of the package ex:good > click finish
+
+
+for creting class under package
+
+click src package ex:good above this is created like src package    >>  new > class > here need to give class name ex: going and here select pubic static void main to writing code ....this is for class file to creating 
+
+after add our code like print in console     .....................>>>   System.out.println("hello sir hw r u");
+
+package good;
+
+public class going {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("hello sir hw r u");
+
+	}
+
+}
+
+check the java code is working r not 
+
+click on writing file ctrl+s and click on     run as  java application   >..........check output  
+
+configure as a maven project
+
+select main project >   configure > convert to Maven project  >
+
+give any name like     groupid ---sekhar
+                       artifactis ...reddy
+					   >>>>>> finish(click)
+					   
+click on pom.xml add package like jar and add depedancy plugins and  >>>>>>>>>> save
+select the main project run as maven build >>>>>>>>> goals(package)  > apply > run
+
+
+
+					   
+					   
+

@@ -1,0 +1,28 @@
+up-down-stream job:
+
+step:1
+    
+	samplebuildjob     date command
+	
+step2:
+      sampledeployjob    date command
+	  
+step3:  sampletestjob    date command
+
+
+step2:   run all step 1 2 3 build now
+
+step3:   login samlebuildjob  >> configure  >>  post-build-action- >> build other projects >>  
+   
+
+
+step4:  login sampledeployjob    >>>>>  build trigger   ??>> build after other projects are build
+                                                                              >> projects to watch > samplebuildjob  >> trigger if the only build is stable  > save+apply
+																			  
+step5:   login sampletestjob   >>>  configure  >>  build trigger   >> build after other projects are build
+                                                                              >> projects to watch > sampledeployjob  >> trigger if the only build is stable  > save+apply	
+
+
+Delivery pipeline plugin:	
+
+																		  

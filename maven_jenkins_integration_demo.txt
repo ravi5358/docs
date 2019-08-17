@@ -1,0 +1,31 @@
+
+https://github.com/kdpthecoder/Jenkins.git
+
+step1:  install git
+
+step2:  install yum install java issue run below commands to update in aws redhat
+
+
+**Installing java 8 in amazon linux/redhat**
+
+--> `yum search java | grep openjdk`
+
+--> `yum install java-1.8.0-openjdk-headless.x86_64`
+
+--> `yum install java-1.8.0-openjdk-devel.x86_64`
+
+--> `update-alternatives --config java #pick java 1.8` and press **1**
+
+--> `update-alternatives --config javac #pick java 1.8` and press **2**
+
+Thank You
+
+step3:  install maven 
+
+
+step4:  
+
+      [root@ip-172-31-6-140 opt]# echo $M2_HOME
+      /opt/maven
+
+	  

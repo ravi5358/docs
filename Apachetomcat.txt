@@ -1,0 +1,293 @@
+Apache tomcat installation
+====================================
+
+[root@ip-172-31-35-65 ~]# wget http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.40/bin/apache-tomcat-8.5.40.tar.gz
+
+tar -zxvf apache-tomcat-8.5.40.tar.gz
+
+[root@ip-172-31-35-65 ~]# mv apache-tomcat-8.5.40 apache-tomcat-8.5.40.tar.gz /opt
+[root@ip-172-31-35-65 ~]# cd /opt
+[root@ip-172-31-35-65 opt]# ls -lrth
+total 18M
+-rw-r--r--. 1 root root 8.8M Apr  4 19:30 apache-maven-3.6.1-bin.tar.gz
+-rw-r--r--. 1 root root 9.3M Apr 10 14:57 apache-tomcat-8.5.40.tar.gz
+drwxr-xr-x. 6 root root   99 Apr 29 10:14 apache-maven-3.6.1
+lrwxrwxrwx. 1 root root   18 Apr 29 10:14 maven -> apache-maven-3.6.1
+drwxr-xr-x. 9 root root  220 Apr 29 11:09 apache-tomcat-8.5.40
+
+[root@ip-172-31-35-65 apache-tomcat-8.5.40]# cd bin
+[root@ip-172-31-35-65 bin]# ls -lrth
+total 852K
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 version.bat
+-rw-r-----. 1 root root 4.5K Apr 10 14:31 tool-wrapper.bat
+-rw-r-----. 1 root root  49K Apr 10 14:31 tomcat-juli.jar
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 startup.bat
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 shutdown.bat
+-rw-r-----. 1 root root 3.4K Apr 10 14:31 setclasspath.bat
+-rw-r-----. 1 root root 2.1K Apr 10 14:31 digest.bat
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 configtest.bat
+-rw-r-----. 1 root root  25K Apr 10 14:31 commons-daemon.jar
+-rw-r-----. 1 root root  16K Apr 10 14:31 catalina.bat
+-rw-r-----. 1 root root  35K Apr 10 14:31 bootstrap.jar
+-rwxr-x---. 1 root root 1.9K Apr 10 14:31 version.sh
+-rwxr-x---. 1 root root 5.4K Apr 10 14:31 tool-wrapper.sh
+-rw-r-----. 1 root root 410K Apr 10 14:31 tomcat-native.tar.gz
+-rwxr-x---. 1 root root 1.9K Apr 10 14:31 startup.sh
+-rwxr-x---. 1 root root 1.9K Apr 10 14:31 shutdown.sh
+-rwxr-x---. 1 root root 3.6K Apr 10 14:31 setclasspath.sh
+-rwxr-x---. 1 root root 2.0K Apr 10 14:31 digest.sh
+-rwxr-x---. 1 root root 8.4K Apr 10 14:31 daemon.sh
+-rwxr-x---. 1 root root 1.9K Apr 10 14:31 configtest.sh
+-rw-r-----. 1 root root 203K Apr 10 14:31 commons-daemon-native.tar.gz
+-rwxr-x---. 1 root root  23K Apr 10 14:31 catalina.sh
+-rw-r-----. 1 root root 1.7K Apr 10 14:33 catalina-tasks.xml
+[root@ip-172-31-35-65 bin]# ps -ef|grep tomcat
+root     16739 16441  0 11:12 pts/4    00:00:00 grep --color=auto tomcat
+[root@ip-172-31-35-65 bin]# chmod a+x startup.sh
+[root@ip-172-31-35-65 bin]# ls -lrth
+total 852K
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 version.bat
+-rw-r-----. 1 root root 4.5K Apr 10 14:31 tool-wrapper.bat
+-rw-r-----. 1 root root  49K Apr 10 14:31 tomcat-juli.jar
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 startup.bat
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 shutdown.bat
+-rw-r-----. 1 root root 3.4K Apr 10 14:31 setclasspath.bat
+-rw-r-----. 1 root root 2.1K Apr 10 14:31 digest.bat
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 configtest.bat
+-rw-r-----. 1 root root  25K Apr 10 14:31 commons-daemon.jar
+-rw-r-----. 1 root root  16K Apr 10 14:31 catalina.bat
+-rw-r-----. 1 root root  35K Apr 10 14:31 bootstrap.jar
+-rwxr-x---. 1 root root 1.9K Apr 10 14:31 version.sh
+-rwxr-x---. 1 root root 5.4K Apr 10 14:31 tool-wrapper.sh
+-rw-r-----. 1 root root 410K Apr 10 14:31 tomcat-native.tar.gz
+-rwxr-x--x. 1 root root 1.9K Apr 10 14:31 startup.sh
+-rwxr-x---. 1 root root 1.9K Apr 10 14:31 shutdown.sh
+-rwxr-x---. 1 root root 3.6K Apr 10 14:31 setclasspath.sh
+-rwxr-x---. 1 root root 2.0K Apr 10 14:31 digest.sh
+-rwxr-x---. 1 root root 8.4K Apr 10 14:31 daemon.sh
+-rwxr-x---. 1 root root 1.9K Apr 10 14:31 configtest.sh
+-rw-r-----. 1 root root 203K Apr 10 14:31 commons-daemon-native.tar.gz
+-rwxr-x---. 1 root root  23K Apr 10 14:31 catalina.sh
+-rw-r-----. 1 root root 1.7K Apr 10 14:33 catalina-tasks.xml
+[root@ip-172-31-35-65 bin]#
+[root@ip-172-31-35-65 bin]# ./startup.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.40
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.40
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.40/temp
+Using JRE_HOME:        /
+Using CLASSPATH:       /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar
+Tomcat started.
+[root@ip-172-31-35-65 bin]# ps -ef|grep tomcat
+root     16858     1 31 11:14 pts/4    00:00:02 //bin/java -Djava.util.logging.config.file=/opt/apache-tomcat-8.5.40/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar -Dcatalina.base=/opt/apache-tomcat-8.5.40 -Dcatalina.home=/opt/apache-tomcat-8.5.40 -Djava.io.tmpdir=/opt/apache-tomcat-8.5.40/temp org.apache.catalina.startup.Bootstrap start
+root     16894 16441  0 11:14 pts/4    00:00:00 grep --color=auto tomcat
+
+how to change Port
+============================
+Default it is 8080 we can change to 8090
+
+[root@ip-172-31-35-65 bin]# cd ..
+[root@ip-172-31-35-65 apache-tomcat-8.5.40]# ls -lrth
+total 124K
+drwxr-x---. 7 root root   81 Apr 10 14:31 webapps
+-rw-r-----. 1 root root  16K Apr 10 14:33 RUNNING.txt
+-rw-r-----. 1 root root 7.0K Apr 10 14:33 RELEASE-NOTES
+-rw-r-----. 1 root root 3.2K Apr 10 14:33 README.md
+-rw-r-----. 1 root root 1.7K Apr 10 14:33 NOTICE
+-rw-r-----. 1 root root  56K Apr 10 14:33 LICENSE
+-rw-r-----. 1 root root 6.0K Apr 10 14:33 CONTRIBUTING.md
+-rw-r-----. 1 root root  20K Apr 10 14:33 BUILDING.txt
+drwxr-x---. 2 root root 4.0K Apr 29 11:09 lib
+drwxr-x---. 2 root root   30 Apr 29 11:09 temp
+drwxr-x---. 2 root root 4.0K Apr 29 11:09 bin
+drwx------. 3 root root  254 Apr 29 11:14 conf
+drwxr-x---. 2 root root  197 Apr 29 11:14 logs
+drwxr-x---. 3 root root   22 Apr 29 11:14 work
+[root@ip-172-31-35-65 apache-tomcat-8.5.40]# cd conf
+[root@ip-172-31-35-65 conf]# ls -lrth
+total 224K
+-rw-------. 1 root root 168K Apr 10 14:33 web.xml
+-rw-------. 1 root root 2.6K Apr 10 14:33 tomcat-users.xsd
+-rw-------. 1 root root 2.2K Apr 10 14:33 tomcat-users.xml
+-rw-------. 1 root root 7.4K Apr 10 14:33 server.xml
+-rw-------. 1 root root 3.9K Apr 10 14:33 logging.properties
+-rw-------. 1 root root 2.3K Apr 10 14:33 jaspic-providers.xsd
+-rw-------. 1 root root 1.2K Apr 10 14:33 jaspic-providers.xml
+-rw-------. 1 root root 1.4K Apr 10 14:33 context.xml
+-rw-------. 1 root root 7.5K Apr 10 14:33 catalina.properties
+-rw-------. 1 root root  14K Apr 10 14:33 catalina.policy
+drwxr-x---. 3 root root   23 Apr 29 11:14 Catalina
+[root@ip-172-31-35-65 conf]# vi server.xml
+
+Connector port="8080" to 8090
+
+[root@ip-172-31-35-65 bin]# chmod -R a+x shutdown.sh
+[root@ip-172-31-35-65 bin]# ./shutdown.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.40
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.40
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.40/temp
+Using JRE_HOME:        /
+Using CLASSPATH:       /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar
+Apr 29, 2019 11:28:32 AM org.apache.catalina.startup.Catalina stopServer
+SEVERE: Could not contact [localhost:[8005]]. Tomcat may not be running.
+Apr 29, 2019 11:28:32 AM org.apache.catalina.startup.Catalina stopServer
+SEVERE: Catalina.stop:
+java.net.ConnectException: Connection refused (Connection refused)
+        at java.net.PlainSocketImpl.socketConnect(Native Method)
+        at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+        at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+        at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+        at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+        at java.net.Socket.connect(Socket.java:589)
+        at java.net.Socket.connect(Socket.java:538)
+        at java.net.Socket.<init>(Socket.java:434)
+        at java.net.Socket.<init>(Socket.java:211)
+        at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:504)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:406)
+        at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:498)
+
+[root@ip-172-31-35-65 bin]# ps -ef|grep tomcat
+root      4276  4230  0 11:28 pts/0    00:00:00 grep --color=auto tomcat
+[root@ip-172-31-35-65 bin]# ./startup.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.40
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.40
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.40/temp
+Using JRE_HOME:        /
+Using CLASSPATH:       /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar
+Tomcat started.
+[root@ip-172-31-35-65 bin]# ps -ef|grep tomcat
+root      4292     1 31 11:29 pts/0    00:00:02 //bin/java -Djava.util.logging.config.file=/opt/apache-tomcat-8.5.40/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar -Dcatalina.base=/opt/apache-tomcat-8.5.40 -Dcatalina.home=/opt/apache-tomcat-8.5.40 -Djava.io.tmpdir=/opt/apache-tomcat-8.5.40/temp org.apache.catalina.startup.Bootstrap start
+root      4336  4230  0 11:29 pts/0    00:00:00 grep --color=auto tomcat
+[root@ip-172-31-35-65 bin]#
+
+http://3.14.85.167:8090/
+
+http://3.14.85.167:8090/manager/
+[root@ip-172-31-35-65 bin]# find / -name context.xml
+/opt/apache-tomcat-8.5.40/conf/context.xml
+/opt/apache-tomcat-8.5.40/webapps/host-manager/META-INF/context.xml
+/opt/apache-tomcat-8.5.40/webapps/manager/META-INF/context.xml
+[root@ip-172-31-35-65 bin]#vi /opt/apache-tomcat-8.5.40/webapps/host-manager/META-INF/context.xml
+
+<!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+		 
+vi /opt/apache-tomcat-8.5.40/webapps/manager/META-INF/context.xml
+
+<!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+
+[root@ip-172-31-35-65 bin]# ./shutdown.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.40
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.40
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.40/temp
+Using JRE_HOME:        /
+Using CLASSPATH:       /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar
+[root@ip-172-31-35-65 bin]# ps -ef|grep tomcat
+root      4638  4230  0 11:38 pts/0    00:00:00 grep --color=auto tomcat
+[root@ip-172-31-35-65 bin]# ./startup.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.40
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.40
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.40/temp
+Using JRE_HOME:        /
+Using CLASSPATH:       /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar
+Tomcat started.
+[root@ip-172-31-35-65 bin]# ps -ef|grep tomcat
+root      4659     1 61 11:38 pts/0    00:00:02 //bin/java -Djava.util.logging.config.file=/opt/apache-tomcat-8.5.40/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar -Dcatalina.base=/opt/apache-tomcat-8.5.40 -Dcatalina.home=/opt/apache-tomcat-8.5.40 -Djava.io.tmpdir=/opt/apache-tomcat-8.5.40/temp org.apache.catalina.startup.Bootstrap start
+root      4706  4230  0 11:38 pts/0    00:00:00 grep --color=auto tomcat
+
+[root@ip-172-31-35-65 conf]# ls -lrth
+total 224K
+-rw-------. 1 root root 168K Apr 10 14:33 web.xml
+-rw-------. 1 root root 2.6K Apr 10 14:33 tomcat-users.xsd
+-rw-------. 1 root root 2.2K Apr 10 14:33 tomcat-users.xml
+-rw-------. 1 root root 3.9K Apr 10 14:33 logging.properties
+-rw-------. 1 root root 2.3K Apr 10 14:33 jaspic-providers.xsd
+-rw-------. 1 root root 1.2K Apr 10 14:33 jaspic-providers.xml
+-rw-------. 1 root root 1.4K Apr 10 14:33 context.xml
+-rw-------. 1 root root 7.5K Apr 10 14:33 catalina.properties
+-rw-------. 1 root root  14K Apr 10 14:33 catalina.policy
+drwxr-x---. 3 root root   23 Apr 29 11:14 Catalina
+-rw-------. 1 root root 7.4K Apr 29 11:20 server.xml
+[root@ip-172-31-35-65 conf]# vi tomcat-users.xml
+
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+<user username="admin" password="admin" role="manager-gui, manager-script, manager-jmx, manager-status"/>
+<user username="deployer" password="deployer" roles="manager-script"/>
+<user username="tomcat" password="s3cret" roles="manager-gui"/>
+
+[root@ip-172-31-35-65 conf]# ls -lrth
+total 224K
+-rw-------. 1 root root 168K Apr 10 14:33 web.xml
+-rw-------. 1 root root 2.6K Apr 10 14:33 tomcat-users.xsd
+-rw-------. 1 root root 2.2K Apr 10 14:33 tomcat-users.xml
+-rw-------. 1 root root 3.9K Apr 10 14:33 logging.properties
+-rw-------. 1 root root 2.3K Apr 10 14:33 jaspic-providers.xsd
+-rw-------. 1 root root 1.2K Apr 10 14:33 jaspic-providers.xml
+-rw-------. 1 root root 1.4K Apr 10 14:33 context.xml
+-rw-------. 1 root root 7.5K Apr 10 14:33 catalina.properties
+-rw-------. 1 root root  14K Apr 10 14:33 catalina.policy
+drwxr-x---. 3 root root   23 Apr 29 11:14 Catalina
+-rw-------. 1 root root 7.4K Apr 29 11:20 server.xml
+[root@ip-172-31-35-65 conf]# vi tomcat-users.xml
+[root@ip-172-31-35-65 conf]# cd ..
+[root@ip-172-31-35-65 apache-tomcat-8.5.40]# cd bin
+[root@ip-172-31-35-65 bin]# mvn --version^C
+[root@ip-172-31-35-65 bin]# ps -ef|grep tomcat
+root      4659     1  0 11:38 pts/0    00:00:05 //bin/java -Djava.util.logging.config.file=/opt/apache-tomcat-8.5.40/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar -Dcatalina.base=/opt/apache-tomcat-8.5.40 -Dcatalina.home=/opt/apache-tomcat-8.5.40 -Djava.io.tmpdir=/opt/apache-tomcat-8.5.40/temp org.apache.catalina.startup.Bootstrap start
+root      4801  4230  0 11:40 pts/0    00:00:00 vi tomcat-users.xml
+root      5652  5504  0 11:56 pts/1    00:00:00 grep --color=auto tomcat
+[root@ip-172-31-35-65 bin]# ls -lrth
+total 852K
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 version.bat
+-rw-r-----. 1 root root 4.5K Apr 10 14:31 tool-wrapper.bat
+-rw-r-----. 1 root root  49K Apr 10 14:31 tomcat-juli.jar
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 startup.bat
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 shutdown.bat
+-rw-r-----. 1 root root 3.4K Apr 10 14:31 setclasspath.bat
+-rw-r-----. 1 root root 2.1K Apr 10 14:31 digest.bat
+-rw-r-----. 1 root root 2.0K Apr 10 14:31 configtest.bat
+-rw-r-----. 1 root root  25K Apr 10 14:31 commons-daemon.jar
+-rw-r-----. 1 root root  16K Apr 10 14:31 catalina.bat
+-rw-r-----. 1 root root  35K Apr 10 14:31 bootstrap.jar
+-rwxr-x---. 1 root root 1.9K Apr 10 14:31 version.sh
+-rwxr-x---. 1 root root 5.4K Apr 10 14:31 tool-wrapper.sh
+-rw-r-----. 1 root root 410K Apr 10 14:31 tomcat-native.tar.gz
+-rwxr-x--x. 1 root root 1.9K Apr 10 14:31 startup.sh
+-rwxr-x--x. 1 root root 1.9K Apr 10 14:31 shutdown.sh
+-rwxr-x---. 1 root root 3.6K Apr 10 14:31 setclasspath.sh
+-rwxr-x---. 1 root root 2.0K Apr 10 14:31 digest.sh
+-rwxr-x---. 1 root root 8.4K Apr 10 14:31 daemon.sh
+-rwxr-x---. 1 root root 1.9K Apr 10 14:31 configtest.sh
+-rw-r-----. 1 root root 203K Apr 10 14:31 commons-daemon-native.tar.gz
+-rwxr-x---. 1 root root  23K Apr 10 14:31 catalina.sh
+-rw-r-----. 1 root root 1.7K Apr 10 14:33 catalina-tasks.xml
+[root@ip-172-31-35-65 bin]# ./shutdown.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.40
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.40
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.40/temp
+Using JRE_HOME:        /
+Using CLASSPATH:       /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar
+[root@ip-172-31-35-65 bin]# ./startup.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.40
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.40
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.40/temp
+Using JRE_HOME:        /
+Using CLASSPATH:       /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar
+Tomcat started.
+[root@ip-172-31-35-65 bin]# ps -ef|grep tomcat
+root      4801  4230  0 11:40 pts/0    00:00:00 vi tomcat-users.xml
+root      5713     1 39 11:56 pts/1    00:00:02 //bin/java -Djava.util.logging.config.file=/opt/apache-tomcat-8.5.40/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/apache-tomcat-8.5.40/bin/bootstrap.jar:/opt/apache-tomcat-8.5.40/bin/tomcat-juli.jar -Dcatalina.base=/opt/apache-tomcat-8.5.40 -Dcatalina.home=/opt/apache-tomcat-8.5.40 -Djava.io.tmpdir=/opt/apache-tomcat-8.5.40/temp org.apache.catalina.startup.Bootstrap start
+root      5761  5504  0 11:56 pts/1    00:00:00 grep --color=auto tomcat
+[root@ip-172-31-35-65 bin]#
+
+
+
+https://www.youtube.com/watch?v=m21nFreFw8A&list=PLxzKY3wu0_FJdJd3IKdiM4Om1hGo2Hsdt&index=13
+

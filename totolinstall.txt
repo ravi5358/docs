@@ -1,0 +1,762 @@
+login as: vagrant
+vagrant@192.168.33.20's password:
+Last login: Wed Nov 28 02:57:36 2018 from 192.168.33.1
+[vagrant@localhost ~]$ ls -lrth
+total 183M
+-rw-rw-r--. 1 vagrant vagrant 183M Apr 29  2018 jdk-8u171-linux-x64.tar.gz
+[vagrant@localhost ~]$ mv jdk-8u171-linux-x64.tar.gz /opt
+mv: cannot create regular file `/opt/jdk-8u171-linux-x64.tar.gz': Permission den                                                                                        ied
+[vagrant@localhost ~]$ sudo su
+[root@localhost vagrant]# mv jdk-8u171-linux-x64.tar.gz /opt
+[root@localhost vagrant]# cd /opt
+[root@localhost opt]# ls -lrth
+total 183M
+-rw-rw-r--. 1 vagrant vagrant 183M Apr 29  2018 jdk-8u171-linux-x64.tar.gz
+drwxr-xr-x. 9 root    root    4.0K Aug 22 12:20 VBoxGuestAdditions-5.2.18
+[root@localhost opt]# tar -xzf jdk-8u171-linux-x64.tar.gz
+[root@localhost opt]# ls -lrth
+total 183M
+drwxr-xr-x. 8 uucp        143 4.0K Mar 29  2018 jdk1.8.0_171
+-rw-rw-r--. 1 vagrant vagrant 183M Apr 29  2018 jdk-8u171-linux-x64.tar.gz
+drwxr-xr-x. 9 root    root    4.0K Aug 22 12:20 VBoxGuestAdditions-5.2.18
+[root@localhost opt]# cd jdk1.8.0_171
+[root@localhost jdk1.8.0_171]# ls -lrth
+total 26M
+-rw-r--r--. 1 uucp 143 105K Mar 28  2018 THIRDPARTYLICENSEREADME-JAVAFX.txt
+-rw-r--r--. 1 uucp 143 5.0M Mar 28  2018 javafx-src.zip
+-r--r--r--. 1 uucp 143 142K Mar 29  2018 THIRDPARTYLICENSEREADME.txt
+-r--r--r--. 1 uucp 143  159 Mar 29  2018 README.html
+-r--r--r--. 1 uucp 143   40 Mar 29  2018 LICENSE
+drwxr-xr-x. 4 uucp 143 4.0K Mar 29  2018 db
+-r--r--r--. 1 uucp 143 3.2K Mar 29  2018 COPYRIGHT
+-rw-r--r--. 1 uucp 143  21M Mar 29  2018 src.zip
+-rw-r--r--. 1 uucp 143  424 Mar 29  2018 release
+drwxr-xr-x. 4 uucp 143 4.0K Mar 29  2018 man
+drwxr-xr-x. 3 uucp 143 4.0K Mar 29  2018 include
+drwxr-xr-x. 5 uucp 143 4.0K Mar 29  2018 jre
+drwxr-xr-x. 5 uucp 143 4.0K Mar 29  2018 lib
+drwxr-xr-x. 2 uucp 143 4.0K Mar 29  2018 bin
+[root@localhost jdk1.8.0_171]# cd /home/vagrant/
+[root@localhost vagrant]# vi .bashrc
+[root@localhost vagrant]# vi ~/.bashrc
+[root@localhost vagrant]# yum install java
+Loaded plugins: fastestmirror
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+epel/metalink                                                                                                                                    | 8.3 kB     00:00
+ * base: centos.excellmedia.net
+ * epel: mirrors.aliyun.com
+ * extras: centos.myfahim.com
+ * updates: centos.myfahim.com
+base                                                                                                                                             | 3.7 kB     00:00
+epel                                                                                                                                             | 3.2 kB     00:00
+epel/primary                                                                                                                                     | 3.2 MB     00:04
+epel                                                                                                                                                        12500/12500
+extras                                                                                                                                           | 3.4 kB     00:00
+updates                                                                                                                                          | 3.4 kB     00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package java-1.8.0-openjdk.x86_64 1:1.8.0.191.b12-0.el6_10 will be installed
+--> Processing Dependency: java-1.8.0-openjdk-headless = 1:1.8.0.191.b12-0.el6_10 for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: xorg-x11-fonts-Type1 for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libpng12.so.0(PNG12_0)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libjvm.so(SUNWprivate_1.1)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libjli.so(SUNWprivate_1.1)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libjava.so(SUNWprivate_1.1)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: fontconfig for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libpng12.so.0()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libjvm.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libjpeg.so.62()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libjli.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libjava.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libgif.so.4()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libawt.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64
+--> Running transaction check
+---> Package alsa-lib.x86_64 0:1.1.0-4.el6 will be installed
+---> Package fontconfig.x86_64 0:2.8.0-5.el6 will be installed
+--> Processing Dependency: freetype >= 2.1.4 for package: fontconfig-2.8.0-5.el6.x86_64
+--> Processing Dependency: libfreetype.so.6()(64bit) for package: fontconfig-2.8.0-5.el6.x86_64
+---> Package giflib.x86_64 0:4.1.6-3.1.el6 will be installed
+--> Processing Dependency: libSM.so.6()(64bit) for package: giflib-4.1.6-3.1.el6.x86_64
+--> Processing Dependency: libICE.so.6()(64bit) for package: giflib-4.1.6-3.1.el6.x86_64
+---> Package java-1.8.0-openjdk-headless.x86_64 1:1.8.0.191.b12-0.el6_10 will be installed
+--> Processing Dependency: tzdata-java >= 2014f-1 for package: 1:java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64
+--> Processing Dependency: jpackage-utils for package: 1:java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64
+---> Package libX11.x86_64 0:1.6.4-3.el6 will be installed
+--> Processing Dependency: libX11-common = 1.6.4-3.el6 for package: libX11-1.6.4-3.el6.x86_64
+--> Processing Dependency: libxcb.so.1()(64bit) for package: libX11-1.6.4-3.el6.x86_64
+---> Package libXext.x86_64 0:1.3.3-1.el6 will be installed
+---> Package libXi.x86_64 0:1.7.8-1.el6 will be installed
+---> Package libXrender.x86_64 0:0.9.10-1.el6 will be installed
+---> Package libXtst.x86_64 0:1.2.3-1.el6 will be installed
+---> Package libjpeg-turbo.x86_64 0:1.2.1-3.el6_5 will be installed
+---> Package libpng.x86_64 2:1.2.49-2.el6_7 will be installed
+---> Package xorg-x11-fonts-Type1.noarch 0:7.2-11.el6 will be installed
+--> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.2-11.el6.noarch
+--> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.2-11.el6.noarch
+--> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.2-11.el6.noarch
+--> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.2-11.el6.noarch
+--> Running transaction check
+---> Package freetype.x86_64 0:2.3.11-17.el6 will be installed
+---> Package jpackage-utils.noarch 0:1.7.5-3.16.el6 will be installed
+---> Package libICE.x86_64 0:1.0.6-1.el6 will be installed
+---> Package libSM.x86_64 0:1.2.1-2.el6 will be installed
+---> Package libX11-common.noarch 0:1.6.4-3.el6 will be installed
+---> Package libxcb.x86_64 0:1.12-4.el6 will be installed
+--> Processing Dependency: libXau.so.6()(64bit) for package: libxcb-1.12-4.el6.x86_64
+---> Package ttmkfdir.x86_64 0:3.0.9-32.1.el6 will be installed
+---> Package tzdata-java.noarch 0:2018g-1.el6 will be installed
+---> Package xorg-x11-font-utils.x86_64 1:7.2-11.el6 will be installed
+--> Processing Dependency: libfontenc.so.1()(64bit) for package: 1:xorg-x11-font-utils-7.2-11.el6.x86_64
+--> Processing Dependency: libXfont.so.1()(64bit) for package: 1:xorg-x11-font-utils-7.2-11.el6.x86_64
+--> Running transaction check
+---> Package libXau.x86_64 0:1.0.6-4.el6 will be installed
+---> Package libXfont.x86_64 0:1.5.1-2.el6 will be installed
+---> Package libfontenc.x86_64 0:1.1.2-3.el6 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================================================================
+ Package                                            Arch                          Version                                          Repository                      Size
+========================================================================================================================================================================
+Installing:
+ java-1.8.0-openjdk                                 x86_64                        1:1.8.0.191.b12-0.el6_10                         updates                        212 k
+Installing for dependencies:
+ alsa-lib                                           x86_64                        1.1.0-4.el6                                      base                           389 k
+ fontconfig                                         x86_64                        2.8.0-5.el6                                      base                           186 k
+ freetype                                           x86_64                        2.3.11-17.el6                                    base                           361 k
+ giflib                                             x86_64                        4.1.6-3.1.el6                                    base                            37 k
+ java-1.8.0-openjdk-headless                        x86_64                        1:1.8.0.191.b12-0.el6_10                         updates                         32 M
+ jpackage-utils                                     noarch                        1.7.5-3.16.el6                                   base                            60 k
+ libICE                                             x86_64                        1.0.6-1.el6                                      base                            53 k
+ libSM                                              x86_64                        1.2.1-2.el6                                      base                            37 k
+ libX11                                             x86_64                        1.6.4-3.el6                                      base                           587 k
+ libX11-common                                      noarch                        1.6.4-3.el6                                      base                           171 k
+ libXau                                             x86_64                        1.0.6-4.el6                                      base                            24 k
+ libXext                                            x86_64                        1.3.3-1.el6                                      base                            35 k
+ libXfont                                           x86_64                        1.5.1-2.el6                                      base                           145 k
+ libXi                                              x86_64                        1.7.8-1.el6                                      base                            38 k
+ libXrender                                         x86_64                        0.9.10-1.el6                                     base                            24 k
+ libXtst                                            x86_64                        1.2.3-1.el6                                      base                            19 k
+ libfontenc                                         x86_64                        1.1.2-3.el6                                      base                            29 k
+ libjpeg-turbo                                      x86_64                        1.2.1-3.el6_5                                    base                           174 k
+ libpng                                             x86_64                        2:1.2.49-2.el6_7                                 base                           182 k
+ libxcb                                             x86_64                        1.12-4.el6                                       base                           180 k
+ ttmkfdir                                           x86_64                        3.0.9-32.1.el6                                   base                            43 k
+ tzdata-java                                        noarch                        2018g-1.el6                                      updates                        186 k
+ xorg-x11-font-utils                                x86_64                        1:7.2-11.el6                                     base                            75 k
+ xorg-x11-fonts-Type1                               noarch                        7.2-11.el6                                       base                           520 k
+
+Transaction Summary
+========================================================================================================================================================================
+Install      25 Package(s)
+
+Total download size: 36 M
+Installed size: 113 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/25): alsa-lib-1.1.0-4.el6.x86_64.rpm                                                                                                          | 389 kB     00:01
+(2/25): fontconfig-2.8.0-5.el6.x86_64.rpm                                                                                                        | 186 kB     00:04
+(3/25): freetype-2.3.11-17.el6.x86_64.rpm                                                                                                        | 361 kB     00:06
+(4/25): giflib-4.1.6-3.1.el6.x86_64.rpm                                                                                                          |  37 kB     00:00
+(5/25): java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64.rpm                                                                                     | 212 kB     00:04
+(6/25): java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64.rpm                                                                            |  32 MB     00:53
+(7/25): jpackage-utils-1.7.5-3.16.el6.noarch.rpm                                                                                                 |  60 kB     00:00
+(8/25): libICE-1.0.6-1.el6.x86_64.rpm                                                                                                            |  53 kB     00:00
+(9/25): libSM-1.2.1-2.el6.x86_64.rpm                                                                                                             |  37 kB     00:10
+(10/25): libX11-1.6.4-3.el6.x86_64.rpm                                                                                                           | 587 kB     00:02
+(11/25): libX11-common-1.6.4-3.el6.noarch.rpm                                                                                                    | 171 kB     00:00
+(12/25): libXau-1.0.6-4.el6.x86_64.rpm                                                                                                           |  24 kB     00:00
+(13/25): libXext-1.3.3-1.el6.x86_64.rpm                                                                                                          |  35 kB     00:00
+(14/25): libXfont-1.5.1-2.el6.x86_64.rpm                                                                                                         | 145 kB     00:00
+(15/25): libXi-1.7.8-1.el6.x86_64.rpm                                                                                                            |  38 kB     00:00
+(16/25): libXrender-0.9.10-1.el6.x86_64.rpm                                                                                                      |  24 kB     00:00
+(17/25): libXtst-1.2.3-1.el6.x86_64.rpm                                                                                                          |  19 kB     00:00
+(18/25): libfontenc-1.1.2-3.el6.x86_64.rpm                                                                                                       |  29 kB     00:00
+(19/25): libjpeg-turbo-1.2.1-3.el6_5.x86_64.rpm                                                                                                  | 174 kB     00:00
+(20/25): libpng-1.2.49-2.el6_7.x86_64.rpm                                                                                                        | 182 kB     00:01
+(21/25): libxcb-1.12-4.el6.x86_64.rpm                                                                                                            | 180 kB     00:00
+(22/25): ttmkfdir-3.0.9-32.1.el6.x86_64.rpm                                                                                                      |  43 kB     00:00
+(23/25): tzdata-java-2018g-1.el6.noarch.rpm                                                                                                      | 186 kB     00:01
+(24/25): xorg-x11-font-utils-7.2-11.el6.x86_64.rpm                                                                                               |  75 kB     00:00
+(25/25): xorg-x11-fonts-Type1-7.2-11.el6.noarch.rpm                                                                                              | 520 kB     00:01
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                   324 kB/s |  36 MB     01:53
+Running rpm_check_debug
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+  Installing : freetype-2.3.11-17.el6.x86_64                                                                                                                       1/25
+  Installing : fontconfig-2.8.0-5.el6.x86_64                                                                                                                       2/25
+  Installing : libICE-1.0.6-1.el6.x86_64                                                                                                                           3/25
+  Installing : libjpeg-turbo-1.2.1-3.el6_5.x86_64                                                                                                                  4/25
+  Installing : libfontenc-1.1.2-3.el6.x86_64                                                                                                                       5/25
+  Installing : libXfont-1.5.1-2.el6.x86_64                                                                                                                         6/25
+  Installing : 1:xorg-x11-font-utils-7.2-11.el6.x86_64                                                                                                             7/25
+  Installing : libSM-1.2.1-2.el6.x86_64                                                                                                                            8/25
+  Installing : ttmkfdir-3.0.9-32.1.el6.x86_64                                                                                                                      9/25
+  Installing : xorg-x11-fonts-Type1-7.2-11.el6.noarch                                                                                                             10/25
+  Installing : libXau-1.0.6-4.el6.x86_64                                                                                                                          11/25
+  Installing : libxcb-1.12-4.el6.x86_64                                                                                                                           12/25
+  Installing : alsa-lib-1.1.0-4.el6.x86_64                                                                                                                        13/25
+  Installing : libX11-common-1.6.4-3.el6.noarch                                                                                                                   14/25
+  Installing : libX11-1.6.4-3.el6.x86_64                                                                                                                          15/25
+  Installing : libXext-1.3.3-1.el6.x86_64                                                                                                                         16/25
+  Installing : libXi-1.7.8-1.el6.x86_64                                                                                                                           17/25
+  Installing : libXtst-1.2.3-1.el6.x86_64                                                                                                                         18/25
+  Installing : libXrender-0.9.10-1.el6.x86_64                                                                                                                     19/25
+  Installing : giflib-4.1.6-3.1.el6.x86_64                                                                                                                        20/25
+  Installing : tzdata-java-2018g-1.el6.noarch                                                                                                                     21/25
+  Installing : jpackage-utils-1.7.5-3.16.el6.noarch                                                                                                               22/25
+  Installing : 1:java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64                                                                                        23/25
+  Installing : 2:libpng-1.2.49-2.el6_7.x86_64                                                                                                                     24/25
+  Installing : 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64                                                                                                 25/25
+  Verifying  : freetype-2.3.11-17.el6.x86_64                                                                                                                       1/25
+  Verifying  : fontconfig-2.8.0-5.el6.x86_64                                                                                                                       2/25
+  Verifying  : libxcb-1.12-4.el6.x86_64                                                                                                                            3/25
+  Verifying  : libSM-1.2.1-2.el6.x86_64                                                                                                                            4/25
+  Verifying  : libXfont-1.5.1-2.el6.x86_64                                                                                                                         5/25
+  Verifying  : 2:libpng-1.2.49-2.el6_7.x86_64                                                                                                                      6/25
+  Verifying  : ttmkfdir-3.0.9-32.1.el6.x86_64                                                                                                                      7/25
+  Verifying  : jpackage-utils-1.7.5-3.16.el6.noarch                                                                                                                8/25
+  Verifying  : 1:xorg-x11-font-utils-7.2-11.el6.x86_64                                                                                                             9/25
+  Verifying  : libfontenc-1.1.2-3.el6.x86_64                                                                                                                      10/25
+  Verifying  : tzdata-java-2018g-1.el6.noarch                                                                                                                     11/25
+  Verifying  : libX11-common-1.6.4-3.el6.noarch                                                                                                                   12/25
+  Verifying  : libXi-1.7.8-1.el6.x86_64                                                                                                                           13/25
+  Verifying  : alsa-lib-1.1.0-4.el6.x86_64                                                                                                                        14/25
+  Verifying  : libXext-1.3.3-1.el6.x86_64                                                                                                                         15/25
+  Verifying  : libX11-1.6.4-3.el6.x86_64                                                                                                                          16/25
+  Verifying  : libjpeg-turbo-1.2.1-3.el6_5.x86_64                                                                                                                 17/25
+  Verifying  : 1:java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64                                                                                        18/25
+  Verifying  : libXau-1.0.6-4.el6.x86_64                                                                                                                          19/25
+  Verifying  : libXtst-1.2.3-1.el6.x86_64                                                                                                                         20/25
+  Verifying  : libICE-1.0.6-1.el6.x86_64                                                                                                                          21/25
+  Verifying  : 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64                                                                                                 22/25
+  Verifying  : libXrender-0.9.10-1.el6.x86_64                                                                                                                     23/25
+  Verifying  : xorg-x11-fonts-Type1-7.2-11.el6.noarch                                                                                                             24/25
+  Verifying  : giflib-4.1.6-3.1.el6.x86_64                                                                                                                        25/25
+
+Installed:
+  java-1.8.0-openjdk.x86_64 1:1.8.0.191.b12-0.el6_10
+
+Dependency Installed:
+  alsa-lib.x86_64 0:1.1.0-4.el6                fontconfig.x86_64 0:2.8.0-5.el6                                       freetype.x86_64 0:2.3.11-17.el6
+  giflib.x86_64 0:4.1.6-3.1.el6                java-1.8.0-openjdk-headless.x86_64 1:1.8.0.191.b12-0.el6_10           jpackage-utils.noarch 0:1.7.5-3.16.el6
+  libICE.x86_64 0:1.0.6-1.el6                  libSM.x86_64 0:1.2.1-2.el6                                            libX11.x86_64 0:1.6.4-3.el6
+  libX11-common.noarch 0:1.6.4-3.el6           libXau.x86_64 0:1.0.6-4.el6                                           libXext.x86_64 0:1.3.3-1.el6
+  libXfont.x86_64 0:1.5.1-2.el6                libXi.x86_64 0:1.7.8-1.el6                                            libXrender.x86_64 0:0.9.10-1.el6
+  libXtst.x86_64 0:1.2.3-1.el6                 libfontenc.x86_64 0:1.1.2-3.el6                                       libjpeg-turbo.x86_64 0:1.2.1-3.el6_5
+  libpng.x86_64 2:1.2.49-2.el6_7               libxcb.x86_64 0:1.12-4.el6                                            ttmkfdir.x86_64 0:3.0.9-32.1.el6
+  tzdata-java.noarch 0:2018g-1.el6             xorg-x11-font-utils.x86_64 1:7.2-11.el6                               xorg-x11-fonts-Type1.noarch 0:7.2-11.el6
+
+Complete!
+[root@localhost vagrant]# wget http://www.eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+--2018-11-29 03:06:23--  http://www.eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+Resolving www.eu.apache.org... 95.216.24.32, 2a01:4f9:2a:185f::2
+Connecting to www.eu.apache.org|95.216.24.32|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8491533 (8.1M) [application/x-gzip]
+Saving to: “apache-maven-3.3.9-bin.tar.gz”
+
+100%[==============================================================================================================================>] 8,491,533   1.93M/s   in 4.1s
+
+2018-11-29 03:06:27 (1.98 MB/s) - “apache-maven-3.3.9-bin.tar.gz” saved [8491533/8491533]
+
+[root@localhost vagrant]# vi ~/.bashrc
+[root@localhost vagrant]# ls-lrth
+bash: ls-lrth: command not found
+[root@localhost vagrant]# ls -lrth
+total 8.2M
+-rw-r--r--. 1 root root 8.1M Nov 18  2015 apache-maven-3.3.9-bin.tar.gz
+[root@localhost vagrant]# cd /opt
+[root@localhost opt]# ls -lrth
+total 183M
+drwxr-xr-x. 8 uucp        143 4.0K Mar 29  2018 jdk1.8.0_171
+-rw-rw-r--. 1 vagrant vagrant 183M Apr 29  2018 jdk-8u171-linux-x64.tar.gz
+drwxr-xr-x. 9 root    root    4.0K Aug 22 12:20 VBoxGuestAdditions-5.2.18
+[root@localhost opt]# cd /home/vagrant
+[root@localhost vagrant]# vi ~/.bashrc
+[root@localhost vagrant]# source ~/.bashrc
+[root@localhost vagrant]# java --version
+Unrecognized option: --version
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+[root@localhost vagrant]# java -version
+openjdk version "1.8.0_191"
+OpenJDK Runtime Environment (build 1.8.0_191-b12)
+OpenJDK 64-Bit Server VM (build 25.191-b12, mixed mode)
+[root@localhost vagrant]# ls -lrth
+total 8.2M
+-rw-r--r--. 1 root root 8.1M Nov 18  2015 apache-maven-3.3.9-bin.tar.gz
+[root@localhost vagrant]# tar -xzf apache-maven-3.3.9-bin.tar.gz
+[root@localhost vagrant]# ls -lrth
+total 8.2M
+-rw-r--r--. 1 root root 8.1M Nov 18  2015 apache-maven-3.3.9-bin.tar.gz
+drwxr-xr-x. 6 root root 4.0K Nov 29 03:12 apache-maven-3.3.9
+[root@localhost vagrant]# cd apache-maven-3.3.9
+[root@localhost apache-maven-3.3.9]# ls -lrth
+total 44K
+-rw-r--r--. 1 root root 2.5K Nov 10  2015 README.txt
+drwxr-xr-x. 3 root root 4.0K Nov 10  2015 conf
+-rw-r--r--. 1 root root  182 Nov 10  2015 NOTICE
+-rw-r--r--. 1 root root  19K Nov 10  2015 LICENSE
+drwxr-xr-x. 2 root root 4.0K Nov 29 03:12 boot
+drwxr-xr-x. 2 root root 4.0K Nov 29 03:12 bin
+drwxr-xr-x. 3 root root 4.0K Nov 29 03:12 lib
+[root@localhost apache-maven-3.3.9]# cd /usr/local
+[root@localhost local]# ls -lrth
+total 40K
+drwxr-xr-x. 2 root root 4.0K Sep 23  2011 src
+drwxr-xr-x. 2 root root 4.0K Sep 23  2011 sbin
+drwxr-xr-x. 2 root root 4.0K Sep 23  2011 libexec
+drwxr-xr-x. 2 root root 4.0K Sep 23  2011 lib64
+drwxr-xr-x. 2 root root 4.0K Sep 23  2011 lib
+drwxr-xr-x. 2 root root 4.0K Sep 23  2011 include
+drwxr-xr-x. 2 root root 4.0K Sep 23  2011 games
+drwxr-xr-x. 2 root root 4.0K Sep 23  2011 etc
+drwxr-xr-x. 2 root root 4.0K Sep 23  2011 bin
+drwxr-xr-x. 5 root root 4.0K Aug 22 12:12 share
+[root@localhost local]# mkdir apache-maven
+[root@localhost local]# cd /vagrant/home
+bash: cd: /vagrant/home: No such file or directory
+[root@localhost local]# cd apache-maven-3.3.9
+bash: cd: apache-maven-3.3.9: No such file or directory
+[root@localhost local]# cd /home/vagrant
+[root@localhost vagrant]# cd apache-maven-3.3.9
+[root@localhost apache-maven-3.3.9]# mv * /usr/local/apache-maven
+[root@localhost apache-maven-3.3.9]# cd /usr/local/apache-maven
+[root@localhost apache-maven]# ls -lrth
+total 44K
+-rw-r--r--. 1 root root 2.5K Nov 10  2015 README.txt
+drwxr-xr-x. 3 root root 4.0K Nov 10  2015 conf
+-rw-r--r--. 1 root root  182 Nov 10  2015 NOTICE
+-rw-r--r--. 1 root root  19K Nov 10  2015 LICENSE
+drwxr-xr-x. 2 root root 4.0K Nov 29 03:12 boot
+drwxr-xr-x. 2 root root 4.0K Nov 29 03:12 bin
+drwxr-xr-x. 3 root root 4.0K Nov 29 03:12 lib
+[root@localhost apache-maven]# vi ~/.bashrc
+[root@localhost apache-maven]# source ~/.bashrc
+[root@localhost apache-maven]# mvn -version
+Error: JAVA_HOME is not defined correctly.
+  We cannot execute /opt/jdk.8.0_171/bin/java
+[root@localhost apache-maven]# mvn -version
+Error: JAVA_HOME is not defined correctly.
+  We cannot execute /opt/jdk.8.0_171/bin/java
+[root@localhost apache-maven]# cd /home/vagrant
+[root@localhost vagrant]# ls -lrth
+total 8.2M
+-rw-r--r--. 1 root root 8.1M Nov 18  2015 apache-maven-3.3.9-bin.tar.gz
+drwxr-xr-x. 2 root root 4.0K Nov 29 03:17 apache-maven-3.3.9
+[root@localhost vagrant]# cd /opt
+[root@localhost opt]# ls -lrth
+total 183M
+drwxr-xr-x. 8 uucp        143 4.0K Mar 29  2018 jdk1.8.0_171
+-rw-rw-r--. 1 vagrant vagrant 183M Apr 29  2018 jdk-8u171-linux-x64.tar.gz
+drwxr-xr-x. 9 root    root    4.0K Aug 22 12:20 VBoxGuestAdditions-5.2.18
+[root@localhost opt]# chown -R root.root jdk1.8.0_171
+[root@localhost opt]# ls -lrth
+total 183M
+drwxr-xr-x. 8 root    root    4.0K Mar 29  2018 jdk1.8.0_171
+-rw-rw-r--. 1 vagrant vagrant 183M Apr 29  2018 jdk-8u171-linux-x64.tar.gz
+drwxr-xr-x. 9 root    root    4.0K Aug 22 12:20 VBoxGuestAdditions-5.2.18
+[root@localhost opt]# cd jdk1.8.0_171
+[root@localhost jdk1.8.0_171]# ls -lrth
+total 26M
+-rw-r--r--. 1 root root 105K Mar 28  2018 THIRDPARTYLICENSEREADME-JAVAFX.txt
+-rw-r--r--. 1 root root 5.0M Mar 28  2018 javafx-src.zip
+-r--r--r--. 1 root root 142K Mar 29  2018 THIRDPARTYLICENSEREADME.txt
+-r--r--r--. 1 root root  159 Mar 29  2018 README.html
+-r--r--r--. 1 root root   40 Mar 29  2018 LICENSE
+drwxr-xr-x. 4 root root 4.0K Mar 29  2018 db
+-r--r--r--. 1 root root 3.2K Mar 29  2018 COPYRIGHT
+-rw-r--r--. 1 root root  21M Mar 29  2018 src.zip
+-rw-r--r--. 1 root root  424 Mar 29  2018 release
+drwxr-xr-x. 4 root root 4.0K Mar 29  2018 man
+drwxr-xr-x. 3 root root 4.0K Mar 29  2018 include
+drwxr-xr-x. 5 root root 4.0K Mar 29  2018 jre
+drwxr-xr-x. 5 root root 4.0K Mar 29  2018 lib
+drwxr-xr-x. 2 root root 4.0K Mar 29  2018 bin
+[root@localhost jdk1.8.0_171]# pwd
+/opt/jdk1.8.0_171
+[root@localhost jdk1.8.0_171]# cat ~/.bashrc
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+
+export JAVA_HOME=/opt/jdk.8.0_171
+export PATH=$PATH:$JAVA_HOME/bin
+
+export M2_HOME=/usr/local/apache-maven
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+[root@localhost jdk1.8.0_171]# vi ~/.bashrc
+[root@localhost jdk1.8.0_171]# source ~/.bashrc
+[root@localhost jdk1.8.0_171]# java -version
+openjdk version "1.8.0_191"
+OpenJDK Runtime Environment (build 1.8.0_191-b12)
+OpenJDK 64-Bit Server VM (build 25.191-b12, mixed mode)
+[root@localhost jdk1.8.0_171]# mvn -version
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T16:41:47+00:00)
+Maven home: /usr/local/apache-maven
+Java version: 1.8.0_171, vendor: Oracle Corporation
+Java home: /opt/jdk1.8.0_171/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "2.6.32-754.3.5.el6.x86_64", arch: "amd64", family: "unix"
+[root@localhost jdk1.8.0_171]# cd /home/vagrant
+[root@localhost vagrant]# wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+--2018-11-29 03:26:45--  http://pkg.jenkins-ci.org/redhat/jenkins.repo
+Resolving pkg.jenkins-ci.org... 52.202.51.185
+Connecting to pkg.jenkins-ci.org|52.202.51.185|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 71
+Saving to: “/etc/yum.repos.d/jenkins.repo”
+
+100%[==============================================================================================================================>] 71          --.-K/s   in 0s
+
+2018-11-29 03:26:45 (770 KB/s) - “/etc/yum.repos.d/jenkins.repo” saved [71/71]
+
+[root@localhost vagrant]# ls -lrth
+total 8.2M
+-rw-r--r--. 1 root root 8.1M Nov 18  2015 apache-maven-3.3.9-bin.tar.gz
+drwxr-xr-x. 2 root root 4.0K Nov 29 03:17 apache-maven-3.3.9
+[root@localhost vagrant]# rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+[root@localhost vagrant]# ls -lrth
+total 8.2M
+-rw-r--r--. 1 root root 8.1M Nov 18  2015 apache-maven-3.3.9-bin.tar.gz
+drwxr-xr-x. 2 root root 4.0K Nov 29 03:17 apache-maven-3.3.9
+[root@localhost vagrant]# yum install jenkins
+Loaded plugins: fastestmirror
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+ * base: centos.excellmedia.net
+ * epel: mirrors.aliyun.com
+ * extras: centos.myfahim.com
+ * updates: centos.excellmedia.net
+jenkins                                                                                                                                          | 2.9 kB     00:00
+jenkins/primary_db                                                                                                                               | 117 kB     00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package jenkins.noarch 0:2.153-1.1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================================================================
+ Package                                 Arch                                   Version                                   Repository                               Size
+========================================================================================================================================================================
+Installing:
+ jenkins                                 noarch                                 2.153-1.1                                 jenkins                                  72 M
+
+Transaction Summary
+========================================================================================================================================================================
+Install       1 Package(s)
+
+Total download size: 72 M
+Installed size: 72 M
+Is this ok [y/N]: y
+Downloading Packages:
+jenkins-2.153-1.1.noarch.rpm                                                                                                                     |  72 MB     00:26
+Running rpm_check_debug
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+  Installing : jenkins-2.153-1.1.noarch                                                                                                                             1/1
+  Verifying  : jenkins-2.153-1.1.noarch                                                                                                                             1/1
+
+Installed:
+  jenkins.noarch 0:2.153-1.1
+
+Complete!
+[root@localhost vagrant]# yum install java -y
+Loaded plugins: fastestmirror
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+ * base: centos.excellmedia.net
+ * epel: mirrors.aliyun.com
+ * extras: centos.myfahim.com
+ * updates: centos.excellmedia.net
+Package 1:java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64 already installed and latest version
+Nothing to do
+[root@localhost vagrant]# service jenkins status
+jenkins is stopped
+[root@localhost vagrant]# service jenkins start
+Starting Jenkins                                           [  OK  ]
+[root@localhost vagrant]# service jenkins status
+jenkins (pid  1729) is running...
+[root@localhost vagrant]# rpm -iUvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+Retrieving http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+Preparing...                ########################################### [100%]
+        package epel-release-6-8.noarch is already installed
+[root@localhost vagrant]# yum update -y
+Loaded plugins: fastestmirror
+Setting up Update Process
+Loading mirror speeds from cached hostfile
+ * base: centos.excellmedia.net
+ * epel: mirror1.ku.ac.th
+ * extras: centos.myfahim.com
+ * updates: centos.excellmedia.net
+Resolving Dependencies
+--> Running transaction check
+---> Package device-mapper-multipath.x86_64 0:0.4.9-106.el6 will be updated
+---> Package device-mapper-multipath.x86_64 0:0.4.9-106.el6_10.1 will be an update
+---> Package device-mapper-multipath-libs.x86_64 0:0.4.9-106.el6 will be updated
+---> Package device-mapper-multipath-libs.x86_64 0:0.4.9-106.el6_10.1 will be an update
+---> Package dhclient.x86_64 12:4.1.1-61.P1.el6.centos will be updated
+---> Package dhclient.x86_64 12:4.1.1-63.P1.el6.centos will be an update
+---> Package dhcp-common.x86_64 12:4.1.1-61.P1.el6.centos will be updated
+---> Package dhcp-common.x86_64 12:4.1.1-63.P1.el6.centos will be an update
+---> Package kernel.x86_64 0:2.6.32-754.6.3.el6 will be installed
+---> Package kernel-firmware.noarch 0:2.6.32-754.3.5.el6 will be updated
+---> Package kernel-firmware.noarch 0:2.6.32-754.6.3.el6 will be an update
+---> Package kpartx.x86_64 0:0.4.9-106.el6 will be updated
+---> Package kpartx.x86_64 0:0.4.9-106.el6_10.1 will be an update
+---> Package nfs-utils.x86_64 1:1.2.3-78.el6 will be updated
+---> Package nfs-utils.x86_64 1:1.2.3-78.el6_10.1 will be an update
+---> Package nss.x86_64 0:3.36.0-8.el6 will be updated
+---> Package nss.x86_64 0:3.36.0-9.el6_10 will be an update
+---> Package nss-sysinit.x86_64 0:3.36.0-8.el6 will be updated
+---> Package nss-sysinit.x86_64 0:3.36.0-9.el6_10 will be an update
+---> Package nss-tools.x86_64 0:3.36.0-8.el6 will be updated
+---> Package nss-tools.x86_64 0:3.36.0-9.el6_10 will be an update
+---> Package python-paramiko.noarch 0:1.7.5-4.el6_9 will be updated
+---> Package python-paramiko.noarch 0:1.7.5-5.el6_10 will be an update
+---> Package tzdata.noarch 0:2018e-3.el6 will be updated
+---> Package tzdata.noarch 0:2018g-1.el6 will be an update
+---> Package yum.noarch 0:3.2.29-81.el6.centos will be updated
+---> Package yum.noarch 0:3.2.29-81.el6.centos.0.1 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================================================================
+ Package                                            Arch                         Version                                            Repository                     Size
+========================================================================================================================================================================
+Installing:
+ kernel                                             x86_64                       2.6.32-754.6.3.el6                                 updates                        32 M
+Updating:
+ device-mapper-multipath                            x86_64                       0.4.9-106.el6_10.1                                 updates                       133 k
+ device-mapper-multipath-libs                       x86_64                       0.4.9-106.el6_10.1                                 updates                       204 k
+ dhclient                                           x86_64                       12:4.1.1-63.P1.el6.centos                          updates                       323 k
+ dhcp-common                                        x86_64                       12:4.1.1-63.P1.el6.centos                          updates                       145 k
+ kernel-firmware                                    noarch                       2.6.32-754.6.3.el6                                 updates                        29 M
+ kpartx                                             x86_64                       0.4.9-106.el6_10.1                                 updates                        72 k
+ nfs-utils                                          x86_64                       1:1.2.3-78.el6_10.1                                updates                       337 k
+ nss                                                x86_64                       3.36.0-9.el6_10                                    updates                       865 k
+ nss-sysinit                                        x86_64                       3.36.0-9.el6_10                                    updates                        53 k
+ nss-tools                                          x86_64                       3.36.0-9.el6_10                                    updates                       460 k
+ python-paramiko                                    noarch                       1.7.5-5.el6_10                                     updates                       729 k
+ tzdata                                             noarch                       2018g-1.el6                                        updates                       498 k
+ yum                                                noarch                       3.2.29-81.el6.centos.0.1                           updates                       1.0 M
+
+Transaction Summary
+========================================================================================================================================================================
+Install       1 Package(s)
+Upgrade      13 Package(s)
+
+Total download size: 66 M
+Downloading Packages:
+(1/14): device-mapper-multipath-0.4.9-106.el6_10.1.x86_64.rpm                                                                                    | 133 kB     00:00
+(2/14): device-mapper-multipath-libs-0.4.9-106.el6_10.1.x86_64.rpm                                                                               | 204 kB     00:00
+(3/14): dhclient-4.1.1-63.P1.el6.centos.x86_64.rpm                                                                                               | 323 kB     00:00
+(4/14): dhcp-common-4.1.1-63.P1.el6.centos.x86_64.rpm                                                                                            | 145 kB     00:00
+(5/14): kernel-2.6.32-754.6.3.el6.x86_64.rpm                                                                                                     |  32 MB     00:15
+(6/14): kernel-firmware-2.6.32-754.6.3.el6.noarch.rpm                                                                                            |  29 MB     00:21
+(7/14): kpartx-0.4.9-106.el6_10.1.x86_64.rpm                                                                                                     |  72 kB     00:00
+(8/14): nfs-utils-1.2.3-78.el6_10.1.x86_64.rpm                                                                                                   | 337 kB     00:02
+(9/14): nss-3.36.0-9.el6_10.x86_64.rpm                                                                                                           | 865 kB     00:01
+(10/14): nss-sysinit-3.36.0-9.el6_10.x86_64.rpm                                                                                                  |  53 kB     00:00
+(11/14): nss-tools-3.36.0-9.el6_10.x86_64.rpm                                                                                                    | 460 kB     00:00
+(12/14): python-paramiko-1.7.5-5.el6_10.noarch.rpm                                                                                               | 729 kB     00:02
+(13/14): tzdata-2018g-1.el6.noarch.rpm                                                                                                           | 498 kB     00:01
+(14/14): yum-3.2.29-81.el6.centos.0.1.noarch.rpm                                                                                                 | 1.0 MB     00:01
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                   1.3 MB/s |  66 MB     00:51
+Running rpm_check_debug
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+  Updating   : nss-3.36.0-9.el6_10.x86_64                                                                                                                          1/27
+  Updating   : nss-sysinit-3.36.0-9.el6_10.x86_64                                                                                                                  2/27
+  Updating   : 12:dhcp-common-4.1.1-63.P1.el6.centos.x86_64                                                                                                        3/27
+  Updating   : device-mapper-multipath-libs-0.4.9-106.el6_10.1.x86_64                                                                                              4/27
+  Updating   : kernel-firmware-2.6.32-754.6.3.el6.noarch                                                                                                           5/27
+  Updating   : kpartx-0.4.9-106.el6_10.1.x86_64                                                                                                                    6/27
+  Updating   : device-mapper-multipath-0.4.9-106.el6_10.1.x86_64                                                                                                   7/27
+  Installing : kernel-2.6.32-754.6.3.el6.x86_64                                                                                                                    8/27
+  Updating   : 12:dhclient-4.1.1-63.P1.el6.centos.x86_64                                                                                                           9/27
+  Updating   : nss-tools-3.36.0-9.el6_10.x86_64                                                                                                                   10/27
+  Updating   : 1:nfs-utils-1.2.3-78.el6_10.1.x86_64                                                                                                               11/27
+  Updating   : yum-3.2.29-81.el6.centos.0.1.noarch                                                                                                                12/27
+  Updating   : tzdata-2018g-1.el6.noarch                                                                                                                          13/27
+  Updating   : python-paramiko-1.7.5-5.el6_10.noarch                                                                                                              14/27
+  Cleanup    : device-mapper-multipath-0.4.9-106.el6.x86_64                                                                                                       15/27
+  Cleanup    : 12:dhclient-4.1.1-61.P1.el6.centos.x86_64                                                                                                          16/27
+  Cleanup    : nss-tools-3.36.0-8.el6.x86_64                                                                                                                      17/27
+  Cleanup    : 12:dhcp-common-4.1.1-61.P1.el6.centos.x86_64                                                                                                       18/27
+  Cleanup    : yum-3.2.29-81.el6.centos.noarch                                                                                                                    19/27
+  Cleanup    : kernel-firmware-2.6.32-754.3.5.el6.noarch                                                                                                          20/27
+  Cleanup    : tzdata-2018e-3.el6.noarch                                                                                                                          21/27
+  Cleanup    : python-paramiko-1.7.5-4.el6_9.noarch                                                                                                               22/27
+  Cleanup    : nss-sysinit-3.36.0-8.el6.x86_64                                                                                                                    23/27
+  Cleanup    : nss-3.36.0-8.el6.x86_64                                                                                                                            24/27
+  Cleanup    : device-mapper-multipath-libs-0.4.9-106.el6.x86_64                                                                                                  25/27
+  Cleanup    : kpartx-0.4.9-106.el6.x86_64                                                                                                                        26/27
+  Cleanup    : 1:nfs-utils-1.2.3-78.el6.x86_64                                                                                                                    27/27
+  Verifying  : kernel-2.6.32-754.6.3.el6.x86_64                                                                                                                    1/27
+  Verifying  : nss-tools-3.36.0-9.el6_10.x86_64                                                                                                                    2/27
+  Verifying  : python-paramiko-1.7.5-5.el6_10.noarch                                                                                                               3/27
+  Verifying  : 12:dhclient-4.1.1-63.P1.el6.centos.x86_64                                                                                                           4/27
+  Verifying  : nss-sysinit-3.36.0-9.el6_10.x86_64                                                                                                                  5/27
+  Verifying  : kpartx-0.4.9-106.el6_10.1.x86_64                                                                                                                    6/27
+  Verifying  : device-mapper-multipath-0.4.9-106.el6_10.1.x86_64                                                                                                   7/27
+  Verifying  : tzdata-2018g-1.el6.noarch                                                                                                                           8/27
+  Verifying  : kernel-firmware-2.6.32-754.6.3.el6.noarch                                                                                                           9/27
+  Verifying  : nss-3.36.0-9.el6_10.x86_64                                                                                                                         10/27
+  Verifying  : device-mapper-multipath-libs-0.4.9-106.el6_10.1.x86_64                                                                                             11/27
+  Verifying  : yum-3.2.29-81.el6.centos.0.1.noarch                                                                                                                12/27
+  Verifying  : 1:nfs-utils-1.2.3-78.el6_10.1.x86_64                                                                                                               13/27
+  Verifying  : 12:dhcp-common-4.1.1-63.P1.el6.centos.x86_64                                                                                                       14/27
+  Verifying  : device-mapper-multipath-0.4.9-106.el6.x86_64                                                                                                       15/27
+  Verifying  : kpartx-0.4.9-106.el6.x86_64                                                                                                                        16/27
+  Verifying  : tzdata-2018e-3.el6.noarch                                                                                                                          17/27
+  Verifying  : 1:nfs-utils-1.2.3-78.el6.x86_64                                                                                                                    18/27
+  Verifying  : nss-tools-3.36.0-8.el6.x86_64                                                                                                                      19/27
+  Verifying  : 12:dhclient-4.1.1-61.P1.el6.centos.x86_64                                                                                                          20/27
+  Verifying  : 12:dhcp-common-4.1.1-61.P1.el6.centos.x86_64                                                                                                       21/27
+  Verifying  : nss-3.36.0-8.el6.x86_64                                                                                                                            22/27
+  Verifying  : kernel-firmware-2.6.32-754.3.5.el6.noarch                                                                                                          23/27
+  Verifying  : nss-sysinit-3.36.0-8.el6.x86_64                                                                                                                    24/27
+  Verifying  : device-mapper-multipath-libs-0.4.9-106.el6.x86_64                                                                                                  25/27
+  Verifying  : python-paramiko-1.7.5-4.el6_9.noarch                                                                                                               26/27
+  Verifying  : yum-3.2.29-81.el6.centos.noarch                                                                                                                    27/27
+
+Installed:
+  kernel.x86_64 0:2.6.32-754.6.3.el6
+
+Updated:
+  device-mapper-multipath.x86_64 0:0.4.9-106.el6_10.1      device-mapper-multipath-libs.x86_64 0:0.4.9-106.el6_10.1      dhclient.x86_64 12:4.1.1-63.P1.el6.centos
+  dhcp-common.x86_64 12:4.1.1-63.P1.el6.centos             kernel-firmware.noarch 0:2.6.32-754.6.3.el6                   kpartx.x86_64 0:0.4.9-106.el6_10.1
+  nfs-utils.x86_64 1:1.2.3-78.el6_10.1                     nss.x86_64 0:3.36.0-9.el6_10                                  nss-sysinit.x86_64 0:3.36.0-9.el6_10
+  nss-tools.x86_64 0:3.36.0-9.el6_10                       python-paramiko.noarch 0:1.7.5-5.el6_10                       tzdata.noarch 0:2018g-1.el6
+  yum.noarch 0:3.2.29-81.el6.centos.0.1
+
+Complete!
+[root@localhost vagrant]# yum -y install docker-io
+Loaded plugins: fastestmirror
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+ * base: centos.excellmedia.net
+ * epel: mirrors.aliyun.com
+ * extras: centos.myfahim.com
+ * updates: centos.excellmedia.net
+Resolving Dependencies
+--> Running transaction check
+---> Package docker-io.x86_64 0:1.7.1-2.el6 will be installed
+--> Processing Dependency: xz for package: docker-io-1.7.1-2.el6.x86_64
+--> Processing Dependency: lxc for package: docker-io-1.7.1-2.el6.x86_64
+--> Processing Dependency: libcgroup for package: docker-io-1.7.1-2.el6.x86_64
+--> Running transaction check
+---> Package libcgroup.x86_64 0:0.40.rc1-27.el6_10 will be installed
+---> Package lxc.x86_64 0:1.0.11-1.el6 will be installed
+--> Processing Dependency: lua-lxc(x86-64) = 1.0.11-1.el6 for package: lxc-1.0.11-1.el6.x86_64
+--> Processing Dependency: lua-alt-getopt for package: lxc-1.0.11-1.el6.x86_64
+--> Processing Dependency: liblxc.so.1()(64bit) for package: lxc-1.0.11-1.el6.x86_64
+---> Package xz.x86_64 0:4.999.9-0.5.beta.20091007git.el6 will be installed
+--> Running transaction check
+---> Package lua-alt-getopt.noarch 0:0.7.0-1.el6 will be installed
+---> Package lua-lxc.x86_64 0:1.0.11-1.el6 will be installed
+--> Processing Dependency: lua-filesystem for package: lua-lxc-1.0.11-1.el6.x86_64
+---> Package lxc-libs.x86_64 0:1.0.11-1.el6 will be installed
+--> Running transaction check
+---> Package lua-filesystem.x86_64 0:1.4.2-1.el6 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================================================================
+ Package                                Arch                           Version                                                    Repository                       Size
+========================================================================================================================================================================
+Installing:
+ docker-io                              x86_64                         1.7.1-2.el6                                                epel                            4.6 M
+Installing for dependencies:
+ libcgroup                              x86_64                         0.40.rc1-27.el6_10                                         updates                         131 k
+ lua-alt-getopt                         noarch                         0.7.0-1.el6                                                epel                            6.9 k
+ lua-filesystem                         x86_64                         1.4.2-1.el6                                                epel                             24 k
+ lua-lxc                                x86_64                         1.0.11-1.el6                                               epel                             16 k
+ lxc                                    x86_64                         1.0.11-1.el6                                               epel                            124 k
+ lxc-libs                               x86_64                         1.0.11-1.el6                                               epel                            257 k
+ xz                                     x86_64                         4.999.9-0.5.beta.20091007git.el6                           base                            137 k
+
+Transaction Summary
+========================================================================================================================================================================
+Install       8 Package(s)
+
+Total download size: 5.3 M
+Installed size: 21 M
+Downloading Packages:
+(1/8): docker-io-1.7.1-2.el6.x86_64.rpm                                                                                                          | 4.6 MB     00:29
+(2/8): libcgroup-0.40.rc1-27.el6_10.x86_64.rpm                                                                                                   | 131 kB     00:01
+(3/8): lua-alt-getopt-0.7.0-1.el6.noarch.rpm                                                                                                     | 6.9 kB     00:00
+(4/8): lua-filesystem-1.4.2-1.el6.x86_64.rpm                                                                                                     |  24 kB     00:00
+(5/8): lua-lxc-1.0.11-1.el6.x86_64.rpm                                                                                                           |  16 kB     00:00
+(6/8): lxc-1.0.11-1.el6.x86_64.rpm                                                                                                               | 124 kB     00:01
+(7/8): lxc-libs-1.0.11-1.el6.x86_64.rpm                                                                                                          | 257 kB     00:02
+(8/8): xz-4.999.9-0.5.beta.20091007git.el6.x86_64.rpm                                                                                            | 137 kB     00:03
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                   113 kB/s | 5.3 MB     00:47
+Running rpm_check_debug
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+  Installing : lxc-libs-1.0.11-1.el6.x86_64                                                                                                                         1/8
+  Installing : lua-filesystem-1.4.2-1.el6.x86_64                                                                                                                    2/8
+  Installing : lua-lxc-1.0.11-1.el6.x86_64                                                                                                                          3/8
+  Installing : lua-alt-getopt-0.7.0-1.el6.noarch                                                                                                                    4/8
+  Installing : lxc-1.0.11-1.el6.x86_64                                                                                                                              5/8
+  Installing : xz-4.999.9-0.5.beta.20091007git.el6.x86_64                                                                                                           6/8
+  Installing : libcgroup-0.40.rc1-27.el6_10.x86_64                                                                                                                  7/8
+  Installing : docker-io-1.7.1-2.el6.x86_64                                                                                                                         8/8
+  Verifying  : lxc-1.0.11-1.el6.x86_64                                                                                                                              1/8
+  Verifying  : lua-lxc-1.0.11-1.el6.x86_64                                                                                                                          2/8
+  Verifying  : libcgroup-0.40.rc1-27.el6_10.x86_64                                                                                                                  3/8
+  Verifying  : lxc-libs-1.0.11-1.el6.x86_64                                                                                                                         4/8
+  Verifying  : xz-4.999.9-0.5.beta.20091007git.el6.x86_64                                                                                                           5/8
+  Verifying  : docker-io-1.7.1-2.el6.x86_64                                                                                                                         6/8
+  Verifying  : lua-alt-getopt-0.7.0-1.el6.noarch                                                                                                                    7/8
+  Verifying  : lua-filesystem-1.4.2-1.el6.x86_64                                                                                                                    8/8
+
+Installed:
+  docker-io.x86_64 0:1.7.1-2.el6
+
+Dependency Installed:
+  libcgroup.x86_64 0:0.40.rc1-27.el6_10     lua-alt-getopt.noarch 0:0.7.0-1.el6     lua-filesystem.x86_64 0:1.4.2-1.el6              lua-lxc.x86_64 0:1.0.11-1.el6
+  lxc.x86_64 0:1.0.11-1.el6                 lxc-libs.x86_64 0:1.0.11-1.el6          xz.x86_64 0:4.999.9-0.5.beta.20091007git.el6
+
+Complete!
+[root@localhost vagrant]# service docker start
+Starting cgconfig service:                                 [  OK  ]
+Starting docker:                                           [  OK  ]
+[root@localhost vagrant]# service docker status
+docker (pid  12281) is running...
+[root@localhost vagrant]#

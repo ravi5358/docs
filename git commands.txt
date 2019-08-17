@@ -1,0 +1,161 @@
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice
+$ git clone https://github.com/ravi5358/ecs-repo.git
+Cloning into 'ecs-repo'...
+warning: You appear to have cloned an empty repository.
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice
+$ git st
+git: 'st' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        reset
+        stage
+        stash
+        svn
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice
+$ cd ecs-repo
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git add *
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git commit -m "add"
+[master (root-commit) 1c8cd8b] add
+ 89 files changed, 3264 insertions(+)
+ create mode 100644 Docker/Dockerfile
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/com/maaven/practice/App(1).java
+ create mode 100644 src/main/java/com/maaven/practice/App.java
+ create mode 100644 src/main/java/com/maaven/practice/dummy.java
+ create mode 100644 src/test/java/com/maaven/practice/AppTest(1).java
+ create mode 100644 src/test/java/com/maaven/practice/AppTest.java
+ create mode 100644 target/classes/com/maaven/practice/App(1).class
+ create mode 100644 target/classes/com/maaven/practice/App.class
+ create mode 100644 target/maven-archiver/pom(1).properties
+ create mode 100644 target/maven-archiver/pom.properties
+ create mode 100644 target/maven-status/maven-compiler-plugin/compile/default-co                                                                                                                mpile/createdFiles(1).lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/compile/default-co                                                                                                                mpile/createdFiles.lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/compile/default-co                                                                                                                mpile/inputFiles(1).lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/compile/default-co                                                                                                                mpile/inputFiles.lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/testCompile/defaul                                                                                                                t-testCompile/createdFiles(1).lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/testCompile/defaul                                                                                                                t-testCompile/createdFiles.lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/testCompile/defaul                                                                                                                t-testCompile/inputFiles(1).lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/testCompile/defaul                                                                                                                t-testCompile/inputFiles.lst
+ create mode 100644 target/myapp-1.0(1).jar
+ create mode 100644 target/myapp-1.0-SNAPSHOT(1).jar
+ create mode 100644 target/myapp-1.0-SNAPSHOT.jar
+ create mode 100644 target/myapp-1.0.jar
+ create mode 100644 target/myapp-1.0snapshot(1).jar
+ create mode 100644 target/myapp-1.0snapshot.jar
+ create mode 100644 target/myapp-2.0-SNAPSHOT(1).jar
+ create mode 100644 target/myapp-2.0-SNAPSHOT.jar
+ create mode 100644 target/myapp-3.0-SNAPSHOT(1).jar
+ create mode 100644 target/myapp-3.0-SNAPSHOT.jar
+ create mode 100644 target/site/css/maven-base(1).css
+ create mode 100644 target/site/css/maven-base.css
+ create mode 100644 target/site/css/maven-theme(1).css
+ create mode 100644 target/site/css/maven-theme.css
+ create mode 100644 target/site/css/print(1).css
+ create mode 100644 target/site/css/print.css
+ create mode 100644 target/site/css/site(1).css
+ create mode 100644 target/site/css/site.css
+ create mode 100644 target/site/dependencies(1).html
+ create mode 100644 target/site/dependencies.html
+ create mode 100644 target/site/dependency-convergence(1).html
+ create mode 100644 target/site/dependency-convergence.html
+ create mode 100644 target/site/dependency-info(1).html
+ create mode 100644 target/site/dependency-info.html
+ create mode 100644 target/site/images/close(1).gif
+ create mode 100644 target/site/images/close.gif
+ create mode 100644 target/site/images/collapsed(1).gif
+ create mode 100644 target/site/images/collapsed.gif
+ create mode 100644 target/site/images/expanded(1).gif
+ create mode 100644 target/site/images/expanded.gif
+ create mode 100644 target/site/images/external(1).png
+ create mode 100644 target/site/images/external.png
+ create mode 100644 target/site/images/icon_error_sml(1).gif
+ create mode 100644 target/site/images/icon_error_sml.gif
+ create mode 100644 target/site/images/icon_info_sml(1).gif
+ create mode 100644 target/site/images/icon_info_sml.gif
+ create mode 100644 target/site/images/icon_success_sml(1).gif
+ create mode 100644 target/site/images/icon_success_sml.gif
+ create mode 100644 target/site/images/icon_warning_sml(1).gif
+ create mode 100644 target/site/images/icon_warning_sml.gif
+ create mode 100644 target/site/images/logos/build-by-maven-black(1).png
+ create mode 100644 target/site/images/logos/build-by-maven-black.png
+ create mode 100644 target/site/images/logos/build-by-maven-white(1).png
+ create mode 100644 target/site/images/logos/build-by-maven-white.png
+ create mode 100644 target/site/images/logos/maven-feather(1).png
+ create mode 100644 target/site/images/logos/maven-feather.png
+ create mode 100644 target/site/images/newwindow(1).png
+ create mode 100644 target/site/images/newwindow.png
+ create mode 100644 target/site/index(1).html
+ create mode 100644 target/site/index.html
+ create mode 100644 target/site/plugin-management(1).html
+ create mode 100644 target/site/plugin-management.html
+ create mode 100644 target/site/plugins(1).html
+ create mode 100644 target/site/plugins.html
+ create mode 100644 target/site/project-info(1).html
+ create mode 100644 target/site/project-info.html
+ create mode 100644 target/site/project-summary(1).html
+ create mode 100644 target/site/project-summary.html
+ create mode 100644 target/surefire-reports/TEST-com.maaven.practice.AppTest(1).                                                                                                                xml
+ create mode 100644 target/surefire-reports/TEST-com.maaven.practice.AppTest.xml
+ create mode 100644 target/surefire-reports/com.maaven.practice.AppTest(1).txt
+ create mode 100644 target/surefire-reports/com.maaven.practice.AppTest.txt
+ create mode 100644 target/surefire/surefire1657128719121255822tmp
+ create mode 100644 target/surefire/surefire1657128719121255822tmp(1)
+ create mode 100644 target/surefire/surefire_08214270484357781207tmp
+ create mode 100644 target/surefire/surefire_08214270484357781207tmp(1)
+ create mode 100644 target/surefire/surefirebooter5002116280197003247(1).jar
+ create mode 100644 target/surefire/surefirebooter5002116280197003247.jar
+ create mode 100644 target/test-classes/com/maaven/practice/AppTest(1).class
+ create mode 100644 target/test-classes/com/maaven/practice/AppTest.class
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git config --global user.email ravishankar5358@gmail.com
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git config --global user.name ravi5358
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git push origin master
+remote: Permission to ravi5358/ecs-repo.git denied to ravi119467.
+fatal: unable to access 'https://github.com/ravi5358/ecs-repo.git/': The requested URL returned error: 403
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git config --global user.name ravi535
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git config --global user.name ravi5358
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git config --global user.name ravi5358
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git config --global user.email ravishankar5358@gmail.com
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git config --global user.name ravi5358
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git commit -m "add"
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$ git push origin master
+remote: Permission to ravi5358/ecs-repo.git denied to ravi119467.
+fatal: unable to access 'https://github.com/ravi5358/ecs-repo.git/': The requested URL returned error: 403
+
+Ravi Shankar@Ravi MINGW64 ~/Desktop/gitpractice/ecs-repo (master)
+$

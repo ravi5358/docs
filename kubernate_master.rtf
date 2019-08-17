@@ -1,0 +1,256 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang2057{\fonttbl{\f0\fmodern Courier New;}{\f1\fmodern\fcharset0 Courier New;}{\f2\fnil\fcharset129 Courier New;}}
+{\colortbl ;\red0\green0\blue0;\red48\green127\blue48;\red127\green127\blue27;\red127\green27\blue127;\red127\green48\blue48;\red27\green127\blue127;\red64\green127\blue64;}
+\viewkind4\uc1\pard\f0\fs18 Authenticating with public key "Imported-Openssh-Key: C:\\Users\\Ravi Shankar\\Desktop\\Kubernatives_practice.pem"\cf1\highlight1 
+\par \cf0\highlight0      \u9484?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9488?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?                        \cf2\f1\bullet  MobaXterm 11.1 \bullet  \cf0\f0                          \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?            \cf3 (SSH client, X-server and networking tools)\cf0              \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?                                                                    \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474? \u8594? SSH session to \cf4 ec2-user\cf0 @\cf4 3.88.129.51                              \cf0\u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?\f1    \bullet  SSH compression : \cf2\f0 v\cf0                                             \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?\f1    \bullet  SSH-browser     : \cf2\f0 v\cf0                                             \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?\f1    \bullet  X11-forwarding  : \cf5\f0 x\cf0   (disabled or not supported by server)     \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?\f1    \bullet  DISPLAY         : \cf4\f0 192.168.1.12:0.0                          \cf0    \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474?                                                                    \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9474? \u8594? For more info, ctrl+click on \cf6\ul help\cf0\ulnone  or visit our \cf6\ul website\cf0\ulnone            \u9474?\cf1\highlight1 
+\par \cf0\highlight0      \u9492?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9496?\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Last login: Sat Apr 27 18:55:15 2019 from 27.59.16.190\cf1\highlight1 
+\par \cf0\highlight0 [ec2-user@ravishankar-master ~]$ sudo  -i\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]#\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]#\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]#\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# cat /etc/yum.repos.d/kubernetes.repo\cf1\highlight1 
+\par \cf0\highlight0 [kubernetes]\cf1\highlight1 
+\par \cf0\highlight0 name=Kubernetes\cf1\highlight1 
+\par \cf0\highlight0 baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64\cf1\highlight1 
+\par \cf0\highlight0 enabled=1\cf1\highlight1 
+\par \cf0\highlight0 gpgcheck=1\cf1\highlight1 
+\par \cf0\highlight0 repo_gpgcheck=1\cf1\highlight1 
+\par \cf0\highlight0 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg\cf1\highlight1 
+\par \cf0\highlight0        https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# sudo yum install firewalld\cf1\highlight1 
+\par \cf0\highlight0 Loaded plugins: amazon-id, rhui-lb, search-disabled-repos\cf1\highlight1 
+\par \cf0\highlight0 dockerrepo                                                                                                        | 2.9 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 kubernetes/signature                                                                                              |  454 B  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 kubernetes/signature                                                                                              | 1.4 kB  00:00:00 !!!\cf1\highlight1 
+\par \cf0\highlight0 rhui-REGION-client-config-server-7                                                                                | 2.9 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 rhui-REGION-rhel-server-releases                                                                                  | 3.5 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 rhui-REGION-rhel-server-rh-common                                                                                 | 3.8 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 Resolving Dependencies\cf1\highlight1 
+\par \cf0\highlight0 --> Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 ---> Package firewalld.noarch 0:0.5.3-5.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: firewalld-filesystem = 0.5.3-5.el7 for package: firewalld-0.5.3-5.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: python-firewall = 0.5.3-5.el7 for package: firewalld-0.5.3-5.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: ipset for package: firewalld-0.5.3-5.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 --> Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 ---> Package firewalld-filesystem.noarch 0:0.5.3-5.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package ipset.x86_64 0:6.38-3.el7_6 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: ipset-libs(x86-64) = 6.38-3.el7_6 for package: ipset-6.38-3.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: libipset.so.11(LIBIPSET_1.0)(64bit) for package: ipset-6.38-3.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: libipset.so.11(LIBIPSET_2.0)(64bit) for package: ipset-6.38-3.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: libipset.so.11(LIBIPSET_3.0)(64bit) for package: ipset-6.38-3.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: libipset.so.11(LIBIPSET_4.5)(64bit) for package: ipset-6.38-3.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: libipset.so.11(LIBIPSET_4.6)(64bit) for package: ipset-6.38-3.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: libipset.so.11()(64bit) for package: ipset-6.38-3.el7_6.x86_64\cf1\highlight1 
+\par \cf0\highlight0 ---> Package python-firewall.noarch 0:0.5.3-5.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: python-slip-dbus for package: python-firewall-0.5.3-5.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 --> Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 ---> Package ipset-libs.x86_64 0:6.38-3.el7_6 will be installed\cf1\highlight1 
+\par \cf0\highlight0 ---> Package python-slip-dbus.noarch 0:0.4.0-4.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Processing Dependency: python-slip = 0.4.0-4.el7 for package: python-slip-dbus-0.4.0-4.el7.noarch\cf1\highlight1 
+\par \cf0\highlight0 --> Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 ---> Package python-slip.noarch 0:0.4.0-4.el7 will be installed\cf1\highlight1 
+\par \cf0\highlight0 --> Finished Dependency Resolution\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Dependencies Resolved\cf1\highlight1 
+\par 
+\par \cf0\highlight0 =========================================================================================================================================\cf1\highlight1 
+\par \cf0\highlight0  Package                            Arch                 Version                    Repository                                      Size\cf1\highlight1 
+\par \cf0\highlight0 =========================================================================================================================================\cf1\highlight1 
+\par \cf0\highlight0 Installing:\cf1\highlight1 
+\par \cf0\highlight0  firewalld                          noarch               0.5.3-5.el7                rhui-REGION-rhel-server-releases               431 k\cf1\highlight1 
+\par \cf0\highlight0 Installing for dependencies:\cf1\highlight1 
+\par \cf0\highlight0  firewalld-filesystem               noarch               0.5.3-5.el7                rhui-REGION-rhel-server-releases                49 k\cf1\highlight1 
+\par \cf0\highlight0  ipset                              x86_64               6.38-3.el7_6               rhui-REGION-rhel-server-releases                43 k\cf1\highlight1 
+\par \cf0\highlight0  ipset-libs                         x86_64               6.38-3.el7_6               rhui-REGION-rhel-server-releases                50 k\cf1\highlight1 
+\par \cf0\highlight0  python-firewall                    noarch               0.5.3-5.el7                rhui-REGION-rhel-server-releases               331 k\cf1\highlight1 
+\par \cf0\highlight0  python-slip                        noarch               0.4.0-4.el7                rhui-REGION-rhel-server-releases                31 k\cf1\highlight1 
+\par \cf0\highlight0  python-slip-dbus                   noarch               0.4.0-4.el7                rhui-REGION-rhel-server-releases                32 k\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Transaction Summary\cf1\highlight1 
+\par \cf0\highlight0 =========================================================================================================================================\cf1\highlight1 
+\par \cf0\highlight0 Install  1 Package (+6 Dependent packages)\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Total download size: 967 k\cf1\highlight1 
+\par \cf0\highlight0 Installed size: 3.9 M\cf1\highlight1 
+\par \cf0\highlight0 Is this ok [y/d/N]: y\cf1\highlight1 
+\par \cf0\highlight0 Downloading packages:\cf1\highlight1 
+\par \cf0\highlight0 (1/7): firewalld-filesystem-0.5.3-5.el7.noarch.rpm                                                                |  49 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (2/7): ipset-libs-6.38-3.el7_6.x86_64.rpm                                                                         |  50 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (3/7): firewalld-0.5.3-5.el7.noarch.rpm                                                                           | 431 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (4/7): ipset-6.38-3.el7_6.x86_64.rpm                                                                              |  43 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (5/7): python-slip-0.4.0-4.el7.noarch.rpm                                                                         |  31 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (6/7): python-firewall-0.5.3-5.el7.noarch.rpm                                                                     | 331 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 (7/7): python-slip-dbus-0.4.0-4.el7.noarch.rpm                                                                    |  32 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 -----------------------------------------------------------------------------------------------------------------------------------------\cf1\highlight1 
+\par \cf0\highlight0 Total                                                                                                    1.7 MB/s | 967 kB  00:00:00\cf1\highlight1 
+\par \cf0\highlight0 Running transaction check\cf1\highlight1 
+\par \cf0\highlight0 Running transaction test\cf1\highlight1 
+\par \cf0\highlight0 Transaction test succeeded\cf1\highlight1 
+\par \cf0\highlight0 Running transaction\cf1\highlight1 
+\par \cf0\highlight0   Installing : python-slip-0.4.0-4.el7.noarch                                                                                        1/7\cf1\highlight1 
+\par \cf0\highlight0   Installing : python-slip-dbus-0.4.0-4.el7.noarch                                                                                   2/7\cf1\highlight1 
+\par \cf0\highlight0   Installing : python-firewall-0.5.3-5.el7.noarch                                                                                    3/7\cf1\highlight1 
+\par \cf0\highlight0   Installing : firewalld-filesystem-0.5.3-5.el7.noarch                                                                               4/7\cf1\highlight1 
+\par \cf0\highlight0   Installing : ipset-libs-6.38-3.el7_6.x86_64                                                                                        5/7\cf1\highlight1 
+\par \cf0\highlight0   Installing : ipset-6.38-3.el7_6.x86_64                                                                                             6/7\cf1\highlight1 
+\par \cf0\highlight0   Installing : firewalld-0.5.3-5.el7.noarch                                                                                          7/7\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : ipset-libs-6.38-3.el7_6.x86_64                                                                                        1/7\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : firewalld-filesystem-0.5.3-5.el7.noarch                                                                               2/7\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : firewalld-0.5.3-5.el7.noarch                                                                                          3/7\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : ipset-6.38-3.el7_6.x86_64                                                                                             4/7\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : python-firewall-0.5.3-5.el7.noarch                                                                                    5/7\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : python-slip-0.4.0-4.el7.noarch                                                                                        6/7\cf1\highlight1 
+\par \cf0\highlight0   Verifying  : python-slip-dbus-0.4.0-4.el7.noarch                                                                                   7/7\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Installed:\cf1\highlight1 
+\par \cf0\highlight0   firewalld.noarch 0:0.5.3-5.el7\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Dependency Installed:\cf1\highlight1 
+\par \cf0\highlight0   firewalld-filesystem.noarch 0:0.5.3-5.el7        ipset.x86_64 0:6.38-3.el7_6             ipset-libs.x86_64 0:6.38-3.el7_6\cf1\highlight1 
+\par \cf0\highlight0   python-firewall.noarch 0:0.5.3-5.el7             python-slip.noarch 0:0.4.0-4.el7        python-slip-dbus.noarch 0:0.4.0-4.el7\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Complete!\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# sudo systemctl enable firewalld\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# sudo systemctl status firewalld\cf1\highlight1 
+\par \cf0\highlight0\u9679? firewalld.service - firewalld - dynamic firewall daemon\cf1\highlight1 
+\par \cf0\highlight0    Loaded: loaded (/usr/lib/systemd/system/firewalld.service; enabled; vendor preset: enabled)\cf1\highlight1 
+\par \cf0\highlight0    Active: inactive (dead)\cf1\highlight1 
+\par \cf0\highlight0      Docs: man:firewalld(1)\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# sudo systemctl start firewalld\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# sudo systemctl status firewalld\cf1\highlight1 
+\par \cf7\highlight0\u9679?\cf0  firewalld.service - firewalld - dynamic firewall daemon\cf1\highlight1 
+\par \cf0\highlight0    Loaded: loaded (/usr/lib/systemd/system/firewalld.service; enabled; vendor preset: enabled)\cf1\highlight1 
+\par \cf0\highlight0    Active: \cf7 active (running)\cf0  since Sun 2019-04-28 03:39:07 UTC; 2s ago\cf1\highlight1 
+\par \cf0\highlight0      Docs: man:firewalld(1)\cf1\highlight1 
+\par \cf0\highlight0  Main PID: 13902 (firewalld)\cf1\highlight1 
+\par \cf0\highlight0     Tasks: 2\cf1\highlight1 
+\par \cf0\highlight0    Memory: 22.9M\cf1\highlight1 
+\par \cf0\highlight0    CGroup: /system.slice/firewalld.service\cf1\highlight1 
+\par \cf0\highlight0            \u9492?\u9472?13902 /usr/bin/python -Es /usr/sbin/firewalld --nofork --nopid\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Apr 28 03:39:06 ravishankar-master systemd[1]: Starting firewalld - dynamic firewall daemon...\cf1\highlight1 
+\par \cf0\highlight0 Apr 28 03:39:07 ravishankar-master systemd[1]: Started firewalld - dynamic firewall daemon.\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# firewall-cmd --permanent --add-port=6443/tcp\cf1\highlight1 
+\par \cf0\highlight0 success\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# firewall-cmd --permanent --add-port=10250/tcp\cf1\highlight1 
+\par \cf0\highlight0 success\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# firewall-cmd --reload\cf1\highlight1 
+\par \cf0\highlight0 success\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# ip a\cf1\highlight1 
+\par \cf0\highlight0 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000\cf1\highlight1 
+\par \cf0\highlight0     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\cf1\highlight1 
+\par \cf0\highlight0     inet 127.0.0.1/8 scope host lo\cf1\highlight1 
+\par \cf0\highlight0        valid_lft forever preferred_lft forever\cf1\highlight1 
+\par \cf0\highlight0     inet6 ::1/128 scope host\cf1\highlight1 
+\par \cf0\highlight0        valid_lft forever preferred_lft forever\cf1\highlight1 
+\par \cf0\highlight0 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc mq state UP group default qlen 1000\cf1\highlight1 
+\par \cf0\highlight0     link/ether 0e:35:17:2d:d5:e8 brd ff:ff:ff:ff:ff:ff\cf1\highlight1 
+\par \cf0\highlight0     inet 172.31.37.15/20 brd 172.31.47.255 scope global noprefixroute dynamic eth0\cf1\highlight1 
+\par \cf0\highlight0        valid_lft 3022sec preferred_lft 3022sec\cf1\highlight1 
+\par \cf0\highlight0     inet6 fe80::c35:17ff:fe2d:d5e8/64 scope link\cf1\highlight1 
+\par \cf0\highlight0        valid_lft forever preferred_lft forever\cf1\highlight1 
+\par \cf0\highlight0 3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default\cf1\highlight1 
+\par \cf0\highlight0     link/ether 02:42:2a:fd:8e:15 brd ff:ff:ff:ff:ff:ff\cf1\highlight1 
+\par \cf0\highlight0     inet 172.17.0.1/16 scope global docker0\cf1\highlight1 
+\par \cf0\highlight0        valid_lft forever preferred_lft forever\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# kubeadm init --apiserver-advertise-address 172.31.37.15 --pod-network-cidr=10.0.0.0/16\cf1\highlight1 
+\par \cf0\highlight0 [init] Using Kubernetes version: v1.14.1\cf1\highlight1 
+\par \cf0\highlight0 [preflight] Running pre-flight checks\cf1\highlight1 
+\par \cf0\highlight0         [WARNING Firewalld]: firewalld is active, please ensure ports [6443 10250] are open or your cluster may not function correctly\cf1\highlight1 
+\par \cf0\highlight0         [WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd". Please follow the guide at https://kubernetes.io/docs/setup/cri/\cf1\highlight1 
+\par \cf0\highlight0         [WARNING SystemVerification]: this Docker version is not on the list of validated versions: 17.05.0-ce. Latest validated version: 18.09\cf1\highlight1 
+\par \cf0\highlight0 [preflight] Pulling images required for setting up a Kubernetes cluster\cf1\highlight1 
+\par \cf0\highlight0 [preflight] This might take a minute or two, depending on the speed of your internet connection\cf1\highlight1 
+\par \cf0\highlight0 [preflight] You can also perform this action in beforehand using 'kubeadm config images pull'\cf1\highlight1 
+\par \cf0\highlight0 [kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"\cf1\highlight1 
+\par \cf0\highlight0 [kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"\cf1\highlight1 
+\par \cf0\highlight0 [kubelet-start] Activating the kubelet service\cf1\highlight1 
+\par \cf0\highlight0 [certs] Using certificateDir folder "/etc/kubernetes/pki"\cf1\highlight1 
+\par \cf0\highlight0 [certs] Generating "ca" certificate and key\cf1\highlight1 
+\par \cf0\highlight0 [certs] Generating "apiserver-kubelet-client" certificate and key\cf1\highlight1 
+\par \cf0\highlight0 [certs] Generating "apiserver" certificate and key\cf1\highlight1 
+\par \cf0\highlight0 [certs] apiserver serving cert is signed for DNS names [ravishankar-master kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local] and IPs [10.96.0.1 172.31.37.15]\cf1\highlight1 
+\par \cf0\highlight0 [certs] Generating "front-proxy-ca" certificate and key\cf1\highlight1 
+\par \cf0\highlight0 [certs] Generating "front-proxy-client" certificate and key\cf1\highlight1 
+\par \cf0\highlight0 [certs] Generating "etcd/ca" certificate and key\cf1\highlight1 
+\par \cf0\highlight0 [certs] Generating "etcd/healthcheck-client" certificate and key\cf1\highlight1 
+\par \cf0\highlight0 [certs] Generating "apiserver-etcd-client" certificate and key\cf1\highlight1 
+\par \cf0\highlight0 [certs] Generating "etcd/server" certificate and key\cf1\highlight1 
+\par \cf0\highlight0 [certs] etcd/server serving cert is signed for DNS names [ravishankar-master localhost] and IPs [172.31.37.15 127.0.0.1 ::1]\cf1\highlight1 
+\par \cf0\highlight0 [certs] Generating "etcd/peer" certificate and key\cf1\highlight1 
+\par \cf0\highlight0 [certs] etcd/peer serving cert is signed for DNS names [ravishankar-master localhost] and IPs [172.31.37.15 127.0.0.1 ::1]\cf1\highlight1 
+\par \cf0\highlight0 [certs] Generating "sa" key and public key\cf1\highlight1 
+\par \cf0\highlight0 [kubeconfig] Using kubeconfig folder "/etc/kubernetes"\cf1\highlight1 
+\par \cf0\highlight0 [kubeconfig] Writing "admin.conf" kubeconfig file\cf1\highlight1 
+\par \cf0\highlight0 [kubeconfig] Writing "kubelet.conf" kubeconfig file\cf1\highlight1 
+\par \cf0\highlight0 [kubeconfig] Writing "controller-manager.conf" kubeconfig file\cf1\highlight1 
+\par \cf0\highlight0 [kubeconfig] Writing "scheduler.conf" kubeconfig file\cf1\highlight1 
+\par \cf0\highlight0 [control-plane] Using manifest folder "/etc/kubernetes/manifests"\cf1\highlight1 
+\par \cf0\highlight0 [control-plane] Creating static Pod manifest for "kube-apiserver"\cf1\highlight1 
+\par \cf0\highlight0 [control-plane] Creating static Pod manifest for "kube-controller-manager"\cf1\highlight1 
+\par \cf0\highlight0 [control-plane] Creating static Pod manifest for "kube-scheduler"\cf1\highlight1 
+\par \cf0\highlight0 [etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"\cf1\highlight1 
+\par \cf0\highlight0 [wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s\cf1\highlight1 
+\par \cf0\highlight0 [apiclient] All control plane components are healthy after 19.002257 seconds\cf1\highlight1 
+\par \cf0\highlight0 [upload-config] storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace\cf1\highlight1 
+\par \cf0\highlight0 [kubelet] Creating a ConfigMap "kubelet-config-1.14" in namespace kube-system with the configuration for the kubelets in the cluster\cf1\highlight1 
+\par \cf0\highlight0 [upload-certs] Skipping phase. Please see --experimental-upload-certs\cf1\highlight1 
+\par \cf0\highlight0 [mark-control-plane] Marking the node ravishankar-master as control-plane by adding the label "node-role.kubernetes.io/master=''"\cf1\highlight1 
+\par \cf0\highlight0 [mark-control-plane] Marking the node ravishankar-master as control-plane by adding the taints [node-role.kubernetes.io/master:NoSchedule]\cf1\highlight1 
+\par \cf0\highlight0 [bootstrap-token] Using token: fkk45m.mmgabwdgn8f9ojp5\cf1\highlight1 
+\par \cf0\highlight0 [bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles\cf1\highlight1 
+\par \cf0\highlight0 [bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials\cf1\highlight1 
+\par \cf0\highlight0 [bootstrap-token] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token\cf1\highlight1 
+\par \cf0\highlight0 [bootstrap-token] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster\cf1\highlight1 
+\par \cf0\highlight0 [bootstrap-token] creating the "cluster-info" ConfigMap in the "kube-public" namespace\cf1\highlight1 
+\par \cf0\highlight0 [addons] Applied essential addon: CoreDNS\cf1\highlight1 
+\par \cf0\highlight0 [addons] Applied essential addon: kube-proxy\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Your Kubernetes control-plane has initialized successfully!\cf1\highlight1 
+\par 
+\par \cf0\highlight0 To start using your cluster, you need to run the following as a regular user:\cf1\highlight1 
+\par 
+\par \cf0\highlight0   mkdir -p $HOME/.kube\cf1\highlight1 
+\par \cf0\highlight0   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config\cf1\highlight1 
+\par \cf0\highlight0   sudo chown $(id -u):$(id -g) $HOME/.kube/config\cf1\highlight1 
+\par 
+\par \cf0\highlight0 You should now deploy a pod network to the cluster.\cf1\highlight1 
+\par \cf0\highlight0 Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:\cf1\highlight1 
+\par \cf0\highlight0   https://kubernetes.io/docs/concepts/cluster-administration/addons/\cf1\highlight1 
+\par 
+\par \cf0\highlight0 Then you can join any number of worker nodes by running the following on each as root:\cf1\highlight1 
+\par 
+\par \cf0\highlight0 kubeadm join 172.31.37.15:6443 --token fkk45m.mmgabwdgn8f9ojp5 \\\cf1\highlight1 
+\par \cf0\highlight0     --discovery-token-ca-cert-hash sha256:ebbcf0a4e642a29c9d8dc6ed9a4db2ae991d4d3ed444cacaca9581d257b1eb2f\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# mkdir -p $HOME/.kube\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# sudo chown $(id -u):$(id -g) $HOME/.kube/config\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml\cf1\highlight1 
+\par \cf0\highlight0 podsecuritypolicy.extensions/psp.flannel.unprivileged created\cf1\highlight1 
+\par \cf0\highlight0 clusterrole.rbac.authorization.k8s.io/flannel created\cf1\highlight1 
+\par \cf0\highlight0 clusterrolebinding.rbac.authorization.k8s.io/flannel created\cf1\highlight1 
+\par \cf0\highlight0 serviceaccount/flannel created\cf1\highlight1 
+\par \cf0\highlight0 configmap/kube-flannel-cfg created\cf1\highlight1 
+\par \cf0\highlight0 daemonset.extensions/kube-flannel-ds-amd64 created\cf1\highlight1 
+\par \cf0\highlight0 daemonset.extensions/kube-flannel-ds-arm64 created\cf1\highlight1 
+\par \cf0\highlight0 daemonset.extensions/kube-flannel-ds-arm created\cf1\highlight1 
+\par \cf0\highlight0 daemonset.extensions/kube-flannel-ds-ppc64le created\cf1\highlight1 
+\par \cf0\highlight0 daemonset.extensions/kube-flannel-ds-s390x created\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]# kubectl get nodes\cf1\highlight1 
+\par \cf0\highlight0 NAME                 STATUS   ROLES    AGE     VERSION\cf1\highlight1 
+\par \cf0\highlight0 ravishankar-master   Ready    master   5m28s   v1.14.1\cf1\highlight1 
+\par \cf0\highlight0 [root@ravishankar-master ~]#\cf1\highlight1 
+\par \pard\cf0\highlight0\f2\fs20 
+\par }
+ 

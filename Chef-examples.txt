@@ -1,0 +1,232 @@
+Installation of Chef-----------------
+------------------------------------------
+$sudo rpm -ivh chef-server-core-12.3.0-1.el6.x86_64.rpm
+
+$sudo  chef-server-ctl reconfigure
+
+
+$sudo rpm -ivh chef-manage-2.2.0-1.el6.x86_64.rpm
+
+$sudo chef-manage-ctl reconfigure
+
+------------------------------------------
+Craeting user and password for chef server
+-------------------------------------------
+$sudo chef-server-ctl user-create ram venkat ramanareddy ramana.devops1988@gmail.com 'Ram123' --filename /home/vagrant/ram.pem
+
+
+
+
+Create a recipes------------------------
+
+Def of Recipe: Recipe is a collection of resources with their actions to perform an automated task.
+
+
+vi Hello.rb---------
+
+file 'helloworld.txt' do
+
+	content 'hi this is ram'
+	action :create
+end
+
+
+
+how to Run recipes-------------------------------
+
+chef-apply "Recipename"
+
+-------	Example:chef-apply Hello.rb
+
+
+vi apache.rb----------
+
+
+package 'httpd'
+
+service 'httpd' do
+	action [:enable,:start]
+end
+
+
+service 'httpd' do
+  action [ :enable, :start ]
+  retries 3
+end
+
+file 'var/www/html/index.html' do
+content '<html><body><h1>Hi this is html devops template</h1></body></html>'
+end
+how to run the recipe?
+
+---------chef-apply apache.rb
+
+-----------------------------------
+How to create CookBook in chef
+-----------------------------------
+Def of CookBook: well managed way of recipes,all collection together with include their policies is called cookbook.
+
+	chef generate cookbook LeadApp
+
+how to Run cookbook in chef..............
+
+          sudo chef-client --local-mode --runlist 'recipe[LeadApp]'
+
+Sturcture of cookbook...........................
+
+ rw-rw-r--. 1 vagrant vagrant 1133 Apr 26 07:10 Berksfile	|
+-rw-rw-r--. 1 vagrant vagrant 1133 Apr 26 07:10 chefignore	|Files
+-rw-rw-r--. 1 vagrant vagrant  775 Apr 26 07:10 metadata.rb     |
+-rw-rw-r--. 1 vagrant vagrant   60 Apr 26 07:10 README.md	|
+drwxrwxr-x. 2 vagrant vagrant 4096 Apr 26 07:10 recipes  |
+drwxrwxr-x. 3 vagrant vagrant 4096 Apr 26 07:10 spec	 |Directories
+drwxrwxr-x. 3 vagrant vagrant 4096 Apr 26 07:10 test     |
+
+
+---------------------------------
+how to upload a cookbook to server
+----------------------------------
+current location : /home/vagrant/chef-repo/cookbooks/LeadApp/recipes
+
+go back : /home/vagrant/chef-repo
+
+run the below command : knife cookbook upload LeadApp
+
+click on exit run in normal user .
+
+sudo knife cookbook upload LeadApp --force
+ 
+now we have to check cookbok uploaded or not go to server 192.168.5.10 and go to policy check.
+
+
+bootstrap :
+
+go path: /home/vagrant/chef-repo
+
+sudo knife bootstrap 192.168.50.12 --ssh-user vagrant --ssh-password 'vagrant' --sudo --use-sudo-password --node-name node1 --run-list 'recipe[LeadApp]'
+
+
+
+
+
+
+
+
+
+
+
+
+
+ $knife cookbook upload LeadApp
+
+-------------------------------------------
+How to create a node in different machine
+-------------------------------------------
+
+$knife bootstrap 192.168.33.10 --ssh-user vagrant --ssh-password 'vagrant' --sudo --use-sudo-password --node-name node1 --run-list 'recipe[Learn_devops]'
+
+
+
+knife bootstrap 192.168.50.12 --ssh-user vagrant --ssh-password 'vagrant' --sudo --use-sudo-password --node-name node1 --run-list 'recipe[Light]'
+
+---------------------------
+Machine Details----------------
+---------------------------------
+
+192.168.50.10     chefserver
+192.168.50.11      workstation
+192.168.50.12       Node
+
+
+
+Download custom cookbook
+--------------------------
+
+$knife cookbook site download java
+
+depends 'apt'
+depends 'windows'
+depends 'homebrew'
+
+
+
+
+Deployment---------------------------------
+
+LeadApp
+
+$ knife cookbook create LeadApp 
+
+==============LeadApp/recipes/default.rb==========================
+
+
+node.default['java']['jdk_version'] = 7
+include_recipe "java"
+
+execute 'checking version of java ' do
+	command 'java -version'
+end
+
+execute  'Download tomcat7 tar file ' do
+	command  "if [ ! -f /home/vagrant/apache-tomcat-7.0.70.tar.gz ];then wget xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+end
+
+execute 'extract the tar file' do
+	command "if [ ! -f /home/vagrant/apache-tomcat-7.0.70.tar.gz ];then
+end
+
+execute 'stop tomcat if it is running'
+	command 'sh /home/vagrant/apache-tomcat-7.0.70/bin/shutdown.sh'
+end
+
+execute 'start tomcat if it is not running'
+	command 'sh /home/vagrant/apache-tomcat-7.0.70/bin/startup.sh'
+end
+
+
+
+----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+Mysql setup:
+................................
+mysql_service 'test' do
+                        port '3306'
+                        version ''5.5'
+                        initial_root_password 'root'
+                        action [:create, :start]
+end
+
+mysql_database_user 'ramana' do
+                                connection(
+                                                :host => '127.0.0.1',
+                                                :username => 'root',
+                                                :password => 'root'
+                                        )
+                                        password 'ramana'
+                                        database_name 'LeadAppDB'
+                                        host '127.0.0.1'
+                                        action [:create, :grant]
+end
+
+mysql_database 'LeadAppDB' do
+                                 connection(
+                                                :host => '127.0.0.1',
+                                                :username => 'ramana',
+                                                :password => 'ramana'
+                                        )
+                                        action :create
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+

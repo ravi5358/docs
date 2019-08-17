@@ -1,0 +1,108 @@
+==========================================================================================================================================
+                                                 Java and jenkins installation and one sample project in AWS
+=============================================================================================================================================
+                                                 https://github.com/miztiik/DevOps-Demos/tree/master/setup-jenkins
+==================================================================================================================================================
+                                                     JAVA INSTALLATION
+==================================================================================================================================================
+
+1) yum update
+
+2)yum -y install java-1.8*
+
+    (or)
+
+yum -y install java-1.8.0-openjdk
+
+yum -y install java-1.8.0-openjdk-devel
+
+3) find / -name javac
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/bin/javac
+
+         (OR)
+
+find /usr/lib/jvm/java-1.8* | head -n 3
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64
+
+4) vi.bash_profiles
+
+# User specific environment and startup programs
+JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64
+PATH=$PATH:$JAVA_HOME:$HOME/bin
+
+
+5) echo $JAVA_HOME
+
+6) source ~/.bash_profile
+7) echo $JAVA_HOME
+
+==================================================================================================================================
+                                                   Install jenkins
+====================================================================================================================================
+
+1) yum install -y wget
+
+2) wget -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+3) rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+4) yum -y install jenkins
+
+5) systemctl start jenkins
+6) systemctl enable jenkins
+7) systemctl status jenkins
+
+8)http://3.16.45.202:8080/
+
+9) cat /var/lib/jenkins/secrets/initialAdminPassword
+
+10) User :- admin
+Password :- admin
+=================================================================================================================================================================
+                                                               Sample project using java and jenkins
+==================================================================================================================================================================
+Add java path in global too configuration
+
+1)goto manage jenkins
+
+2) global tool configuration
+
+3) unde JDK
+4)click on JDK installations
+
+Give Name java-1.8
+
+JAVA_HOME PATH :- /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64
+click save 
+===================================================================================================================================
+                                                             Sample project
+================================================================================================================================
+1) Click on new item
+
+2) enter the item name :- My-first-project
+
+select or click freestyle project
+
+next click on ok
+
+Description my first project
+
+no need to select any one in under build click on execute shell
+give below in box
+
+
+#!/bin/bash
+echo "Welcome to Valaxy jenkins Demo"
+
+click on save and click on build now.
+
+=========================================================================================================================================
+
+
+https://stackoverflow.com/questions/38392152/maven-project-radio-option-is-not-showing-in-jenkins-latest-version-2-7-1-for/46082178
+
+
+https://github.com/arsr319/maven-hello-world.git
+
+
+

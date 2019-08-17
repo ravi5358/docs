@@ -1,0 +1,579 @@
+JAVA_HOME=/usr/java/jre1.8.0_181
+export JAVA_HOME
+PATH=$JAVA_HOME/bin:$PATH
+export PATH
+
+====================================================================================================
+login as: root
+root@192.168.130.132's password:
+Last login: Sun Sep 23 00:43:44 2018 from 192.168.130.1
+[root@localhost ~]# java -version
+java version "1.8.0_181"
+Java(TM) SE Runtime Environment (build 1.8.0_181-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.181-b13, mixed mode)
+[root@localhost ~]# cd /usr
+[root@localhost usr]# wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz"
+--2018-09-23 01:20:28--  http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz
+Resolving download.oracle.com (download.oracle.com)... 23.57.112.199
+Connecting to download.oracle.com (download.oracle.com)|23.57.112.199|:80... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://edelivery.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz [following]
+--2018-09-23 01:20:29--  https://edelivery.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz
+Resolving edelivery.oracle.com (edelivery.oracle.com)... 23.207.143.117, 2600:140f:4:1a0::2d3e, 2600:140f:4:196::2d3e
+Connecting to edelivery.oracle.com (edelivery.oracle.com)|23.207.143.117|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz?AuthParam=1537628902_97727a7f04a2f0ab6b53675921221923 [following]
+--2018-09-23 01:20:30--  http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz?AuthParam=1537628902_97727a7f04a2f0ab6b53675921221923
+Connecting to download.oracle.com (download.oracle.com)|23.57.112.199|:80... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2018-09-23 01:20:31 ERROR 404: Not Found.
+
+[root@localhost usr]# ls -lrh
+total 144K
+lrwxrwxrwx.  1 root root   10 Apr 16 20:40 tmp -> ../var/tmp
+drwxr-xr-x.  4 root root   34 Apr 16 20:40 src
+drwxr-xr-x. 96 root root 4.0K Apr 16 20:56 share
+dr-xr-xr-x.  2 root root  16K Apr 16 20:56 sbin
+drwxr-xr-x. 12 root root  131 Apr 16 20:40 local
+drwxr-xr-x. 20 root root 4.0K Apr 16 20:52 libexec
+dr-xr-xr-x. 51 root root  32K Apr 16 20:56 lib64
+dr-xr-xr-x. 29 root root 4.0K Apr 16 20:52 lib
+drwxr-xr-x.  3 root root   60 Sep 23 00:56 java
+drwxr-xr-x. 34 root root 4.0K Apr 16 20:44 include
+drwxr-xr-x.  2 root root    6 Mar 10  2016 games
+drwxr-xr-x.  2 root root    6 Mar 10  2016 etc
+dr-xr-xr-x.  2 root root  28K Apr 16 20:56 bin
+[root@localhost usr]# cd ~
+[root@localhost ~]# wget -0 /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.                                                                                        org/redhat/jenkins.repo
+wget: invalid option -- '0'
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+[root@localhost ~]# cd /
+[root@localhost /]# wget -0 /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.                                                                                        org/redhat/jenkins.repo
+wget: invalid option -- '0'
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+[root@localhost /]# wget -o /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.                                                                                        org/redhat/jenkins.repo
+[root@localhost /]# wget -0 /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.                                                                                        org/redhat/jenkins.repo
+wget: invalid option -- '0'
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+[root@localhost /]# wget -0/etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.o                                                                                        rg/redhat/jenkins.repo
+wget: invalid option -- '0'
+wget: invalid option -- '/'
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+[root@localhost /]# wget -0 /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.                                                                                        org/redhat/jenkins.repo
+wget: invalid option -- '0'
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+[root@localhost /]# cd /etc
+[root@localhost etc]# ls -lrth
+total 1.2M
+-rw-r--r--.  1 root root   1.7K Oct 22  2012 nsswitch.conf.bak
+-rw-r--r--.  1 root root   1.6K Dec 25  2012 rpc
+-rw-r--r--.  1 root root     28 Feb 28  2013 ld.so.conf
+-rw-r--r--.  1 root root   655K Jun  7  2013 services
+-rw-r--r--.  1 root root   6.4K Jun  7  2013 protocols
+-rw-r--r--.  1 root root    233 Jun  7  2013 printcap
+-rw-r--r--.  1 root root      0 Jun  7  2013 motd
+-rw-r--r--.  1 root root    942 Jun  7  2013 inputrc
+-rw-r--r--.  1 root root    460 Jun  7  2013 hosts.deny
+-rw-r--r--.  1 root root    370 Jun  7  2013 hosts.allow
+-rw-r--r--.  1 root root    158 Jun  7  2013 hosts
+-rw-r--r--.  1 root root      9 Jun  7  2013 host.conf
+-rw-r--r--.  1 root root      0 Jun  7  2013 exports
+-rw-r--r--.  1 root root    841 Jun  7  2013 csh.login
+-rw-r--r--.  1 root root   1.5K Jun  7  2013 aliases
+-rw-r--r--.  1 root root    662 Jul 31  2013 logrotate.conf
+drwxr-xr-x.  2 root root      6 Dec 28  2013 cron.weekly
+-rw-r--r--.  1 root root    451 Dec 28  2013 crontab
+drwxr-xr-x.  2 root root      6 Dec 28  2013 cron.monthly
+-rw-r--r--.  1 root root   8.7K Jan 26  2014 nanorc
+drwxr-xr-x.  2 root root      6 Jan 26  2014 terminfo
+-rw-r--r--.  1 root root   2.9K Jan 27  2014 pinforc
+drwxr-xr-x.  2 root root      6 Jan 27  2014 popt.d
+-rw-r--r--.  1 root root   2.0K Jan 30  2014 virc
+-rw-r--r--.  1 root root   2.0K Jan 30  2014 vimrc
+-rw-r--r--.  1 root root   5.1K Mar 17  2014 man_db.conf
+-rw-r--r--.  1 root root     20 May 12  2014 fprintd.conf
+-rw-r--r--.  1 root root   2.0K Dec 10  2014 mail.rc
+drwxr-xr-x.  2 root root      6 Apr 10  2015 gcrypt
+-rw-r--r--.  1 root root     94 Apr 29  2015 GREP_COLORS
+-rw-------.  1 tss  tss    6.9K May 24  2015 tcsd.conf
+-rw-r--r--.  1 root root    458 Jun 24  2015 rsyncd.conf
+-rw-r--r--.  1 root root    513 Feb  4  2016 updatedb.conf
+-rw-------.  1 root root      0 Feb 23  2016 cron.deny
+-rw-------.  1 root root    541 Feb 23  2016 anacrontab
+drwxr-xr-x.  2 root root      6 Mar 10  2016 xinetd.d
+drwxr-xr-x.  2 root root      6 Mar 10  2016 opt
+drwxr-xr-x.  2 root root      6 Mar 24  2016 gnupg
+-rw-r--r--.  1 root root      0 May  4  2016 subuid
+-rw-r--r--.  1 root root      0 May  4  2016 subgid
+-rw-------.  1 root root    221 May  4  2016 securetty
+-rw-r--r--.  1 root root     70 May  4  2016 filesystems
+-rw-r--r--.  1 root root      0 May  4  2016 environment
+-rw-r--r--.  1 root root   1.6K May  4  2016 csh.cshrc
+-rw-r--r--.  1 root root   2.8K May  4  2016 bashrc
+-rw-r--r--.  1 root root     38 May 19  2016 fuse.conf
+-rw-r--r--.  1 root root      1 May 23  2016 at.deny
+-rw-r--r--.  1 root root    767 Jun  6  2016 netconfig
+-rw-r--r--.  1 root root     55 Jun  6  2016 asound.conf
+-rw-r--r--.  1 root root    112 Jun 13  2016 e2fsck.conf
+-rw-r--r--.  1 root root    936 Jun 13  2016 mke2fs.conf
+-rw-r--r--.  1 root root   4.4K Jun 21  2016 wgetrc
+-rw-r--r--.  1 root root    131 Jun 23  2016 cgsnapshot_blacklist.conf
+-rw-r--r--.  1 root root    234 Jun 23  2016 cgrules.conf
+drwxr-xr-x.  2 root root      6 Jun 23  2016 cgconfig.d
+-rw-r--r--.  1 root root    676 Jun 23  2016 cgconfig.conf
+-rw-r--r--.  1 root root    111 Jun 27  2016 magic
+-rw-r-----.  1 root chrony    9 Jun 28  2016 chrony.keys
+-rw-r--r--.  1 root root   1.2K Jun 28  2016 chrony.conf
+drwxr-xr-x.  2 root root      6 Jun 29  2016 chkconfig.d
+-rw-r--r--.  1 root root    858 Jun 29  2016 GeoIP.conf.default
+-rw-r--r--.  1 root root    842 Jun 29  2016 GeoIP.conf
+-rw-r--r--.  1 root root   4.6K Jun 30  2016 DIR_COLORS.lightbgcolor
+-rw-r--r--.  1 root root   5.6K Jun 30  2016 DIR_COLORS.256color
+-rw-r--r--.  1 root root   5.0K Jun 30  2016 DIR_COLORS
+-rw-r--r--.  1 root root   1.3K Jun 30  2016 ethertypes
+-rw-r--r--.  1 root root   3.2K Jul 14  2016 rsyslog.conf
+drwxr-xr-x.  2 root root     25 Jul 14  2016 rsyslog.d
+-rw-r-----.  1 root root    191 Jul 14  2016 libaudit.conf
+-rw-r-----.  1 root root   3.2K Jul 19  2016 sudo-ldap.conf
+-r--r-----.  1 root root   3.9K Jul 19  2016 sudoers
+-rw-r-----.  1 root root   1.8K Jul 19  2016 sudo.conf
+drwxr-x---.  2 root root      6 Jul 19  2016 sudoers.d
+-rw-r--r--.  1 root root   1018 Jul 25  2016 usb_modeswitch.conf
+drwxr-xr-x.  2 root root      6 Aug  4  2016 gdbinit.d
+-rw-r--r--.  1 root root    265 Aug  4  2016 gdbinit
+-rw-r--r--.  1 root root    590 Aug 19  2016 krb5.conf
+drwxr-xr-x.  2 root root      6 Aug 19  2016 krb5.conf.d
+-rw-r--r--.  1 root root    216 Aug 26  2016 sestatus.conf
+-rw-r--r--.  1 root root   5.1K Sep  5  2016 makedumpfile.conf.sample
+-rw-r--r--.  1 root root    100 Sep  9  2016 sos.conf
+-rw-r--r--.  1 root root    449 Sep 12  2016 sysctl.conf
+drwxr-xr-x.  2 root root      6 Sep 12  2016 statetab.d
+-rw-r--r--.  1 root root    212 Sep 12  2016 statetab
+drwxr-xr-x.  2 root root     23 Sep 12  2016 rwtab.d
+-rw-r--r--.  1 root root    928 Sep 12  2016 rwtab
+-rw-r--r--.  1 root root     58 Sep 12  2016 networks
+-rw-r--r--.  1 root root    511 Sep 12  2016 inittab
+drwxr-xr-x.  2 root root      6 Sep 13  2016 dnsmasq.d
+-rw-r--r--.  1 root root    25K Sep 13  2016 dnsmasq.conf
+drwxr-xr-x.  2 root root      6 Sep 13  2016 tmpfiles.d
+drwxr-xr-x.  2 root root      6 Sep 13  2016 modules-load.d
+drwxr-xr-x.  2 root root      6 Sep 13  2016 binfmt.d
+-rw-r--r--.  1 root root    813 Sep 19  2016 yum.conf
+-rw-r--r--.  1 root root    570 Sep 21  2016 my.cnf
+-rw-r--r--.  1 root root    375 Sep 26  2016 trusted-key.key
+-rw-r--r--.  1 root root     45 Sep 27  2016 system-release-cpe
+-rw-r--r--.  1 root root     52 Sep 27  2016 redhat-release
+-rw-r--r--.  1 root root    495 Sep 27  2016 os-release
+-rw-r--r--.  1 root root     22 Sep 27  2016 issue.net
+-rw-r--r--.  1 root root     23 Sep 27  2016 issue
+drwxr-xr-x.  2 root root      6 Oct  5  2016 dracut.conf.d
+-rw-r--r--.  1 root root   1.3K Oct  5  2016 dracut.conf
+-rw-r--r--.  1 root root    501 Apr 16 20:38 fstab
+-rw-------.  1 root root      0 Apr 16 20:38 crypttab
+lrwxrwxrwx.  1 root root     17 Apr 16 20:38 mtab -> /proc/self/mounts
+lrwxrwxrwx.  1 root root     14 Apr 16 20:40 system-release -> redhat-release
+drwxr-xr-x.  5 root root     52 Apr 16 20:40 pm
+drwxr-xr-x.  2 root root     62 Apr 16 20:42 skel
+lrwxrwxrwx.  1 root root     11 Apr 16 20:42 init.d -> rc.d/init.d
+lrwxrwxrwx.  1 root root     10 Apr 16 20:42 rc2.d -> rc.d/rc2.d
+lrwxrwxrwx.  1 root root     10 Apr 16 20:42 rc1.d -> rc.d/rc1.d
+lrwxrwxrwx.  1 root root     10 Apr 16 20:42 rc0.d -> rc.d/rc0.d
+lrwxrwxrwx.  1 root root     10 Apr 16 20:42 rc3.d -> rc.d/rc3.d
+lrwxrwxrwx.  1 root root     10 Apr 16 20:42 rc4.d -> rc.d/rc4.d
+lrwxrwxrwx.  1 root root     10 Apr 16 20:42 rc5.d -> rc.d/rc5.d
+lrwxrwxrwx.  1 root root     10 Apr 16 20:42 rc6.d -> rc.d/rc6.d
+drwxr-xr-x.  2 root root     35 Apr 16 20:43 libnl
+drwxr-xr-x.  3 root root     21 Apr 16 20:43 pkcs11
+drwxr-xr-x.  4 root root     40 Apr 16 20:43 groff
+drwxr-xr-x.  2 root root     19 Apr 16 20:44 ssl
+drwxr-xr-x.  2 root root    140 Apr 16 20:44 iproute2
+drwxr-xr-x.  3 root root     20 Apr 16 20:44 gss
+drwxr-xr-x.  2 root root     35 Apr 16 20:44 python
+drwxr-xr-x.  3 root root     38 Apr 16 20:45 fonts
+drwxr-xr-x.  6 root root   4.0K Apr 16 20:45 security
+lrwxrwxrwx.  1 root root     56 Apr 16 20:45 favicon.png -> /usr/share/icons/hic                                                                                        olor/16x16/apps/fedora-logo-icon.png
+drwxr-xr-x.  2 root root     31 Apr 16 20:46 my.cnf.d
+drwxr-xr-x.  6 root root    149 Apr 16 20:46 libreport
+drwxr-xr-x.  6 root root    100 Apr 16 20:46 yum
+drwxr-xr-x.  5 root root     81 Apr 16 20:47 selinux
+drwxr-xr-x.  2 root root     23 Apr 16 20:47 depmod.d
+drwxr-xr-x.  5 root root     57 Apr 16 20:47 X11
+lrwxrwxrwx.  1 root root     13 Apr 16 20:47 rc.local -> rc.d/rc.local
+drwxr-xr-x.  4 root root    151 Apr 16 20:47 systemd
+drwxr-xr-x.  4 root root     38 Apr 16 20:47 xdg
+-r--r--r--.  1 root root     33 Apr 16 20:47 machine-id
+drwxr-xr-x.  4 root root     78 Apr 16 20:47 dbus-1
+drwxr-xr-x.  5 root root     72 Apr 16 20:47 polkit-1
+drwxr-xr-x.  2 root root     22 Apr 16 20:47 cron.hourly
+drwxr-xr-x.  2 root root     28 Apr 16 20:47 sysctl.d
+drwxr-x---.  3 root root     24 Apr 16 20:47 dhcp
+drwxr-xr-x.  3 root root     43 Apr 16 20:47 lsm
+drw-------.  2 root root    238 Apr 16 20:47 redhat-access-insights
+drwxr-xr-x.  3 root root    101 Apr 16 20:47 abrt
+drwxr-xr-x.  2 root root     78 Apr 16 20:47 prelink.conf.d
+drwxr-xr-x.  2 root root     28 Apr 16 20:48 plymouth
+-rw-r--r--.  1 root root   6.8K Apr 16 20:48 kdump.conf
+drwxr-xr-x.  2 root root     66 Apr 16 20:48 rpm
+drwxr-xr-x.  2 root root     33 Apr 16 20:48 wpa_supplicant
+drwxr-xr-x.  4 root root    198 Apr 16 20:48 vmware-tools
+drwxr-xr-x.  3 root root    219 Apr 16 20:48 ppp
+drwxr-xr-x.  8 root root    145 Apr 16 20:48 NetworkManager
+drwxr-x---.  5 root root    104 Apr 16 20:49 firewalld
+drwxr-xr-x.  2 root root     26 Apr 16 20:49 cifs-utils
+drwxr-xr-x.  6 root root    100 Apr 16 20:49 lvm
+lrwxrwxrwx.  1 root root     22 Apr 16 20:49 grub2.cfg -> ../boot/grub2/grub.cfg
+drwxr-xr-x.  2 root root     57 Apr 16 20:49 rdma
+drwxr-xr-x.  2 root root    101 Apr 16 20:49 ld.so.conf.d
+drwxr-xr-x.  2 root root     41 Apr 16 20:50 modprobe.d
+drwxr-xr-x.  2 root root     70 Apr 16 20:50 tuned
+drwxr-x---.  3 root root     43 Apr 16 20:50 audisp
+drwxr-xr-x.  2 root root    154 Apr 16 20:50 postfix
+drwxr-xr-x.  2 root root     24 Apr 16 20:50 sasl2
+drwxr-xr-x.  2 root root    261 Apr 16 20:51 alternatives
+drwxr-xr-x.  2 root root     54 Apr 16 20:51 cron.d
+drwxr-xr-x.  3 root root     50 Apr 16 20:51 qemu-ga
+drwxr-xr-x.  2 root root     38 Apr 16 20:51 ntp
+drwxr-xr-x.  2 root root    135 Apr 16 20:51 logrotate.d
+drwxr-xr-x.  5 root root     86 Apr 16 20:51 rhsm
+drwxr-xr-x.  3 root root     74 Apr 16 20:51 smartmontools
+drwxr-xr-x.  3 root root     24 Apr 16 20:51 kernel
+drwxr-xr-x.  2 root root   4.0K Apr 16 20:51 setuptool.d
+drwxr-xr-x.  2 root root     70 Apr 16 20:51 cron.daily
+-rw-r--r--.  1 root root     95 Apr 16 20:52 shells
+drwxr-xr-x.  2 root root   4.0K Apr 16 20:56 profile.d
+drwxr-xr-x.  2 root root    210 Apr 16 20:56 bash_completion.d
+drwxr-xr-x.  3 root root     34 Apr 16 20:56 scl
+-rw-r--r--.  1 root root    33K Apr 16 20:56 ld.so.cache
+drwx------.  2 root root    182 Apr 16 21:10 grub.d
+drwxr-xr-x.  2 root root     44 Apr 16 21:11 default
+drwxr-xr-x.  3 root root     36 Apr 16 21:11 openldap
+-rw-r--r--.  1 root root   2.4K Apr 16 21:11 libuser.conf
+-rw-r--r--.  1 root root   2.0K Apr 16 21:11 login.defs
+-rw-r--r--.  1 root root   1.7K Apr 16 21:11 nsswitch.conf
+drwxr-xr-x.  2 root root   4.0K Apr 16 21:11 pam.d
+-rw-r--r--.  1 root root     37 Apr 16 21:11 vconsole.conf
+lrwxrwxrwx.  1 root root     34 Apr 16 21:11 localtime -> ../usr/share/zoneinfo/                                                                                        Asia/Kolkata
+-rw-r--r--.  1 root root     16 Apr 16 21:11 adjtime
+-rw-r--r--.  1 root root     19 Apr 16 21:11 locale.conf
+-rw-r--r--.  1 root root     22 Apr 16 21:11 hostname
+----------.  1 root root    745 Apr 16 21:13 shadow-
+-rw-r--r--.  1 root root   1.3K Apr 16 21:13 passwd-
+drwxr-xr-x.  3 root root     54 Apr 16 21:14 udev
+drwxr-x---.  3 root root     83 Apr 16 21:14 audit
+drwxr-xr-x.  2 root root    225 Apr 16 21:14 ssh
+-rw-r--r--.  1 root root    12K Apr 16 21:14 aliases.db
+drwxr-xr-x. 10 root root    127 Apr 16 21:14 rc.d
+----------.  1 root root    541 Apr 16 21:43 gshadow-
+-rw-r--r--.  1 root root    679 Apr 16 21:43 group-
+-rw-r--r--.  1 root root   1.4K Apr 16 21:45 passwd
+----------.  1 root root    774 Apr 16 21:45 shadow
+-rw-r--r--.  1 root root    685 Apr 16 21:45 group
+----------.  1 root root    547 Apr 16 21:45 gshadow
+-rw-r--r--.  1 root root     74 Apr 16 22:05 resolv.conf.K9AVHZ
+drwxr-xr-x. 13 root root    171 Apr 16 23:41 pki
+drwxr-xr-x.  7 root root   4.0K Sep 23 00:37 sysconfig
+-rw-r--r--.  1 root root     74 Sep 23 00:43 resolv.conf
+-rw-r--r--.  1 root root   1.9K Sep 23 01:12 profile
+drwxr-xr-x.  2 root root     26 Sep 23 01:25 yum.repos.d
+[root@localhost etc]# cd /
+[root@localhost /]# sudo wget -0 /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+wget: invalid option -- '0'
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+[root@localhost /]# cd ~
+[root@localhost ~]# sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+--2018-09-23 01:28:09--  https://pkg.jenkins.io/redhat-stable/jenkins.repo
+Resolving pkg.jenkins.io (pkg.jenkins.io)... 52.202.51.185
+Connecting to pkg.jenkins.io (pkg.jenkins.io)|52.202.51.185|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 85
+Saving to: ‘/etc/yum.repos.d/jenkins.repo’
+
+100%[==============================================================================================================================>] 85          --.-K/s   in 0s
+
+2018-09-23 01:28:10 (2.30 MB/s) - ‘/etc/yum.repos.d/jenkins.repo’ saved [85/85]
+
+[root@localhost ~]# rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.ke                                                                                        y
+[root@localhost ~]# yum install jenkins -y
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-
+              : manager
+This system is not registered to Red Hat Subscription Management. You can use su                                                                                        bscription-manager to register.
+jenkins                                                  | 2.9 kB     00:00
+jenkins/primary_db                                         |  25 kB   00:01
+Resolving Dependencies
+--> Running transaction check
+---> Package jenkins.noarch 0:2.138.1-1.1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================================================================
+ Package                                Arch                                  Version                                      Repository                              Size
+========================================================================================================================================================================
+Installing:
+ jenkins                                noarch                                2.138.1-1.1                                  jenkins                                 72 M
+
+Transaction Summary
+========================================================================================================================================================================
+Install  1 Package
+
+Total download size: 72 M
+Installed size: 72 M
+Downloading packages:
+jenkins-2.138.1-1.1.noarch.rpm                                                                                                                   |  72 MB  00:09:09
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : jenkins-2.138.1-1.1.noarch                                                                                                                           1/1
+  Verifying  : jenkins-2.138.1-1.1.noarch                                                                                                                           1/1
+
+Installed:
+  jenkins.noarch 0:2.138.1-1.1
+
+Complete!
+[root@localhost ~]# sudo systemctl start jenkins.service
+Job for jenkins.service failed because the control process exited with error cod                                                                                        e. See "systemctl status jenkins.service" and "journalctl -xe" for details.
+[root@localhost ~]# sudo systemctl start jenkins.service
+Job for jenkins.service failed because the control process exited with error code. See "systemctl status jenkins.service" and "journalctl -xe" for details.
+[root@localhost ~]# sudo systemctl enable jenkins.service
+jenkins.service is not a native service, redirecting to /sbin/chkconfig.
+Executing /sbin/chkconfig jenkins on
+[root@localhost ~]# systemctl start jenkins.service
+Job for jenkins.service failed because the control process exited with error code. See "systemctl status jenkins.service" and "journalctl -xe" for details.
+[root@localhost ~]# firewall-cmd --zone=public --permanent --add-port=8080/tcp -                                                                                        -permanent
+success
+[root@localhost ~]# firewall-cmd --zone=public --add-service=http --permanent
+success
+[root@localhost ~]# firewall-cmd --reload
+success
+[root@localhost ~]# firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: ens33
+  sources:
+  services: dhcpv6-client http ssh
+  ports: 8080/tcp
+  protocols:
+  masquerade: no
+  forward-ports:
+  sourceports:
+  icmp-blocks:
+  rich rules:
+
+[root@localhost ~]# systemctl start jenkins
+Job for jenkins.service failed because the control process exited with error cod                                                                                        e. See "systemctl status jenkins.service" and "journalctl -xe" for details.
+[root@localhost ~]# sudo systemctl start jenkins
+Job for jenkins.service failed because the control process exited with error cod                                                                                        e. See "systemctl status jenkins.service" and "journalctl -xe" for details.
+[root@localhost ~]# sudo systemctl start jenkins
+Job for jenkins.service failed because the control process exited with error code. See "systemctl status jenkins.service" and "journalctl -xe" for details.
+[root@localhost ~]# systemctl start jenkins
+Job for jenkins.service failed because the control process exited with error code. See "systemctl status jenkins.service" and "journalctl -xe" for details.
+[root@localhost ~]# service start jenkins
+The service command supports only basic LSB actions (start, stop, restart, try-restart, reload, force-reload, status). For other actions, please try to use systemctl.
+[root@localhost ~]# sudo vi /etc/init.d/jenkins
+[root@localhost ~]# cd /usr
+[root@localhost usr]# ls
+bin  etc  games  include  java  lib  lib64  libexec  local  sbin  share  src  tmp
+[root@localhost usr]# cd java
+[root@localhost java]# ls -lrth
+total 78M
+drwxr-xr-x. 6 root root 211 Jul  7 13:37 jre1.8.0_181
+-rw-r--r--. 1 root root 78M Sep 22 15:57 jre-8u181-linux-x64.tar.gz
+[root@localhost java]# cd jre1.8.0_181
+[root@localhost jre1.8.0_181]# ls -lrth
+total 284K
+-rw-r--r--.  1 root root 105K Jun 27 13:07 THIRDPARTYLICENSEREADME-JAVAFX.txt
+-r--r--r--.  1 root root  955 Jul  7 13:36 Welcome.html
+-r--r--r--.  1 root root 151K Jul  7 13:36 THIRDPARTYLICENSEREADME.txt
+-r--r--r--.  1 root root   46 Jul  7 13:36 README
+-r--r--r--.  1 root root   40 Jul  7 13:36 LICENSE
+-r--r--r--.  1 root root 3.2K Jul  7 13:36 COPYRIGHT
+drwxr-xr-x.  2 root root  222 Jul  7 13:36 bin
+-rw-r--r--.  1 root root  424 Jul  7 13:36 release
+drwxr-xr-x.  3 root root   21 Jul  7 13:36 plugin
+drwxr-xr-x.  4 root root   47 Jul  7 13:36 man
+drwxr-xr-x. 15 root root 4.0K Jul  7 13:40 lib
+[root@localhost jre1.8.0_181]# cd bin
+[root@localhost bin]# ls -lrth
+total 456K
+-rwxr-xr-x. 1 root root 227K Jul  7 13:36 unpack200
+-rwxr-xr-x. 1 root root 8.0K Jul  7 13:36 tnameserv
+-rwxr-xr-x. 1 root root 7.8K Jul  7 13:36 servertool
+-rwxr-xr-x. 1 root root 7.8K Jul  7 13:36 rmiregistry
+-rwxr-xr-x. 1 root root 7.8K Jul  7 13:36 rmid
+-rwxr-xr-x. 1 root root 7.9K Jul  7 13:36 policytool
+-rwxr-xr-x. 1 root root 7.8K Jul  7 13:36 pack200
+-rwxr-xr-x. 1 root root 8.0K Jul  7 13:36 orbd
+-rwxr-xr-x. 1 root root 7.8K Jul  7 13:36 keytool
+-rwxr-xr-x. 1 root root 7.8K Jul  7 13:36 jjs
+-rwxr-xr-x. 1 root root 6.2K Jul  7 13:36 jcontrol
+-rwxr-xr-x. 1 root root 137K Jul  7 13:36 javaws
+-rwxr-xr-x. 1 root root 7.6K Jul  7 13:36 java
+lrwxrwxrwx. 1 root root    8 Jul  7 13:36 ControlPanel -> jcontrol
+[root@localhost bin]# cd java
+-bash: cd: java: Not a directory
+[root@localhost bin]# pwd
+/usr/java/jre1.8.0_181/bin
+[root@localhost bin]# sudo vi /etc/init.d/jenkins
+[root@localhost bin]# cd /usr/lib/jvm/java-1.8.0/bin/java
+-bash: cd: /usr/lib/jvm/java-1.8.0/bin/java: No such file or directory
+[root@localhost bin]# cd /usr
+[root@localhost usr]# ls
+bin  etc  games  include  java  lib  lib64  libexec  local  sbin  share  src  tmp
+[root@localhost usr]# cd lib
+[root@localhost lib]# ls
+binfmt.d  debug      firmware  grub     kdump   modprobe.d      NetworkManager  rpm               sse2      tmpfiles.d  yum-plugins
+cpp       dracut     games     jenkins  kernel  modules         polkit-1        sendmail          sysctl.d  tuned
+crda      firewalld  gcc       kbd      locale  modules-load.d  python2.7       sendmail.postfix  systemd   udev
+[root@localhost lib]# cd jvm
+-bash: cd: jvm: No such file or directory
+[root@localhost lib]# ls -lrth
+total 36K
+dr-xr-xr-x.  2 root root    6 Mar 10  2016 sse2
+dr-xr-xr-x.  2 root root    6 Mar 10  2016 games
+drwxr-xr-x.  3 root root   64 Mar 10  2016 debug
+drwxr-xr-x.  2 root root    6 Sep 13  2016 modules-load.d
+drwxr-xr-x.  3 root root   23 Sep 13  2016 kernel
+drwxr-xr-x.  2 root root    6 Sep 13  2016 binfmt.d
+drwxr-xr-x.  2 root root   55 Apr 16 20:42 locale
+lrwxrwxrwx.  1 root root   10 Apr 16 20:44 cpp -> ../bin/cpp
+drwxr-xr-x.  3 root root   27 Apr 16 20:44 python2.7
+drwxr-xr-x.  4 root root 4.0K Apr 16 20:46 rpm
+drwxr-xr-x.  4 root root  236 Apr 16 20:47 dracut
+drwxr-xr-x.  2 root root   50 Apr 16 20:47 polkit-1
+drwxr-xr-x.  2 root root   51 Apr 16 20:47 sysctl.d
+drwxr-xr-x. 12 root root 4.0K Apr 16 20:48 systemd
+drwxr-xr-x.  2 root root   56 Apr 16 20:48 kdump
+drwxr-xr-x.  4 root root   31 Apr 16 20:48 NetworkManager
+drwxr-xr-x.  4 root root  248 Apr 16 20:48 udev
+drwxr-xr-x.  6 root root   76 Apr 16 20:49 kbd
+drwxr-xr-x.  7 root root   83 Apr 16 20:49 firewalld
+drwxr-xr-x.  3 root root   21 Apr 16 20:49 grub
+drwxr-xr-x.  2 root root  111 Apr 16 20:49 modprobe.d
+drwxr-xr-x.  3 root root   35 Apr 16 20:49 modules
+drwxr-xr-x. 11 root root  240 Apr 16 20:50 tuned
+lrwxrwxrwx.  1 root root   24 Apr 16 20:50 sendmail.postfix -> ../sbin/sendmail.postfix
+lrwxrwxrwx.  1 root root   30 Apr 16 20:51 sendmail -> /etc/alternatives/mta-sendmail
+drwxr-xr-x.  3 root root   43 Apr 16 20:51 crda
+drwxr-xr-x.  2 root root 4.0K Apr 16 20:51 tmpfiles.d
+drwxr-xr-x.  2 root root 4.0K Apr 16 20:52 yum-plugins
+drwxr-xr-x.  3 root root   33 Apr 16 20:52 gcc
+drwxr-xr-x. 77 root root  12K Apr 16 20:57 firmware
+drwxr-xr-x.  2 root root   25 Sep 23 01:40 jenkins
+[root@localhost lib]# sudo vi /etc/init.d/jenkins
+[root@localhost lib]# cd /etc/alternatives/java
+-bash: cd: /etc/alternatives/java: No such file or directory
+[root@localhost lib]# cd /etc
+[root@localhost etc]# ls
+abrt                       csh.login                groff          locale.conf               passwd                  resolv.conf         sudo.conf
+adjtime                    dbus-1                   group          localtime                 passwd-                 resolv.conf.K9AVHZ  sudoers
+aliases                    default                  group-         login.defs                pinforc                 rhsm                sudoers.d
+aliases.db                 depmod.d                 grub2.cfg      logrotate.conf            pkcs11                  rpc                 sudo-ldap.conf
+alternatives               dhcp                     grub.d         logrotate.d               pki                     rpm                 sysconfig
+anacrontab                 DIR_COLORS               gshadow        lsm                       plymouth                rsyncd.conf         sysctl.conf
+asound.conf                DIR_COLORS.256color      gshadow-       lvm                       pm                      rsyslog.conf        sysctl.d
+at.deny                    DIR_COLORS.lightbgcolor  gss            machine-id                polkit-1                rsyslog.d           systemd
+audisp                     dnsmasq.conf             host.conf      magic                     popt.d                  rwtab               system-release
+audit                      dnsmasq.d                hostname       mail.rc                   postfix                 rwtab.d             system-release-cpe
+bash_completion.d          dracut.conf              hosts          makedumpfile.conf.sample  ppp                     sasl2               tcsd.conf
+bashrc                     dracut.conf.d            hosts.allow    man_db.conf               prelink.conf.d          scl                 terminfo
+binfmt.d                   e2fsck.conf              hosts.deny     mke2fs.conf               printcap                securetty           tmpfiles.d
+cgconfig.conf              environment              init.d         modprobe.d                profile                 security            trusted-key.key
+cgconfig.d                 ethertypes               inittab        modules-load.d            profile.d               selinux             tuned
+cgrules.conf               exports                  inputrc        motd                      protocols               services            udev
+cgsnapshot_blacklist.conf  favicon.png              iproute2       mtab                      python                  sestatus.conf       updatedb.conf
+chkconfig.d                filesystems              issue          my.cnf                    qemu-ga                 setuptool.d         usb_modeswitch.conf
+chrony.conf                firewalld                issue.net      my.cnf.d                  rc0.d                   shadow              vconsole.conf
+chrony.keys                fonts                    kdump.conf     nanorc                    rc1.d                   shadow-             vimrc
+cifs-utils                 fprintd.conf             kernel         netconfig                 rc2.d                   shells              virc
+cron.d                     fstab                    krb5.conf      NetworkManager            rc3.d                   skel                vmware-tools
+cron.daily                 fuse.conf                krb5.conf.d    networks                  rc4.d                   smartmontools       wgetrc
+cron.deny                  gcrypt                   ld.so.cache    nsswitch.conf             rc5.d                   sos.conf            wpa_supplicant
+cron.hourly                gdbinit                  ld.so.conf     nsswitch.conf.bak         rc6.d                   ssh                 X11
+cron.monthly               gdbinit.d                ld.so.conf.d   ntp                       rc.d                    ssl                 xdg
+crontab                    GeoIP.conf               libaudit.conf  openldap                  rc.local                statetab            xinetd.d
+cron.weekly                GeoIP.conf.default       libnl          opt                       rdma                    statetab.d          yum
+crypttab                   gnupg                    libreport      os-release                redhat-access-insights  subgid              yum.conf
+csh.cshrc                  GREP_COLORS              libuser.conf   pam.d                     redhat-release          subuid              yum.repos.d
+[root@localhost etc]# cd alternatives/
+[root@localhost alternatives]# ls
+cifs-idmap-plugin  libnssckbi.so.x86_64  mta-aliasesman  mta-mailqman    mta-newaliasesman  mta-rmail     mta-sendmailman
+ld                 mta                   mta-mailq       mta-newaliases  mta-pam            mta-sendmail
+[root@localhost alternatives]# sudo vi /etc/init.d/jenkins
+[root@localhost alternatives]# cd ~
+[root@localhost ~]# service start jenkins
+The service command supports only basic LSB actions (start, stop, restart, try-restart, reload, force-reload, status). For other actions, please try to use systemctl.
+[root@localhost ~]# sudo service jenkins start
+Starting jenkins (via systemctl):  Warning: jenkins.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+                                                           [  OK  ]
+[root@localhost ~]# sudo service jenkins status
+? jenkins.service - LSB: Jenkins Automation Server
+   Loaded: loaded (/etc/rc.d/init.d/jenkins; bad; vendor preset: disabled)
+   Active: active (running) since Sun 2018-09-23 02:00:58 IST; 8s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 2994 ExecStart=/etc/rc.d/init.d/jenkins start (code=exited, status=0/SUCCESS)
+   CGroup: /system.slice/jenkins.service
+           +-3030 /usr/java/jre1.8.0_181/bin/java -Dcom.sun.akuma.Daemon=daemonized -Djava.awt.headless=true -DJENKINS_HOME=/var/lib/jenkins -jar /usr/lib/jenkins/je...
+
+Sep 23 02:00:54 localhost.localdomain systemd[1]: Starting LSB: Jenkins Automation Server...
+Sep 23 02:00:54 localhost.localdomain runuser[2995]: pam_unix(runuser:session): session opened for user jenkins by (uid=0)
+Sep 23 02:00:58 localhost.localdomain jenkins[2994]: Starting Jenkins [  OK  ]
+Sep 23 02:00:58 localhost.localdomain systemd[1]: Started LSB: Jenkins Automation Server.
+Warning: jenkins.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+[root@localhost ~]# systemctl start jenkins
+Warning: jenkins.service changed on disk. Run 'systemctl daemon-reload' to reloa                                                                                        d units.
+[root@localhost ~]# systemctl daemon-reload
+[root@localhost ~]# systemctl start jenkins
+[root@localhost ~]# systemctl start jenkins
+[root@localhost ~]# sudo service jenkins status
+? jenkins.service - LSB: Jenkins Automation Server
+   Loaded: loaded (/etc/rc.d/init.d/jenkins; bad; vendor preset: disabled)
+   Active: active (running) since Sun 2018-09-23 02:00:58 IST; 1min 48s ago
+     Docs: man:systemd-sysv-generator(8)
+   CGroup: /system.slice/jenkins.service
+           +-3030 /usr/java/jre1.8.0_181/bin/java -Dcom.sun.akuma.Daemon=daem...
+
+Sep 23 02:00:54 localhost.localdomain systemd[1]: Starting LSB: Jenkins Autom...
+Sep 23 02:00:54 localhost.localdomain runuser[2995]: pam_unix(runuser:session...
+Sep 23 02:00:58 localhost.localdomain jenkins[2994]: Starting Jenkins [  OK  ]
+Sep 23 02:00:58 localhost.localdomain systemd[1]: Started LSB: Jenkins Automa...
+Hint: Some lines were ellipsized, use -l to show in full.
+[root@localhost ~]# systemctl status jenkins
+? jenkins.service - LSB: Jenkins Automation Server
+   Loaded: loaded (/etc/rc.d/init.d/jenkins; bad; vendor preset: disabled)
+   Active: active (running) since Sun 2018-09-23 02:00:58 IST; 2min 13s ago
+     Docs: man:systemd-sysv-generator(8)
+   CGroup: /system.slice/jenkins.service
+           +-3030 /usr/java/jre1.8.0_181/bin/java -Dcom.sun.akuma.Daemon=daem...
+
+Sep 23 02:00:54 localhost.localdomain systemd[1]: Starting LSB: Jenkins Autom...
+Sep 23 02:00:54 localhost.localdomain runuser[2995]: pam_unix(runuser:session...
+Sep 23 02:00:58 localhost.localdomain jenkins[2994]: Starting Jenkins [  OK  ]
+Sep 23 02:00:58 localhost.localdomain systemd[1]: Started LSB: Jenkins Automa...
+Hint: Some lines were ellipsized, use -l to show in full.
+[root@localhost ~]# vi /var/lib/jenkins/secrets/initialAdminPassword
+[root@localhost ~]#
+[root@localhost ~]# ps -ef | grep -i jenkins
+jenkins    3030      1 39 02:00 ?        00:07:34 /usr/java/jre1.8.0_181/bin/java -Dcom.sun.akuma.Daemon=daemonized -Djava.awt.headless=true -DJENKINS_HOME=/var/lib/jenkins -jar /usr/lib/jenkins/jenkins.war --logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war --daemon --httpPort=8080 --debug=5 --handlerCountMax=100 --handlerCountMaxIdle=20
+root       3458   2574  0 02:20 pts/0    00:00:00 grep --color=auto -i jenkins
+
+
+The simplest solution is to completely disable security - change true to false in /var/lib/jenkins/config.xml file.
+
+<useSecurity>true</useSecurity>
+Then just restart Jenkins, by
+
+sudo service jenkins restart
